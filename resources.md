@@ -46,5 +46,5 @@ An overview of software architectural patterns and their role in successful soft
 
 
 ### Program Understanding
-* Book: ["The Programmer's Brain" by Felienne Hermans](https://www.manning.com/books/the-programmers-brain))<br />
+* Book: ["The Programmer's Brain" by Felienne Hermans](https://www.manning.com/books/the-programmers-brain)<br />
   A survey of research on programming and cognition, covering topics such as how to read code more effectively and how to write code that is easier to read and share.
