@@ -2,7 +2,7 @@
 layout: home
 title: CS4530, Spring 2022
 nav_exclude: true
-seo:
+seo: software engineering
 type: Course
 name: CS4530, Fundamentals of Software Engineering
 ---
