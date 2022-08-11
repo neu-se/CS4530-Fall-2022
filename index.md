@@ -1,6 +1,6 @@
 ---
 layout: home
-title: CS4530, Spring 2022
+title: CS4530, Fall 2022
 nav_exclude: true
 seo: software engineering
 type: Course
