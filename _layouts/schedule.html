@@ -1,3 +1,56 @@
+
+<h1>{{ page.name }} - Calendar</h1>
+
+<div class="details">{{page.instructor}}<br />
+{{page.dates}}, {{page.location}}</div>
+<table class="schedule">
+{% assign days = "Mon,Tue,Wed,Thu,Fri" | split: "," %}
+{% for wk in (1..site.data.config.dates.numWeeks) %}
+  {% capture wID %}{{ wk }}{% endcapture %}
+  <tr>
+  <td class="week-label">Week {{wID}}</td>
+  {% assign week=page.weeks[wID] %}
+  {% for day in days %}
+    <td class="{{day}}">
+      {% if site.data.config.deadlines[wID][day] or week[day] %}
+      <div class="day">
+      {% if site.data.config.deadlines[wID][day] %}
+      {% assign c = site.data.config.deadlines[wID][day] %}
+      <div class="date">{{ c.date | date: "%a, %b %d" }}</div>
+      <div class="content assignment">
+        {% assign m = site.data.modules[c.content] %}
+        {% if m.page %}
+        <a href="{{site.baseurl}}{{ m.page }}">{{ m.name }}</a>
+        {% else %}
+       {{ m.name }}
+        {% endif %}
+        <div class="deadline">Due at {{ c.date | date: "%I:%M %P" }}</div>
+      </div>
+      {% elsif week[day] %}
+        <div class="date">{{ week[day].date | date: "%a, %b %d" }}</div>
+      {% endif %}
+      {% for c in week[day].content %}
+      {% assign m = site.data.modules[c] %}
+      {% assign className = site.data.sections.types.default.className %}
+      {% if site.data.config.types[m.type] %}
+                {% assign className = site.data.config.types[m.type].className %}
+      {% endif %}
+      <div class="content {{className}}">
+      {% if m.page %}
+        <a href="{{site.baseurl}}{{ m.page }}">{{ m.name }}</a>
+      {% else %}
+        {{ m.name }}
+      {% endif %}
+      <div class="note">{{ week[day].note }}</div>
+    </div>
+    {% endfor %}
+      </div>
+      {% endif %}
+    </td>
+  {% endfor %}
+  </tr>
+{% endfor %}
+</table>
 {% assign start_time = page.timeline | first %}
 {% capture offset %}{% include minutes.liquid time=start_time %}{% endcapture %}
 <div class="schedule">

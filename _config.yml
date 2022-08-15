@@ -29,6 +29,12 @@ color_scheme: neu
 search_enabled: true
 heading_anchors: true
 permalink: pretty
+
+callouts:
+  warning:
+    title: Warning
+    color: red
+
 #aux_links:
 #  Kevin Lin:
 #    - 'https://kevinl.info'

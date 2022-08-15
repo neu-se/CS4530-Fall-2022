@@ -1,0 +1,33 @@
+deadlines:
+  '3':
+    Wed:
+      date: 2022/09/21 11:00am 
+      content: ip1
+  '4':
+    Wed:
+      date: 2022/09/28 11:00am 
+      content: tp1
+  '6':
+    Wed:
+      date: 2022/10/12 11:00am
+      content: tp2
+  '7':
+    Wed:
+      date: 2022/10/19 11:00am
+      content: ip2
+  '8':
+    Wed:
+      date: 2022/10/26 11:00am
+      content: tp3
+  '13':
+    Wed:
+      date: 2022/11/30 11:00am
+      content: tp4
+dates:
+  firstMonday: 2022/09/05
+  numWeeks: 14
+types:
+  default:
+    className: lesson
+  holiday:
+    className: holiday
