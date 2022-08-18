@@ -1,0 +1,86 @@
+# Format of this document:
+# Each top-level key is an item that is referneced by any section schedule's "content" array
+# Each key has a "name" attribute (rendered on the calendar), a "page" attribute (which contains a link to the lesson) and an optional "type" attribute, which is a key into the _data/config.yml "types" dictionary.
+1a:
+  name: Orientation & Requirements
+1b:
+  name: Testing
+2a:
+  name: Code-Level Design Principles
+2b:
+  name: Design Patterns
+3a:
+  name: Concurrency Patterns
+3b:
+  name: Software Process
+4a:
+  name: Frameworks & React
+4b:
+  name: Patterns of React
+5a:
+  name: Distributed Systems Principles & Requirements
+5b:
+  name: Distributed Systems Architectures
+6a:
+  name: What Makes a Good Test Suite?
+6b:
+  name: Tests with Larger Scope
+7a:
+  name: Principles for Cloud Deployment
+7b:
+  name: Continuous Integration & Deployment
+8a:
+  name: Work on project
+8b:
+  name: Midterm Review
+9a:
+  name: Midterm
+9b:
+  name: Security
+10a:
+  name: Technical Debt
+10b:
+  name: Work on project
+11a:
+  name: Open Source
+11b:
+  name: Work on Project
+12b:
+  name: Ethics
+13a:
+  name: Work on Project
+13b:
+  name: Presentations
+14a:
+  name: Presentations
+posters:
+  name: Poster Presentations
+advanced:
+  name: Advanced Topics in SE
+ip1:
+  name: Individual Project Milestone 1
+  type: deadline
+ip2:
+  name: Individual Project Milestone 2 
+  type: deadline
+tp1:
+  name: Project Formation
+  type: deadline
+tp2:
+  name: Preliminary Project Plan
+  type: deadline
+tp3:
+  name: Revised Project Plan
+  type: deadline
+tp4:
+  name: Project Final Deliverable
+  type: deadline
+veteransday:
+  name: Veteran's Day (No class)
+  type: holiday
+thanksgiving:
+  name: Thanksgiving Break (No class)
+  type: holiday
+columbus:
+  name: Columbus Day (No class)
+  type: holiday

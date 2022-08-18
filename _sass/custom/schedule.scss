@@ -1,4 +1,45 @@
 .schedule {
+  table{
+  }
+  tr{
+  }
+  td {
+    min-width: 0;
+    padding: 0;
+    vertical-align:top;
+  }
+  .note {
+    font-style: italic;
+  }
+  .holiday {
+    background-color: #efefef;
+    padding: 5px;
+  }
+  .assignment {
+    border: 1px dashed red;
+    padding: 5px;
+  }
+  .day {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: auto;
+    padding: 4px;
+  }
+  .week-label {
+    min-width: 80px;
+    vertical-align: middle;
+    padding: 4px;
+    text-align: center;
+  }
+  .content{
+    flex-grow: 100;
+  }
+  .date {
+    font-weight: bolder;
+  }
+}
+.bldschedule {
   @include abstract-card();
   overflow-x: scroll;
   position: relative;
@@ -105,3 +146,4 @@
     }
   }
 }
+
