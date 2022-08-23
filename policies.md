@@ -30,10 +30,12 @@ We would like to provide the best and most comfortable learning experience, and 
 
 ## Grading
 There will be four programming assignments and a final project. You will complete the assignments individually, and the project in a group of 3-4. The overall grading breakdown is:
-* 35% Individual homework assignments
-* 35% Team final project
+* 30% Individual project (10% for deliverable 1, 20% for deliverable 2)
+* 40% Team project (including peer evaluation)
 * 10% Participation in synchronous, in-class activities
 * 20% Exam
+
+**Assignment of team project grades:** In cases where team members do not equally contribute to the project, we may assign different grades to different individuals, up to an extreme of deducting 50% of the team project grade for a student. We will evaluate each individual's contribution on the basis of a variety of factors, including progress reports at weekly meetings, through inspecting version control history, through each students' self-reflection, and through each students' peer evaluation {during and/or} at the end of the project. We will make regular efforts to collect and distribute this feedback throughout the project — our ultimate goal is for all students to participate and receive full marks.
 
 **Assignment of final grades:** Although each instructor will use the same lesson plans and assignments, we expect that there may be variation in grades when compared between sections. Hence, each instructor will assign final grades to students in their sections, and reserve the right to apply different curves than are used by the other instructors. With each graded assignment, students will be provided with the distribution of all grades in their section.
 
