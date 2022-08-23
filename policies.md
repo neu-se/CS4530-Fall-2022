@@ -26,12 +26,13 @@ If you join class in person, you are strongly encouraged to bring your laptop or
 
 ### Policy on remote attendance
 
-We would like to provide the best and most comfortable learning experience, and encourage you to stay at home if you are ill, and upon request, will provide remote access to our classes (please contact your instructor by email as soon as possible preferably few hours before the class). We are following guidance and regulations set by the Provost’s office. In short: if you are registered for an on-the-ground section but do not feel comfortable or are unable to attend in person for a short duration (e.g. one or two weeks) due to either your illness or heightened concern for your or your roommates/family’s health, we will provide access to attend class those weeks remotely. However, we have been asked to be *extremely* attentive that we only provide this access for a maximum of two weeks. If you anticipate being unable to attend class in person for more than two weeks, please reach out to the [Disability Resource Center](http://www.northeastern.edu/drc), which is coordinating a process to provide longer-term access to remote resources.
+If you are registered for an on-the-ground section but do not feel comfortable or are unable to attend in person, please contact your instructor in advance of class.
+We would like to provide the best and most comfortable learning experience, and encourage you to stay at home if advised by a medical professional.
 
 ## Grading
 There will be four programming assignments and a final project. You will complete the assignments individually, and the project in a group of 3-4. The overall grading breakdown is:
 * 30% Individual project (10% for deliverable 1, 20% for deliverable 2)
-* 40% Team final project
+* 40% Team final project (including peer evaluation)
 * 10% Participation in synchronous, in-class activities
 * 20% Exam
 
@@ -62,6 +63,7 @@ The best way to attack these kinds of problems is to start with testing some hig
 
 If you come to us for debugging help, we will ask you to answer these 5 questions, as our goal is to help you *get better at debugging* and not to simply point out bugs that we might have seen before.
 We are happy to discuss the problematic behavior that you are observing, possible hypotheses for why that behavior is occurring, and strategies to test those hypotheses.
+In the past, students have found that using a variety of strategies to test their hypotheses (e.g. using a debugger, creating a minimized test case, measured application of `console.log` statements, internet research) are useful, and we would be happy to demonstrate these.
 We may not be able to stay with you while you work on refining your hypotheses and fixing the bug, but would be happy to continue following up if you get stuck again.
 
 ## Classroom Environment
@@ -77,6 +79,8 @@ Attendance in the synchronous meetings is expected. Sometimes you cannot avoid m
 ## Accommodations for Disabilities
 Students who have disabilities who wish to receive academic services and/or accommodations should visit the [Disability Resource Center](http://www.northeastern.edu/drc) at 20 Dodge Hall or call (617) 373-2675.
 Please be sure to provide your instructor with DRC's accommodations letter early in the semester in order to avoid logistical challenges.
+This course includes a significant group project, and providing extensions for group work can be complex. 
+As-per the DRC's policy, it is the student's responsibility to coordinate with the instructor in order to provide suitable accommodations.
 
 ## Title IX Notice
 *Title IX of the Education Amendments of 1972 protects individuals from sex or gender-based discrimination, including discrimination based on gender-identity, in educational programs and activities that receive federal financial assistance.*
