@@ -5,7 +5,7 @@ nav_exclude: true
 ---
 
 This project contains starter code to demonstrate the *observer* design pattern. The starter code for this activity is located in
-[week2-designpatterns-observer.zip]({{ site.baseurl }}{% link Activities/week2-designpatterns-observer.zip %})
+[week2-designpatterns-observer.zip]({{ site.baseurl }}{% link Activities/Lesson04 Activity (Weather Station).zip %})
 
 To run it on your computer, run `npm install` to fetch the dependencies for the project, and then run
 `ts-node src/WeatherStation.ts` (or `npm run demo`, if `ts-node` does not work), which should produce the following output:
