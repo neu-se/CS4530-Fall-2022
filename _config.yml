@@ -47,7 +47,6 @@ footer_content: "&copy; 2022 Jonathan Bell, Adeel Bhutta and Mitch Wand. Release
 collections:
   staffers:
   modules:
-  schedules:
   announcements:
 # Default layouts for each collection type
 defaults:
@@ -62,11 +61,6 @@ defaults:
       type: modules
     values:
       layout: module
-  - scope:
-      path: ''
-      type: schedules
-    values:
-      layout: schedule
   - scope:
       path: ''
       type: announcements
