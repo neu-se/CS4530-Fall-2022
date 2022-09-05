@@ -84,6 +84,12 @@ compress_html:
 plugins:
   - jekyll-seo-tag
   - jekyll-last-modified-at
+  - jekyll-spaceship
+
+jekyll-spaceship:
+  processors:
+    - mermaid-processor
+
 
 last-modified-at:
   date-format: '%b %d, %y %H:%M %Z'
