@@ -5,7 +5,7 @@ permalink: /assignments/ip1
 parent: Assignments
 nav_order: 1
 due_date: "Wednesday September 21, 11:00am EST"
-submission_notes: Submission TBD 
+submission_notes: Submit via GradeScope
 ---
 
 Welcome aboard to the Covey.Town team! We're glad that you're here and ready to join our development team as a new software engineer.
@@ -15,7 +15,7 @@ We understand that some of you may have some web development experience, but don
 
 Covey.Town is a web application that consists of some code that runs in each client's web browser, and also code that runs on a server.
 Users join the application in a "town": a 2D arcade-style map with different rooms to explore.
-Each town is also a video call: when two players get close to each other, they can see and hear each other; there is also a text chat available within the twon.
+Each town is also a video call: when two players get close to each other, they can see and hear each other; there is also a text chat available within the town.
 In Winter of 2021, our lead software engineer, Avery, developed a prototype for Covey.Town, and since then, hundreds of students in this class have built on that codebase.
 The most recent class-wide effort added a concept called [Conversation Areas](https://neu-se.github.io/CS4530-Spring-2022/assignments/hw2), allowing players to post a textual description of the topic of their conversation, and making those video conversations private to those players standing within that same area.
 Many student projects in Spring 2022 (some of which are [publicly showcased](https://neu-se.github.io/CS4530-Spring-2022/assignments/project-showcase)) involved creating other kinds of flexible interactions that involve objects in the arcade game, other elements displayed in the browser, and video chat.
@@ -246,8 +246,12 @@ Grading for implementation tasks:
 
 Grading for testing tasks:
 * `addPlayersWithinBounds`: 3 points
-* `contains`: 7 points (TODO add partial marks)
-* `overlaps`: 7 points (TODO add partial marks)
+* `contains`:
+  * 7 points for detecting all 10 faults, or
+  * 2 points for detecting at least 3 faults
+* `overlaps`
+  * 7 points for detecting all 12 faults, or
+  * 5 points for detecting at least 8 faults
 
 ### Task 2: Implement and test the ConversationArea (15 points total)
 Now that we have the core functionality for the `InteractableArea` abstraction implemented, we can move on to implement one of its concrete instantiations: the `ConversationArea`. 
@@ -355,7 +359,7 @@ Grading for testing tasks:
 * `toModel`: 3 points
 * `fromMapObject`: 3 points
 
-### Task 4: Implement and test createInteractablesFromMap: 20 points total
+### Task 4: Implement and test createInteractablesFromMap (20 points total)
 Your last task for this deliverable is to implement a function to validate the `InteractableArea`s defined in the town's map file and populate the `Town` with instances of `ViewingArea` and `ConversationArea` to represent those areas. Implement this function in the method `initializeFromMap` in `src/town/Town.ts`. 
 
 Avery has provided you with a single test case that you can use to check your progress; you will find that it tests some basic functionality of this function, but does not test the full specification. Please add new tests in the same `describe` block as the existing one in `src/town/Town.test.ts`. You can run these tests by running the command `npx jest --watch Town.test`, which will automatically re-run the tests as you update the file. 
@@ -364,4 +368,29 @@ Hint: The function takes as a parameter an `ITiledMap` object; you can learn mor
 
 Grading:
 * 10 points for a correct implementation
-* 10 points for tests (TODO partial marks?)
+* 10 points for tests:
+  * 10 points for detecting all 15 faults, or
+  * 5 points for detecting at least 6 faults, or
+  * 3 points for detecting at least 1 fault
+
+## Submission Instructions
+Submit your assignment in GradeScope. The easiest way to get into GradeScope the first time is to first
+[sign into Canvas](https://northeastern.instructure.com/courses/99531) and then click the link on our course for "GradeScope". 
+You should then also have the option to create an account on GradeScope (if you don't already have one) so that you can log in to GradeScope directly.
+Please contact the instructors immediately if you have difficulty accessing the course on GradeScope.
+
+To submit your assignment: upload *only* the files:
+* `src/town/InteractableArea.ts` 
+* `src/town/InteractableArea.test.ts` 
+* `src/town/ConversationArea.ts` 
+* `src/town/ConversationArea.test.ts` 
+* `src/town/ViewingArea.ts` 
+* `src/town/ViewingArea.test.ts` 
+* `src/town/Town.test.ts` 
+* `src/town/Town.ts` 
+
+The grading script should also accept your submission if you upload only a subset of these files.
+
+GradeScope will provide you with feedback on your submission, but note that it will *not* include any marks that will be assigned after we manually grade your submission for code style (it will show 0 for this until it is graded). It may take several minutes for the grading script to complete.
+
+GradeScope is configured to only provide feedback on at most 5 submissions per-24-hours per-student (submissions that fail to run or receive a grade of 0 are not counted in that limit). We strongly encourage you to lint and test your submission on your local development machine, and *not* rely on GradeScope for providing grading feedback - relying on GradeScope is a very slow feedback loop.
