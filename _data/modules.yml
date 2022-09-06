@@ -62,7 +62,7 @@ advanced:
 ip1:
   name: Individual Project Milestone 1
   type: deadline
-  page: /Assignments/ip1
+  page: /assignments/ip1
 ip2:
   name: Individual Project Milestone 2 
   type: deadline

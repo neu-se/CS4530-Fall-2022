@@ -4,7 +4,7 @@ title: "Individual Project 1"
 permalink: /assignments/ip1
 parent: Assignments
 nav_order: 1
-due_date: "Wednesday September 21, 11:00am EST"
+due_date: "Wednesday September 21, 11:00am ET"
 submission_notes: Submit via GradeScope
 ---
 
