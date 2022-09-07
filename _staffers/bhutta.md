@@ -7,6 +7,6 @@ photo: staff/bhutta.jpg
 section: CS4530 Sections 2 & 3 
 office-hours: |
     * In-Person: Monday 130-230pm, Meserve 337
-    * Virtually: Thursday 130-230pm [by zoom (link can be found on Canvas -> Modules -> Office Hours page.)"
+    * Virtually: Thursday 130-230pm (by zoom)
 ---
 
