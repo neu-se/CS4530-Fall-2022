@@ -1,6 +1,7 @@
 ---
-name: Shashwat Mehul Rathod
+name: Shashwat Rathod
 role: Teaching Assistant
-photo: staff/shashwat_mehul_rathod.jpg
+email: rathod.sh@northeastern.edu
+photo: staff/shashwat.jpg
 
 ---
