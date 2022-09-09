@@ -20,7 +20,7 @@ If you run into any difficulties following any of these steps, please post (in a
 
 Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine.
 
-For this class, you will need Node.js version 16 (16.13.2 is the latest version at time of writing, although any 16.x shoudl work in theory). 
+For this class, you will need Node.js version 16 (16.17 is the latest version at time of writing, although any 16.x should work in theory). 
 There are many ways that you can install Node.js: for instance, you can use a package manager like
 `snap` or `homebrew` to install it; you can download an installer directly from the Node.js website, and you can,
 of course, build it from source. However, due to the complexity of running different Node.js versions on the same machine, we *very strongly* suggest using `nvm`, as explained below.
