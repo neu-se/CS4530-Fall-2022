@@ -363,7 +363,7 @@ Your last task for this deliverable is to implement a function to validate the `
 
 Avery has provided you with a single test case that you can use to check your progress; you will find that it tests some basic functionality of this function, but does not test the full specification. Please add new tests in the same `describe` block as the existing one in `src/town/Town.test.ts`. You can run these tests by running the command `npx jest --watch Town.test`, which will automatically re-run the tests as you update the file. 
 
-Hint: The function takes as a parameter an `ITiledMap` object; you can learn more about the structure from reviewing the type definition, from the [Tiled JSON Map Format Specification](https://doc.mapeditor.org/en/stable/reference/json-map-format/), and from the example provided in the test case for `initializeFromMap` in the handout. The `type` property of each object in the map identifies it as a `ViewingArea`, `ConversationArea`, or other.
+Hint: The function takes as a parameter an `ITiledMap` object; you can learn more about the structure from reviewing the type definition, from the [Tiled JSON Map Format Specification](https://doc.mapeditor.org/en/stable/reference/json-map-format/), and from the example provided in the test case for `initializeFromMap` in the handout. The specific *layer* of the map that you are looking for will be of the type `ITiledMapObjectLayer`. The object layer will list all of the objects. The `type` property of each object in that layer identifies it as a `ViewingArea`, `ConversationArea`, or other - you can ignore any others.
 
 Grading:
 * 10 points for a correct implementation
