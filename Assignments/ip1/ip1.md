@@ -40,6 +40,9 @@ The objectives of this assignment are to:
 *  Translate high-level requirements into code
 *  Learn how to write unit tests with Jest
 
+## Changelog
+* 9/9/22: Added clear instructions to run eslint
+
 ## Getting started with this assignment
 
 Before you begin, be sure to check that you have NodeJS 16.x installed, along with VSCode. We have provided a [tutorial on setting up a development environment for this class]({{site.baseurl}}{%link tutorials/week1-getting-started.md %})
@@ -126,7 +129,7 @@ classDiagram
 ## Grading
 This submission will be scored out of 100 points, 90 of which will be automatically awarded by the gradign script, with the remaining 10 manually awarded by the course staff.
 
-Your code will automatically be evaluated for linter errors and warnings. Submissions that have *any* linter errors will automatically receive a grade of 0. **Do not wait to run the linter until the last minute**.
+Your code will automatically be evaluated for linter errors and warnings. Submissions that have *any* linter errors will automatically receive a grade of 0. **Do not wait to run the linter until the last minute**. To check for linter errors, run the command `npm run lint` from the terminal. The handout contains the same eslint configuration that is used by our grading script.
 
 Your code will be automatically evaluated for functional correctness by a test suite that expands on the core tests that are distributed in the handout. 
 Your tests will be automatically evaluated for functional correctness by a process that will inject bugs into our reference solution: to receive full marks your tests must detect a minimum number of injected bugs. 
@@ -393,3 +396,4 @@ The grading script should also accept your submission if you upload only a subse
 GradeScope will provide you with feedback on your submission, but note that it will *not* include any marks that will be assigned after we manually grade your submission for code style (it will show 0 for this until it is graded). It may take several minutes for the grading script to complete.
 
 GradeScope is configured to only provide feedback on at most 5 submissions per-24-hours per-student (submissions that fail to run or receive a grade of 0 are not counted in that limit). We strongly encourage you to lint and test your submission on your local development machine, and *not* rely on GradeScope for providing grading feedback - relying on GradeScope is a very slow feedback loop.
+To check for linter errors, run the command `npm run lint` from the terminal. The handout contains the same eslint configuration that is used by our grading script.
