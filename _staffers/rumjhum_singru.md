@@ -1,6 +1,6 @@
 ---
 name: Rumjhum Singru
 role: Teaching Assistant
-photo: 
+photo: staff/runjhum_singru.jpg
 
 ---
