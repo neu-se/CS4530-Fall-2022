@@ -42,6 +42,7 @@ The objectives of this assignment are to:
 
 ## Changelog
 * 9/9/22: Added clear instructions to run eslint
+* 9/12/22: Clarified which properties to use for `fromMapObject`
 
 ## Getting started with this assignment
 
@@ -297,6 +298,8 @@ public static fromMapObject(mapObject: ITiledMapObject,
 {% endhighlight %}
 </details>
 
+(Added 9/12) `fromMapObject` should create the `BoundingBox` from the `mapObject` using its fields: `x, y, width, height`. The `id` of the corresponding `InteractableArea` should match the `name` property of the `mapObject`. If it is helpful: `fromMapObject` may throw an error if the `mapObject` is invalid.
+
 Grading for implementation tasks:
 * `toModel`: 3 points
 * `remove`: 3 points
@@ -349,6 +352,8 @@ Avery has again provided a complete test suite for `remove`, and will expect you
     public static fromMapObject(mapObject: ITiledMapObject, townEmitter: TownEmitter): ViewingArea;
 {% endhighlight %}
 </details>
+
+(Added 9/12) `fromMapObject` should create the `BoundingBox` from the `mapObject` using its fields: `x, y, width, height`. The `id` of the corresponding `InteractableArea` should match the `name` property of the `mapObject`. If it is helpful: `fromMapObject` may throw an error if the `mapObject` is invalid.
 
 Grading for implementation tasks:
 * `remove`: 3 points
