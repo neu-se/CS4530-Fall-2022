@@ -9,10 +9,13 @@
   page: /modules/2-requirements-to-code
 2a:
   name: Code-Level Design Principles
+  page: /modules/3-code-level-design-principles
 2b:
   name: Design Patterns
+  page: /modules/4-interaction-level-design-patterns
 3a:
   name: Concurrency Patterns
+  page: /modules/5-concurrency-patterns-in-typescript
 3b:
   name: Software Process
 4a:
