@@ -127,7 +127,7 @@ classDiagram
 </div>
 
 ## Grading
-This submission will be scored out of 100 points, 90 of which will be automatically awarded by the gradign script, with the remaining 10 manually awarded by the course staff.
+This submission will be scored out of 100 points, 90 of which will be automatically awarded by the grading script, with the remaining 10 manually awarded by the course staff.
 
 Your code will automatically be evaluated for linter errors and warnings. Submissions that have *any* linter errors will automatically receive a grade of 0. **Do not wait to run the linter until the last minute**. To check for linter errors, run the command `npm run lint` from the terminal. The handout contains the same eslint configuration that is used by our grading script.
 
