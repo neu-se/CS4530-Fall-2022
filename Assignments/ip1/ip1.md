@@ -28,7 +28,7 @@ By pressing the spacebar within an `InteractableArea`, the user can trigger an i
 An `InteractableArea` in one user's browser can also emit events that are delivered in real-time to other players interacting with that same area.
 
 The objective for this semester's individual project is to implement this new `InteractableArea` abstraction, with two concrete implementations: `ConversationArea` and `ViewingArea`. While the `ConversationArea` will be implemented by refactoring last semester's code to use the new interface, the  `ViewingArea` is a new concept.
-The `ViewingArea` alows players to have "watch parties": each player who is within the `ViewingArea` sees the same streaming video.
+The `ViewingArea` allows players to have "watch parties": each player who is within the `ViewingArea` sees the same streaming video.
 If one player pauses the video, it pauses for all other players watching it, and the playback is synchronized between all players watching the video.
 
 This implementation effort will be split across two deliverables. In this first deliverable, you will implement and test the core backend components for this feature, and in the second deliverable, you will connect these new components to the rest of the backend, and implement and test the frontend components. 
@@ -128,7 +128,7 @@ classDiagram
 </div>
 
 ## Grading
-This submission will be scored out of 100 points, 90 of which will be automatically awarded by the gradign script, with the remaining 10 manually awarded by the course staff.
+This submission will be scored out of 100 points, 90 of which will be automatically awarded by the grading script, with the remaining 10 manually awarded by the course staff.
 
 Your code will automatically be evaluated for linter errors and warnings. Submissions that have *any* linter errors will automatically receive a grade of 0. **Do not wait to run the linter until the last minute**. To check for linter errors, run the command `npm run lint` from the terminal. The handout contains the same eslint configuration that is used by our grading script.
 
