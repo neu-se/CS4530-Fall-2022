@@ -43,6 +43,7 @@ The objectives of this assignment are to:
 ## Changelog
 * 9/9/22: Added clear instructions to run eslint
 * 9/12/22: Clarified which properties to use for `fromMapObject`
+* 9/13/22: Added note about integration tests in part 4
 
 ## Getting started with this assignment
 
@@ -372,6 +373,8 @@ Your last task for this deliverable is to implement a function to validate the `
 Avery has provided you with a single test case that you can use to check your progress; you will find that it tests some basic functionality of this function, but does not test the full specification. Please add new tests in the same `describe` block as the existing one in `src/town/Town.test.ts`. You can run these tests by running the command `npx jest --watch Town.test`, which will automatically re-run the tests as you update the file. 
 
 Hint: The function takes as a parameter an `ITiledMap` object; you can learn more about the structure from reviewing the type definition, from the [Tiled JSON Map Format Specification](https://doc.mapeditor.org/en/stable/reference/json-map-format/), and from the example provided in the test case for `initializeFromMap` in the handout. The specific *layer* of the map that you are looking for will be of the type `ITiledMapObjectLayer`. The object layer will list all of the objects. The `type` property of each object in that layer identifies it as a `ViewingArea`, `ConversationArea`, or other - you can ignore any others.
+
+Note (9/13/22): The grading script will also run two integration tests as part of grading this task. The integration tests will check for the behavior of every single one of the methods that you were required t complete for this and the other tasks. While we aim to create test suites for each individual implementation task that are *perfect*, this is at times a difficult task, and these two integration tests check how the different units interact. These two tests are clearly identified as integration tests in the grading output. 
 
 Grading:
 * 10 points for a correct implementation
