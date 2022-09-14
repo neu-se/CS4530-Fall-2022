@@ -5,7 +5,7 @@
   name: Orientation & Requirements
   page: /modules/1-requirements-testing
 1b:
-  name: Testing
+  name: Test Driven Development
   page: /modules/2-requirements-to-code
 2a:
   name: Code-Level Design Principles
