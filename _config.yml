@@ -21,7 +21,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 tagline: Fundamentals of Software Engineering
 baseurl: '/CS4530-Fall-2022' # the subpath of your site, e.g. /blog
 url: 'https://neu-se.github.io' # the base hostname & protocol for your site, e.g. http://example.com
-exclude: ["Gemfile", "Gemfile.lock", "LICENSE", "README.md", "disabled", "vendor", "_plugins"]
+exclude: ["Gemfile", "Gemfile.lock", "LICENSE", "README.md", "disabled", "vendor", "_plugins", "temp"]
 
 # Theme settings
 theme: just-the-docs
