@@ -44,7 +44,7 @@ layout: default
       {% else %}
         {{ m.name }}
       {% endif %}
-      <div class="note">{{ week[day].note }}</div>
+      <div class="note">{{ week[day].note | markdownify }}</div>
     </div>
     {% endfor %}
       </div>

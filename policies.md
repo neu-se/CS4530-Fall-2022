@@ -40,7 +40,7 @@ There will be an individual and a team project (in a group of 3-4). The overall 
 
 **Assignment of final grades:** Although each instructor will use the same lesson plans and assignments, we expect that there may be variation in grades when compared between sections. Hence, each instructor will assign final grades to students in their sections, and reserve the right to apply different curves than are used by the other instructors. With each graded assignment, students will be provided with the distribution of all grades in their section.
 
-**Grading grievances:** If you have concerns regarding the grading of your work, please let us know *right away* by opening a regrade request in *TBD*. All regrade requests must be submitted within 7 days from your receipt of the graded work. If your regrade request is closed and you feel that the response was not satisfactory, you may appeal to the instructor via email within 48 hours.
+**Grading grievances:** If you have concerns regarding the grading of your work, please let us know *right away* by opening a regrade request in Gradescope. All regrade requests must be submitted within 7 days from your receipt of the graded work. If your regrade request is closed and you feel that the response was not satisfactory, you may appeal to the instructor via email within 48 hours.
 
 ## Debugging
 One of the objectives of this class is to provide students with experiences writing new code for large, existing codebases.
