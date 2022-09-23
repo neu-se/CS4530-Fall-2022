@@ -70,6 +70,7 @@ ip1:
 ip2:
   name: Individual Project Milestone 2 
   type: deadline
+  page: /assignments/ip2
 tp1:
   name: Project Formation
   type: deadline
