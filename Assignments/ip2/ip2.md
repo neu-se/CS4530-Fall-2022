@@ -96,6 +96,8 @@ We will learn more about both technologies in modules 9 and 10; for the purposes
 
 To run the tests for this part, run the command `npm test TestName` in the `townService` directory, where `TestName` is either `Town.test` or `TownsController`.
 
+Clarification (9/24): A viewing area is "active" if there is a video set. 
+
 {::options parse_block_html="true" /}
 <details>
 <summary markdown="span">View the specification for these tasks</summary>
