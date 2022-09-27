@@ -429,8 +429,8 @@ Point break down for each of the implementation tasks:
 * Implement TownController.ts useTownSettings: 12 points
 * Implement TownController.ts useActiveConversationAreas: 12 points
 * Implement TownController.ts usePlayers: 12 points
-* Implement TownController.ts useConversationAreaOccupants: 12 points
-* Implement TownController.ts useConversationAreaTopic: 12 points
+* Implement ConversationAreaController.ts useConversationAreaOccupants: 12 points
+* Implement ConversationAreaController.ts useConversationAreaTopic: 12 points
 
 To receive marks for implementing each feature, your implementation must pass all of our tests for it.
 
