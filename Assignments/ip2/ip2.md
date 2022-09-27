@@ -56,9 +56,16 @@ The objectives of this assignment are to:
 
 Start by [downloading the starter code]({{site.baseurl}}{%link /Assignments/ip2/ip2-handout.zip %}). Extract the archive and run `npm install` to fetch the dependencies. 
 
+### Installation notes
+
+**Configuring Jest and VSCode**: If you would like to use the built-in Jest test runner for VSCode (where it shows the tests and their status in the sidebar), the easiest way to accomplish this for this project is to open *just* the "frontend" directory or just the "townService" directory in VSCode - not the top-level "ip2-handout" directory. If you have a quick-fix to make it work with the whole project at once, please feel free to share on Piazza and we will incorportate that here.
+
+**NPM install failures**: The libraries used for React require some native binaries to be installed -- code written and compiled for your computer (not JavaScript). If you run into issues with `npm install` not succeeding, please try installing the following libraries using either [Homebrew (if on Mac)](https://brew.sh), apt-get, or your favorite other package manager: `pixman`, `cairo`, `pkgconfig` and `pango`. For example, run `brew install pixman cairo pkgconfig pango`. If you are on a newer Mac with an M1 or M2 chip, you may need to use `arch -arm64 brew install pixman cairo pango`.
+
+
 Changelog:
 * 9/26: Update description for `socket.on('interactableUpdate')` on this page to match the handout; update the handout to remove prettier/linting issues (if you already have downloaded the handout, `npm run format` in the frontend directory will get you the same thing)
-* 9/27: Clarify that `socket.on('interactableUpdate')`  should forward the interactableUpdate message to the other players in the town using the emitter `newPlayer.townEmitter`. Update handout so that `ViewingAreaController` getter for `video` return type is `string | undefined`.
+* 9/27: Clarify that `socket.on('interactableUpdate')`  should forward the interactableUpdate message to the other players in the town using the emitter `newPlayer.townEmitter`. Update handout so that `ViewingAreaController` getter for `video` return type is `string | undefined`. Add installation suggestions.
 
 ## Grading
 This submission will be scored out of 200 points, 180 of which will be automatically awarded by the grading script, with the remaining 20 manually awarded by the course staff.
