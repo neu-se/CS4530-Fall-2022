@@ -58,6 +58,7 @@ Start by [downloading the starter code]({{site.baseurl}}{%link /Assignments/ip2/
 
 Changelog:
 * 9/26: Update description for `socket.on('interactableUpdate')` on this page to match the handout; update the handout to remove prettier/linting issues (if you already have downloaded the handout, `npm run format` in the frontend directory will get you the same thing)
+* 9/27: Clarify that `socket.on('interactableUpdate')`  should forward the interactableUpdate message to the other players in the town using the emitter `newPlayer.townEmitter`.
 
 ## Grading
 This submission will be scored out of 200 points, 180 of which will be automatically awarded by the grading script, with the remaining 20 manually awarded by the course staff.
@@ -150,9 +151,10 @@ Clarification (9/24): A viewing area is "active" if there is a video set.
 // Set up a listener to process updates to interactables.
 // Currently only knows how to process updates for ViewingArea's, and
 // ignores any other updates for any other kind of interactable.
-// For ViewingArea's: dispatches an updateModel call to the viewingArea that
-// corresponds to the interactable being updated. Does not throw an error if
-// the specified viewing area does not exist.
+// For ViewingArea's: Uses the 'newPlayer' object's 'towmEmitter' to forward
+// the interactableUpdate to the other players in the town. Also dispatches an
+// updateModel call to the viewingArea that corresponds to the interactable being
+// updated. Does not throw an error if the specified viewing area does not exist.
   socket.on('interactableUpdate', (update: Interactable) => {});
 {% endhighlight %}
 </details>
