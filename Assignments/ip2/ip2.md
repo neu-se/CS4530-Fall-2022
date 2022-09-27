@@ -58,7 +58,7 @@ Start by [downloading the starter code]({{site.baseurl}}{%link /Assignments/ip2/
 
 Changelog:
 * 9/26: Update description for `socket.on('interactableUpdate')` on this page to match the handout; update the handout to remove prettier/linting issues (if you already have downloaded the handout, `npm run format` in the frontend directory will get you the same thing)
-* 9/27: Clarify that `socket.on('interactableUpdate')`  should forward the interactableUpdate message to the other players in the town using the emitter `newPlayer.townEmitter`.
+* 9/27: Clarify that `socket.on('interactableUpdate')`  should forward the interactableUpdate message to the other players in the town using the emitter `newPlayer.townEmitter`. Update handout so that `ViewingAreaController` getter for `video` return type is `string | undefined`.
 
 ## Grading
 This submission will be scored out of 200 points, 180 of which will be automatically awarded by the grading script, with the remaining 20 manually awarded by the course staff.
