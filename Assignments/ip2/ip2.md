@@ -66,6 +66,7 @@ Start by [downloading the starter code]({{site.baseurl}}{%link /Assignments/ip2/
 Changelog:
 * 9/26: Update description for `socket.on('interactableUpdate')` on this page to match the handout; update the handout to remove prettier/linting issues (if you already have downloaded the handout, `npm run format` in the frontend directory will get you the same thing)
 * 9/27: Clarify that `socket.on('interactableUpdate')`  should forward the interactableUpdate message to the other players in the town using the emitter `newPlayer.townEmitter`. Update handout so that `ViewingAreaController` getter for `video` return type is `string | undefined`. Add installation suggestions.
+* 9/29: Added sequence diagram of hook that uses town events.
 
 ## Grading
 This submission will be scored out of 200 points, 180 of which will be automatically awarded by the grading script, with the remaining 20 manually awarded by the course staff.
@@ -360,7 +361,12 @@ Before implementing the final component that displays and synchronizes video pla
 are related to Avery's overall refactoring to use more hooks.
 
 Some of these hooks may require you to include `useEffect` and/or `useState` hooks within the hook that you are building.
-Some may also require you to use our own `useTownController()` hook, which returns the current `TownController` - these hooks have the comment "This hook relies on the TownControllerContext."
+For each of the hooks, consider the events that they might need to listen to (i.e. `TownEvents` for the hooks that monitor a `TownController` and `ConversationAreaEvents` for those that monitor a `ConversationAreaController`).
+Hooks that need to monitor `TownController` events may require you to use our own `useTownController()` hook, which returns the current `TownController`.
+
+The sequence diagram below shows the expected interactions between hooks that subscribe to `TownEvents`, indicating the interfaces that the hook uses:
+[![](https://mermaid.ink/img/pako:eNqNU8tu2zAQ_JUFTwlg-wN0CFAoAXRoL5V604UWVzFRkqsuSRdGkH_PUrQB5YGiOvExOzM7K76oiQyqRkX8kzFM-Gj1M2s_BpBP50Qh-yNy3S-ak53sokOCoQcdYaC_oUc-2wm_gLQ3SEshMTmHDJ9hXUG1OSby0BH9_oxYeVryCwWU7aSds-EZKDOc1oJaEigh0FlE2mYD18aggUQQJ0a8Ytv9_uGha-AnBoMcYb-yRsgRh5ON1U5xc3dfC7pSMAhxn49CZI9YKPXa3tNZdDYeHM4JaAbhT3J9EAffbUwYkO8Oh8P9DmbLMQGv4kDBXWr10N9UnrwV51CyRR6odVYkNjrDrYEr8ION7nrbrk1piEmLr4gp3WZZEKLzLV7CdGIKlKO7iKN9NSWJlel7LUMQjss_E2b0cmhgZhnhVylXG5NDHfKyzixufEJp-FeI22DTCf8r2ir9Lt0xqJ3yyF5bI3_2S6kelRB6HFUjS4Ozzi6NagyvAi199pKCahJn3Km8GAnr-hBUM2sX5RSNTcQ_6mtZH83rGxqDFX0)](https://mermaid.live/edit#pako:eNqNU8tu2zAQ_JUFTwlg-wN0CFAoAXRoL5V604UWVzFRkqsuSRdGkH_PUrQB5YGiOvExOzM7K76oiQyqRkX8kzFM-Gj1M2s_BpBP50Qh-yNy3S-ak53sokOCoQcdYaC_oUc-2wm_gLQ3SEshMTmHDJ9hXUG1OSby0BH9_oxYeVryCwWU7aSds-EZKDOc1oJaEigh0FlE2mYD18aggUQQJ0a8Ytv9_uGha-AnBoMcYb-yRsgRh5ON1U5xc3dfC7pSMAhxn49CZI9YKPXa3tNZdDYeHM4JaAbhT3J9EAffbUwYkO8Oh8P9DmbLMQGv4kDBXWr10N9UnrwV51CyRR6odVYkNjrDrYEr8ION7nrbrk1piEmLr4gp3WZZEKLzLV7CdGIKlKO7iKN9NSWJlel7LUMQjss_E2b0cmhgZhnhVylXG5NDHfKyzixufEJp-FeI22DTCf8r2ir9Lt0xqJ3yyF5bI3_2S6kelRB6HFUjS4Ozzi6NagyvAi199pKCahJn3Km8GAnr-hBUM2sX5RSNTcQ_6mtZH83rGxqDFX0)
+
 Be sure to follow the [rules of hooks](https://reactjs.org/docs/hooks-rules.html) when implementing your hooks - these will be enforced by the linter, and also by the TAs when grading for style.
 
 To run the tests for this part, run the command `npm test hooks` in the `frontend` directory.
