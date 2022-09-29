@@ -32,7 +32,7 @@ Your overall project grade (which will account for 40% of your final grade in th
 
 * Planning Documents
   * 10% Preliminary Project Plan
-  * 15% Revised Project Plan
+  * 10% Revised Project Plan
 * Activities During the Project
   * 10% Weekly Meetings with TA Mentor
   * 5% Ongoing development progress
@@ -41,8 +41,9 @@ Your overall project grade (which will account for 40% of your final grade in th
     * 20% Final implementation of your feature
     * 10% Final test suite of your feature
    * Report
-    * 10% Feature Overview
+    * 5% Feature Overview
     * 10% Technical Overview
+    * 10% Process Overview
    * 10% Demonstration
 
 ### Team Formation
