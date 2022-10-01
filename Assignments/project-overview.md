@@ -34,20 +34,24 @@ Your overall project grade (which will account for 40% of your final grade in th
   * 10% Preliminary Project Plan
   * 10% Revised Project Plan
 * Activities During the Project
-  * 10% Weekly Meetings with TA Mentor
-  * 5% Ongoing development progress
+  * 10% Weekly Meetings with TA Mentor and Team Surveys
+  * 5% Ongoing development progress, including code reviews
 * Final Deliverables
   * Code 
     * 20% Final implementation of your feature
     * 10% Final test suite of your feature
    * Report
-    * 5% Feature Overview
-    * 10% Technical Overview
-    * 10% Process Overview
+      * 5% Feature Overview
+      * 10% Technical Overview
+      * 10% Process Overview
    * 10% Demonstration
+  
+In cases where team members do not equally contribute to the project, we may assign different grades to different individuals, up to an extreme of deducting 50% of the team project grade for a student.
+We will evaluate each individual's contribution on the basis of a variety of factors, including progress reports at weekly meetings, through inspecting version control history, through each students' self-reflection, and through each students' peer evaluation (during and/or) at the end of the project.
+We will make regular efforts to collect and distribute this feedback throughout the project — our ultimate goal is for all students to participate and receive full marks.
 
 ### Team Formation
-All projects will be completed in a team of 4-5 students.
+All projects will be completed in a team of 3-4 students.
 The very first deliverable for the project will be a team formation survey: you will be able to indicate
 your preferences for teammates. The instructors will assign students to the teams based on a number of factors including your responses to the survey.
 All students in each team must be in the same section of the class.
@@ -63,12 +67,12 @@ All projects will involve frontend and backend development of a new feature for 
 Once teams have been formed, you and your team will decide what kind of new feature you would like to build.
 Your feature should be something that can be implemented within the timeframe allotted (5-7 weeks), and will be implemented in a fork of the main Covey.Town codebase.
 Given that you will be up-to-speed on the Covey.Town codebase (and have been introduced to TypeScript, React, NodeJS, and testing frameworks),
-and that you will have a team of four, we expect that the feature that you propose will be more complex than the feature implemented in the individual
+and that you will have a team of three or four, we expect that the feature that you propose will be more complex than the feature implemented in the individual
 homeworks.
 
 The project plan will focus on two sections:
 * User stories and conditions of satisfaction that describe the feature that you plan to implement.
-* Work breakdown: Map your user stories to engineering tasks. Assign each task to a team member (or pair of team members), provide an estimate for how long each task will take, a rationale for that estimate, and schedule those stories into 2 week sprints.
+* Work breakdown: Map your user stories to engineering tasks. Assign each task to a team member (or pair of team members), provide an estimate for how long each task will take, a rationale for that estimate, and schedule those stories into sprints.
 
 ### Creating a GitHub Repository
 Instructions for creating a GitHub repository for your team will be posted on Friday, October 21. Your team's code repository will build on the solution that we provide for the individual project.
