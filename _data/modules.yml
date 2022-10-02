@@ -79,6 +79,7 @@ tp1:
 tp2:
   name: Preliminary Project Plan
   type: deadline
+  page: /assignments/project-plan
 tp3:
   name: Revised Project Plan
   type: deadline
