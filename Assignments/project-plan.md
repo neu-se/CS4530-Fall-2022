@@ -92,7 +92,7 @@ Each work item should contain the following information:
 Your work breakdown should take the format of a simple textual list.
  
 ## Submission 
-Your project plan should be submitted as a single PDF in GradeScope to the assignment "Project Plan."
+Your project plan should be submitted as a single PDF in GradeScope to the assignment "Preliminary Project Plan."
 Each team submits a single document to GradeScope: when uploading the submission, GradeScope will ask you who your teammates are, and then will associate this submission with every member of your team. Be sure to tag your team mates.
 This assignment is due Oct 12 at 11am. 
 
