@@ -33,8 +33,10 @@
   page: /modules/10-distributed-architectures
 6a:
   name: What Makes a Good Test Suite?
+  page: /modules/11-good-tests
 6b:
   name: Tests with Larger Scope
+  page: /modules/12-larger-tests
 7a:
   name: Principles for Cloud Deployment
 7b:
