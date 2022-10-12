@@ -84,8 +84,8 @@ Each work item should contain the following information:
     * Large: Currently unable to provide a responsible estimate. 
 * A brief (1-2 sentence max) justification of how you reached the size estimate of the task 
 * Milestone for delivering the task, chosen from one of the following:
-  * Sprint 0: Oct 12-Oct 26 (Sprint 0 is just a single week)
-  * Sprint 1: Oct 27-Nov 2
+  * Sprint 0: Oct 12-Oct 26
+  * Sprint 1: Oct 27-Nov 2 (Sprint 1 is just a single week)
   * Sprint 2: Nov 3-Nov 16
   * Sprint 3: Nov 17-Nov 30
 
