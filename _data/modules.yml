@@ -39,10 +39,11 @@
   page: /modules/12-larger-tests
 7a:
   name: Principles for Cloud Deployment
+  page: /modules/13-cloud-infrastructure
 7b:
   name: Continuous Integration & Deployment
 8a:
-  name: Work on project
+  name: Work on project (Discuss project plan revisions)
 8b:
   name: Midterm Review
 9a:
