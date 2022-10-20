@@ -28,7 +28,7 @@ Do not provide more than three user stories. Your problem statement and descript
 
 This revised project plan should be a standalone document (it is OK to copy/paste from the preliminary plan in this case).
 
-**Mandatory update for all teams:** Along with each condition of satisfaction, indicate its priority. The priority should help refine your task breakdown.
+**Mandatory update for all teams:** Along with each condition of satisfaction, indicate its priority (high, medium, low). The priority should help refine your task breakdown.
 
 ## Revised Work Breakdown (max 10 pages)
 Given the project concept that you have chosen and the functionality that you expect to implement to satisfy your user stories, define a breakdown of the work that will be necessary to complete the project.
