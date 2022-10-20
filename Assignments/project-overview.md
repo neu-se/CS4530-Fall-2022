@@ -24,7 +24,7 @@ Select projects from Spring 2022 are hosted [in our project showcase](https://ne
 | -----| ----------- | ----------- |
 | 9/28/22 | Team Formation | Specify preferences for teammates |
 | 10/12/22 | [Preliminary Project Plan]({{ site.baseurl }}{% link Assignments/project-plan.md %}) | Propose a new feature for Covey.Town that can be planned and implemented within 7 weeks |
-| 10/26/22 | Revised Project Plan | Refine the scope of your feature based on staff feedback, define detailed requirements and project acceptance criteria. |
+| 10/26/22 | [Revised Project Plan]({{ site.baseurl }}{% link Assignments/revised-project-plan.md %}) | Refine the scope of your feature based on staff feedback, define detailed requirements and project acceptance criteria. |
 | 11/30/22 | Project Implementation and Documentation | Deliver your new feature, including design documentation and tests |
 
 ### Summary of Project Grading
