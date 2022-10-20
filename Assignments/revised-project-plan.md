@@ -26,7 +26,9 @@ You should include three different user stories to describe how users will inter
 Your three user stories should cover the key behavior that your feature will provide.
 Do not provide more than three user stories. Your problem statement and description of user stories and conditions of satisfaction should be between 2-4 pages.
 
-This revised project plan should be a standalone document, so even if you have no changes to this section, you must still complete it (it is OK to copy/paste from the preliminary plan in this case).
+This revised project plan should be a standalone document (it is OK to copy/paste from the preliminary plan in this case).
+
+**Mandatory update for all teams:** Along with each condition of satisfaction, indicate its priority. The priority should help refine your task breakdown.
 
 ## Revised Work Breakdown (max 10 pages)
 Given the project concept that you have chosen and the functionality that you expect to implement to satisfy your user stories, define a breakdown of the work that will be necessary to complete the project.
@@ -90,6 +92,7 @@ Each of the three user stories will account for 5% of your grade on this assignm
   * The user story fits the problem statement
   * The user story satisfies the INVEST criteria for good user stories (construed quite broadly)
   * The user story includes conditions of satisfaction that cover the "normal" expected behavior of the feature, and any relevant error cases
+* The conditions of satisfaction are prioritized 
 
 ### Work breakdown (80 points):
 Your work breakdown will be evaluated holistically on the following rubric:
