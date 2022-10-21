@@ -88,6 +88,7 @@ tp2:
 tp3:
   name: Revised Project Plan
   type: deadline
+  page: /assignments/revised-project-plan
 tp4:
   name: Project Final Deliverable
   type: deadline

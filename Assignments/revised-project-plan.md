@@ -91,8 +91,7 @@ Each of the three user stories will account for 5% of your grade on this assignm
 * Receive full marks if:
   * The user story fits the problem statement
   * The user story satisfies the INVEST criteria for good user stories (construed quite broadly)
-  * The user story includes conditions of satisfaction that cover the "normal" expected behavior of the feature, and any relevant error cases
-* The conditions of satisfaction are prioritized 
+  * The user story includes conditions of satisfaction that cover the "normal" expected behavior of the feature, and any relevant error cases and all conditions of satisfaction are prioritized 
 
 ### Work breakdown (80 points):
 Your work breakdown will be evaluated holistically on the following rubric:
