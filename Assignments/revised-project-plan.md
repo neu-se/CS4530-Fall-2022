@@ -20,7 +20,7 @@ Your project plan should begin with a 1-3 paragraph introductory problem stateme
 
 Given the problem statement, develop three user stories that show how a user would interact with the feature. User stories are requirements specified in the format 
 "As a < type of user >, I want < some goal > so that < some reason >."
-My conditions of satisfaction are < list of common cases and special cases that must work >.
+My conditions of satisfaction are < list of common cases and special cases that must work >. Please make sure that your conditions of satification are complete (i.e., cover all common cases) and can be turned into testable behaviors.
 
 You should include three different user stories to describe how users will interact with your feature.
 Your three user stories should cover the key behavior that your feature will provide.
@@ -73,6 +73,9 @@ Each work item should contain the following information:
 Your work breakdown should take the format of a simple textual list.
 
 **Mandatory update for all teams:** Even if your work breakdown is entirely unchanged compared to the preliminary plan, please be certain to include updates on all "sprint 0" tasks (those which were scheduled to be completed before the due date of this revised plan). Many teams included research/learning tasks in the first week to help inform the rest of the work breakdown: you should be certain to revise your work breakdown based on what you have learned so far.
+
+Changelog:
+* 10/21: Updated details about conditions of satisfaction (being testable and include priority). Also updated the grading breakdown.
  
 ## Submission 
 Your revised project plan should be submitted as a single PDF in GradeScope to the assignment "Revised Project Plan."
@@ -86,14 +89,16 @@ The revised project plan will account for 10% of your project grade, and will be
 * Receive full marks if there is a narrative consisting of 4-10 sentences that describes a specific problem that your project aims to solve.
 * Receive partial credit if the narrative is present, but does not describe a problem that the project aims to solve
 
-### User stories (15 points):
+### User stories (45 points):
 Each of the three user stories will account for 5% of your grade on this assignment and graded as follows:
 * Receive full marks if:
   * The user story fits the problem statement
   * The user story satisfies the INVEST criteria for good user stories (construed quite broadly)
-  * The user story includes conditions of satisfaction that cover the "normal" expected behavior of the feature, and any relevant error cases and all conditions of satisfaction are prioritized 
+  * The user story includes conditions of satisfaction that cover the "normal" expected behavior of the feature, and any relevant error cases
+  * Conditions of satisfaction can be turned into Testable behaviors
+  * Conditions of satisfaction are prioritized 
 
-### Work breakdown (80 points):
+### Work breakdown (50 points):
 Your work breakdown will be evaluated holistically on the following rubric:
 
 #### Coverage of tasks needed (20 points):
@@ -108,12 +113,12 @@ Receive full marks if the work breakdown includes all (reasonably expected) task
 It is not possible to state generically for all projects whether *all* of the above types of tasks are necessary.
 However, we believe that this list is exhaustive (we do not expect other kinds of tasks).
 
-#### Assignment of tasks (10 points):
+#### Assignment of tasks (5 points):
 Receive full marks if:
 * Each element on the work breakdown is assigned to one team member
 * The distribution of tasks of each size are roughly similar between the whole team (no single person is assigned significantly more or fewer tasks of one size)
 
-#### Sizing of tasks (40 points):
+#### Sizing of tasks (20 points):
 Receive full marks if each element on the work breakdown:
 * Has a size estimate (small, medium, or large) that is provided by the team member assigned the task.
 * Has a responsible justification for that estimation
@@ -121,7 +126,7 @@ Receive full marks if each element on the work breakdown:
   * Is accompanied by a reasonable explanation of why the team is unnable to provide a responsible estimate
   * Is accompanied by at least one small or medium task, scheduled well-before the "large" task is due to be completed. We would expect that most of these research tasks are scheduled to sprint 0, or perhaps sprint 1.
 
-#### Scheduling of tasks (10 points):
+#### Scheduling of tasks (5 points):
 Receive full marks if each element on the work breakdown:
 * Is assigned to a sprint
 * There are no obvious constraint violations (tasks that logically must happen before others should be scheduled before them)
