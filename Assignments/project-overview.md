@@ -44,7 +44,7 @@ Your overall project grade (which will account for 40% of your final grade in th
       * 5% Feature Overview
       * 10% Technical Overview
       * 10% Process Overview
-   * 10% Demonstration
+   * 10% Demonstration & Posters
   
 In cases where team members do not equally contribute to the project, we may assign different grades to different individuals, up to an extreme of deducting 50% of the team project grade for a student.
 We will evaluate each individual's contribution on the basis of a variety of factors, including progress reports at weekly meetings, through inspecting version control history, through each students' self-reflection, and through each students' peer evaluation (during and/or) at the end of the project.
