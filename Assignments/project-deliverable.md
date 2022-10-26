@@ -72,27 +72,27 @@ The project must include evidence of testing. Ideally, all new features will be 
 * Any new or modified backend features include at least one test, which may or may not be an effective test.
 * Tests may contain ESlint warnings (but no errors); does not include any eslint-disable or ts-ignore flags
 
-## Planning Documents
-### 10% Preliminary Project Plan
+### Planning Documents
+#### 10% Preliminary Project Plan
 Each team's preliminary project plan grade will account for 10% of the overall grade for the project.
 
-### 10% Revised Project Plan
+#### 10% Revised Project Plan
 Each team's revised project plan grade will account for 10% of the overall grade for the project.
 
-## Activities During the Project
-### 10% Weekly Meetings with TA Mentor and Team Surveys
+### Activities During the Project
+#### 10% Weekly Meetings with TA Mentor and Team Surveys
 Throughout the semester, each team will be meeting with their TA mentor and with the instructor to discuss their project progress. Attendance at these meetings and demonstrations of progress will, cumulatively, account for 10% of the project grade. You will also be asked to complete Team Surveys and/or Peer evaluations to help track the progress. Each instructor will provide a more detailed rubric for this section of the assignment.
 
-### 5% Ongoing development progress, including code reviews
+#### 5% Ongoing development progress, including code reviews
 Each team is expected to use their GitHub repository, regularly committing changes while developing their project. You will also be expected to use pull-requests and code reviews.
 
-#### Satisfactory:
+##### Satisfactory:
 * There is a clear development history visible from the git repository: features were delivered incrementally, and not in a single (or several) commits at the end of the project
 * There is evidence of code review - for example, pull requests that have comments on them
 * There is a correspondence between commit messages and the technical tasks that they are associated with; there are few (if any) commits with meaningless commits messages like `.` or `Add files via upload`.
 * Each team member has made at least 2 commits over the lifespan of the project
 
-#### Meets minimum requirements:
+##### Meets minimum requirements:
 * There is a clear development history visible from the git repository: features were delivered incrementally, and not in a single (or several) commits at the end of the project
 * Each team member has made at least 2 commits over the lifespan of the project
 
