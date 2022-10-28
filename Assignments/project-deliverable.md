@@ -90,7 +90,7 @@ Each team is expected to use their GitHub repository, regularly committing chang
 * There is a clear development history visible from the git repository: features were delivered incrementally, and not in a single (or several) commits at the end of the project
 * There is evidence of code review - for example, pull requests that have comments on them
 * There is a correspondence between commit messages and the technical tasks that they are associated with; there are few (if any) commits with meaningless commits messages like `.` or `Add files via upload`.
-* Each team member has made at least 2 commits over the lifespan of the project
+* Each team member has made at least 4 commits over the lifespan of the project
 
 ##### Meets minimum requirements:
 * There is a clear development history visible from the git repository: features were delivered incrementally, and not in a single (or several) commits at the end of the project
@@ -125,10 +125,14 @@ The final report should consist of three sections:
 
 #### 10% Process Overview
 ##### Satisfactory:
-* TBA 
+* Process Overview contains a description of any project management process (i.e., agile) used during the project 
+* It uses sprints, sprint reviews, retrospectives and blameless reviews.
+* It provides summary of changes made in the process during the project. 
+* The document is at most 2 pages (fewer pages are absolutely acceptable, consider this a rough limit) 
 
 #### Meets minimum requirements:
-* TBA 
+* Process Overview includes a description of any project management process (i.e., agile) used during the project.
+* The document is at most 2 pages (fewer pages are absolutely acceptable, consider this a rough limit) 
 
 ### 10% Demonstration / Posters
 Each instructor will provide details regarding expectations for the demo and/or poster. The schedule and manner of these demos might also vary from section to section.
