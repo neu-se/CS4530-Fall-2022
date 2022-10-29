@@ -5,8 +5,8 @@ permalink: /Assignments/project-deliverable
 parent: Assignments
 nav_order: 6
 ---
-# Project: Final Deliverable **Due Wednesday November 30, 1a:00am EDT**{: .label .label-red }
-The final project deliverable is the implementation, available in github and (front-end) deployed on Netlify and Heroku, and the documentation turned in to Canvas. It also includes demos and/or posters.
+# Project: Final Deliverable **Due Wednesday November 30, 11:00am EDT**{: .label .label-red }
+The final project deliverable is the implementation, available in github and deployed on Netlify and Heroku, and the documentation turned in to Canvas. It also includes demos and/or posters.
 
 # Project Implementation and Documentation
 
@@ -43,10 +43,30 @@ Details for project demos and posters will be provided during class by each inst
 Create a PDF of your reflection, and submit it to Canvas, under the assignment "Project: Individual Reflection".
 
 ## Grading
-Each project will be graded by the team's assigned TA mentor, and the instructor. We do not expect all teams to deliver all of the features that were initially proposed - in the five week implementation period, there are sure to be some teams that encounter unexpected technical hurdles. As described in greater detail in the rubrics below, teams that have regular communication with their TA regarding their project status may be permitted to variances to their project scope. For most of the submisison components below, we provide two benchmark rubrics: one for a submission that is satisfactory (full marks), and one that would be meeting our minimum expectations (a pass). Rubric for remaining components will be provided by individual instructors. In practice, when grading projects we will assign numeric grades and provide partial credit, using these rubrics as guidelines for those two extremes. Overall project is worth 40% of the course.
+Each project will be graded by the team's assigned TA mentor, and the instructor. We do not expect all teams to deliver all of the features that were initially proposed - in the five week implementation period, there are sure to be some teams that encounter unexpected technical hurdles. As described in greater detail in the rubrics below, teams that have regular communication with their TA regarding their project status may be permitted to variances to their project scope. For most of the submission components below, we provide two benchmark rubrics: one for a submission that is satisfactory (full marks), and one that would be meeting our minimum expectations (a pass). Rubric for remaining components will be provided by individual instructors. In practice, when grading projects we will assign numeric grades and provide partial credit, using these rubrics as guidelines for those two extremes. Overall project is worth 40% of the course.
 
 In cases where team members do not equally contribute to the project, we may assign different grades to different individuals, up to an extreme of deducting 50% of the marks from a student. We will evaluate each individual's contribution on the basis of a variety of factors, including progress reports at weekly meetings, through inspecting version control history, through each students' self-reflection, and through each students' peer evaluation {during and/or} at the end of the project. We will make regular efforts to collect and distribute this feedback throughout the project --- our ultimate goal is for all students to participate and receive full marks.
 
+### Summary of grading
+* Planning Documents
+  * 10% Preliminary Project Plan (already graded)
+  * 10% Revised Project Plan (already submitted)
+* Activities During the Project
+  * 10% Weekly Meetings with TA Mentor and Team Surveys
+  * 5% Ongoing development progress, including code reviews
+* Final Deliverables
+  * Code 
+    * 20% Final implementation of your feature
+    * 10% Final test suite of your feature
+  * Report
+    * 5% Feature Overview
+    * 10% Technical Overview
+    * 10% Process Overview
+  * 10% Demonstration & Posters
+
+This adds up to 100%; this sum is worth 40% of the course grade.
+
+Here are the detailed rubrics for the final deliverables:
 ### 20% Delivered Features 
 We will grade each delivered project holistically using the following two rubrics:
 
@@ -62,7 +82,7 @@ We will grade each delivered project holistically using the following two rubric
 * Implemented feature does not include any eslint-disable or ts-ignore flag
 
 ### 10% Testing
-The project must include evidence of testing. Ideally, all new features will be accompanied by fully automated tests, but in some circumstances (particularly when engaging with Phaser, the game library), this may not be feasible. If automated tests are not possible, include a discusison of your manual testing strategy, including a script that a future developer could use to manually test the feature.
+The project must include evidence of testing. Ideally, all new features will be accompanied by fully automated tests, but in some circumstances (particularly when engaging with Phaser, the game library), this may not be feasible. If automated tests are not possible, include a discussion of your manual testing strategy, including a script that a future developer could use to manually test the feature.
 
 #### Satisfactory:
 * Any new or modified backend features include tests that validate that the feature works as intended. These tests cover the changed code, and also contain well-written assertions that thoroughly check the expected behaviors.
@@ -125,13 +145,12 @@ The final report should consist of three sections:
 
 #### 10% Process Overview
 ##### Satisfactory:
-* Process Overview contains a description of any project management process (i.e., agile) used during the project 
-* It uses sprints, sprint reviews, retrospectives and blameless reviews.
-* It provides summary of changes made in the process during the project. 
+* Process overview contains a detailed description of the manner in which agile project management processes were used during the project (i.e., sprints, sprint reviews, retrospectives and blameless reviews).
+* It provides a summary of what was planned to happen in each sprint vs what actually happened, with a discussion of what was revised as a result. 
 * The document is at most 2 pages (fewer pages are absolutely acceptable, consider this a rough limit) 
 
 #### Meets minimum requirements:
-* Process Overview includes a description of any project management process (i.e., agile) used during the project.
+* It provides a summary of what was planned to happen in each sprint vs what actually happened, with a discussion of what was revised as a result. 
 * The document is at most 2 pages (fewer pages are absolutely acceptable, consider this a rough limit) 
 
 ### 10% Demonstration / Posters
