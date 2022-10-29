@@ -43,9 +43,9 @@ Details for project demos and posters will be provided during class by each inst
 Create a PDF of your reflection, and submit it to Canvas, under the assignment "Project: Individual Reflection".
 
 ## Grading
-Each project will be graded by the team's assigned TA mentor, and the instructor. We do not expect all teams to deliver all of the features that were initially proposed - in the five week implementation period, there are sure to be some teams that encounter unexpected technical hurdles. As described in greater detail in the rubrics below, teams that have regular communication with their TA regarding their project status may be permitted to variances to their project scope. For most of the submission components below, we provide two benchmark rubrics: one for a submission that is satisfactory (full marks), and one that would be meeting our minimum expectations (a pass). Rubric for remaining components will be provided by individual instructors. In practice, when grading projects we will assign numeric grades and provide partial credit, using these rubrics as guidelines for those two extremes. 
+Each project will be graded by the team's assigned TA mentor and the instructor. We do not expect all teams to deliver all of the features that were initially proposed - in the five-week implementation period, there are sure to be some teams that encounter unexpected technical hurdles. As described in greater detail in the rubrics below, teams that have regular communication with their TA regarding their project status may be permitted variances to their project scope. For most of the submission components below, we provide two benchmark rubrics: one for a submission that is satisfactory (full marks), and one that would be meeting our minimum expectations (a pass). Rubric for remaining components will be provided by individual instructors. In practice, when grading projects we will usually assign numeric grades and provide partial credit, using these rubrics as guidelines for those two extremes. 
 
-In cases where team members do not equally contribute to the project, we may assign different grades to different individuals, up to an extreme of deducting 50% of the marks from a student. We will evaluate each individual's contribution on the basis of a variety of factors, including progress reports at weekly meetings, through inspecting version control history, through each students' self-reflection, and through each students' peer evaluation {during and/or} at the end of the project. We will make regular efforts to collect and distribute this feedback throughout the project --- our ultimate goal is for all students to participate and receive full marks.
+In cases where team members do not equally contribute to the project, we may assign different grades to different individuals, up to an extreme of deducting 50% of the marks from a student. We will evaluate each individual's contribution on the basis of a variety of factors, including progress reports at weekly meetings, through inspecting version control history, through each student's self-reflection, and through each team's (or student's) peer evaluations during and/or at the end of the project. We will make regular efforts to collect and distribute this feedback throughout the project. Our ultimate goal is for all students to participate and receive full marks.
 
 ### Summary of grading
 * Planning Documents
@@ -72,17 +72,17 @@ We will grade each delivered project holistically using the following two rubric
 
 #### Satisfactory:
 * Implemented feature satisfies the conditions of satisfaction as proposed by the team and as agreed to by the course staff. If technical difficulties resulted in features being dropped, the project may still earn full marks on "delivered features," but these difficulties must have been documented with the course staff as you encountered them during development.
-* Implemented feature is deployed to a publicly-accessible URL, using Netlify and Heroku for hosting as outlined in TBA.
+* Implemented feature is deployed to a publicly-accessible URL, using Netlify and Heroku for hosting. Detailed instructions for deployement will be supplied later.
 * Implemented feature contains no ESLint warnings or errors; does not include any eslint-disable or ts-ignore flags
 
 #### Meets minimum requirements:
 * Implemented feature largely satisfies acceptance criteria as proposed by the team, but may not meet the course staff’s interpretation of those criteria.
-* Implemented feature is deployed to a publicly-accessible URL, using Netlify and Heroku for hosting as outlined in TBA.
+* Implemented feature is deployed to a publicly-accessible URL, using Netlify and Heroku for hosting. Detailed instructions for deployement will be supplied later.
 * The implementation may have some obvious flaws, but largely works without crashing.
 * Implemented feature does not include any eslint-disable or ts-ignore flag
 
 ### 10% Testing
-The project must include evidence of testing. Ideally, all new features will be accompanied by fully automated tests, but in some circumstances (particularly when engaging with Phaser, the game library), this may not be feasible. If automated tests are not possible, include a discussion of your manual testing strategy, including a script that a future developer could use to manually test the feature.
+The project must include evidence of testing. Ideally, all new features will be accompanied by fully automated tests, but in some circumstances (particularly when engaging with Phaser, the game library, or Tiled, the map editor), this may not be feasible. If automated tests are not possible, include a discussion of your manual testing strategy, including a script that a future developer could use to manually test the feature.
 
 #### Satisfactory:
 * Any new or modified backend features include tests that validate that the feature works as intended. These tests cover the changed code, and also contain well-written assertions that thoroughly check the expected behaviors.
@@ -93,6 +93,8 @@ The project must include evidence of testing. Ideally, all new features will be 
 * Tests may contain ESlint warnings (but no errors); does not include any eslint-disable or ts-ignore flags
 
 ### Activities During the Project
+
+
 #### 10% Weekly Meetings with TA Mentor and Team Surveys
 Throughout the semester, each team will be meeting with their TA mentor and with the instructor to discuss their project progress. Attendance at these meetings and demonstrations of progress will, cumulatively, account for 10% of the project grade. You will also be asked to complete Team Surveys and/or Peer evaluations to help track the progress. Each instructor will provide a more detailed rubric for this section of the assignment.
 
@@ -113,23 +115,24 @@ Each team is expected to use their GitHub repository, regularly committing chang
 The final report should consist of three sections:
 
 #### 5% Report -- Feature Overview
+
 ##### Satisfactory:
 * The Feature section contains sufficient documentation for a user to interact with your updated version of Covey.Town.
 * The documentation covers all steps that the user would need to take to exercise all of your user stories.
 * Screenshots are included that capture the key interactions between a user and your new feature.
 * Course staff were able to follow these instructions to successfully interact with your project implementation.
-* The section is at most 4 pages (roughly 2,000 words maximum), NOT including figures --- fewer pages are absolutely acceptable, consider this a rough limit
+* The section is at most 4 pages (roughly 2,000 words maximum), NOT including figures. Fewer pages are absolutely acceptable, consider this a rough limit
 
 ##### Meets minimum requirements:
 * The Feature contains documentation for a user to interact with your updated version of Covey.Town, but perhaps does not fully describe how.
 * The documentation includes at least one or two screenshots, but screenshots do not capture interactions with all of the user stories.
 * The course staff were able to figure out how to use it through trial and error.
-* The section is at most 4 pages, NOT including figures --- fewer pages are absolutely acceptable, consider this a rough limit
+* The section is at most 4 pages, NOT including figures. Fewer pages are absolutely acceptable, consider this a rough limit
 
 #### 10% Report - Technical Overview
 ##### Satisfactory:
-* Technical Overview contains a description of any substantive changes to the existing Covey.Town codebase, and the architecture of your new code.
-* It uses CRC cards, or state diagrams or any of the other techniques that help describe the structure.
+* Technical Overview contains a description of any substantive changes to the existing Covey.Town codebase, and of the architecture of your new code.
+* It uses UML diagrams, CRC cards, state diagrams or any of the other techniques that help describe the structure.
 * It provides a well-reasoned rationale for why this is the "right" design. 
 * The document is at most 2 pages (fewer pages are absolutely acceptable, consider this a rough limit) 
 ##### Meets minimum requirements:
