@@ -43,7 +43,7 @@ Details for project demos and posters will be provided during class by each inst
 Create a PDF of your reflection, and submit it to Canvas, under the assignment "Project: Individual Reflection".
 
 ## Grading
-Each project will be graded by the team's assigned TA mentor, and the instructor. We do not expect all teams to deliver all of the features that were initially proposed - in the five week implementation period, there are sure to be some teams that encounter unexpected technical hurdles. As described in greater detail in the rubrics below, teams that have regular communication with their TA regarding their project status may be permitted to variances to their project scope. For most of the submission components below, we provide two benchmark rubrics: one for a submission that is satisfactory (full marks), and one that would be meeting our minimum expectations (a pass). Rubric for remaining components will be provided by individual instructors. In practice, when grading projects we will assign numeric grades and provide partial credit, using these rubrics as guidelines for those two extremes. Overall project is worth 40% of the course.
+Each project will be graded by the team's assigned TA mentor, and the instructor. We do not expect all teams to deliver all of the features that were initially proposed - in the five week implementation period, there are sure to be some teams that encounter unexpected technical hurdles. As described in greater detail in the rubrics below, teams that have regular communication with their TA regarding their project status may be permitted to variances to their project scope. For most of the submission components below, we provide two benchmark rubrics: one for a submission that is satisfactory (full marks), and one that would be meeting our minimum expectations (a pass). Rubric for remaining components will be provided by individual instructors. In practice, when grading projects we will assign numeric grades and provide partial credit, using these rubrics as guidelines for those two extremes. 
 
 In cases where team members do not equally contribute to the project, we may assign different grades to different individuals, up to an extreme of deducting 50% of the marks from a student. We will evaluate each individual's contribution on the basis of a variety of factors, including progress reports at weekly meetings, through inspecting version control history, through each students' self-reflection, and through each students' peer evaluation {during and/or} at the end of the project. We will make regular efforts to collect and distribute this feedback throughout the project --- our ultimate goal is for all students to participate and receive full marks.
 
@@ -91,13 +91,6 @@ The project must include evidence of testing. Ideally, all new features will be 
 #### Meets minimum requirements:
 * Any new or modified backend features include at least one test, which may or may not be an effective test.
 * Tests may contain ESlint warnings (but no errors); does not include any eslint-disable or ts-ignore flags
-
-### Planning Documents
-#### 10% Preliminary Project Plan
-Each team's preliminary project plan grade will account for 10% of the overall grade for the project.
-
-#### 10% Revised Project Plan
-Each team's revised project plan grade will account for 10% of the overall grade for the project.
 
 ### Activities During the Project
 #### 10% Weekly Meetings with TA Mentor and Team Surveys
@@ -154,7 +147,9 @@ The final report should consist of three sections:
 * The document is at most 2 pages (fewer pages are absolutely acceptable, consider this a rough limit) 
 
 ### 10% Demonstration / Posters
-Each instructor will provide details regarding expectations for the demo and/or poster. The schedule and manner of these demos might also vary from section to section.
+Each team will be required to submit a poster. In addition, some sections may have live demo (in-person, via zoom or by recorded video). Each instructor will provide details regarding expectations for the demo and/or poster. The schedule and manner of these demos might also vary from section to section.
+
+Select projects will be hosted in our project showcase. Here are the projects from Spring 2022 [project showcase](https://neu-se.github.io/CS4530-Spring-2022/assignments/project-showcase).
 
 ## Individual Reflection
 
