@@ -21,7 +21,6 @@ Your final team deliverable will include:
 * Automated tests for your new feature
 * A report that describes how to use your new feature
 * A poster
-* A 10 minute video that demonstrates the usage of your feature
     
 Accompanying the final team deliverable will be an *individual reflection*, which every student must submit on their own which will include your reflections on:
 * The evolution of your project concept: How does the project that you delivered compare to what you originally planned to deliver? What caused these deviations?
@@ -45,7 +44,7 @@ Each team will submit a poster. Your poster will be a single-page document, that
 
 We've created a [sample poster for the "Conversation Areas" feature]({{ site.baseurl }}{% link Examples/conversation-areas-poster.pdf %}), which you might find useful in deciding how to format your poster. It's fine to use a different aspect ratio (e.g. portrait instead of landscape), and there are no specific requirements for font size or amount of text. Please try to create a document that you feel represents your project, imagine your target audience as a recruiter for a software engineering role: your goal is to demonstrate that you have some experience working on some non-trivial software engineering project.
 
-Some sections will have live (in-person) demos and others may ask you to record a demo video. Details for project demos will be provided during class by each instructor. **Posters and/or demo videos (and presentations) will be submitted on Canvas, under the assignment "Project: Poster / Demo".**
+Some sections will have live (in-person) demos and others may ask you to record a demo video. Details for project demos will be provided during class by each instructor. **Posters and/or demo videos (and presentations) will be submitted on Canvas**, under the assignment "Project: Poster / Demo".
  
 #### Individual Reflection
 Create a PDF of your reflection, and submit it to Canvas, under the assignment "Project: Individual Reflection". 
