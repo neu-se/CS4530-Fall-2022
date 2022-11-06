@@ -75,6 +75,8 @@ Scroll down to "API Key" and click "Reveal". Copy this key, you'll use it in the
  11. To confirm that your service is successfully deployed, try to visit it in your browser. Use the URL that you noted in step 5 ("Your app can be found at https://covey-deployment-example.herokuapp.com/"). Append `towns` to the URl, and visit it in your browser (e.g. `https://covey-deployment-example.herokuapp.com/towns`). After a short delay, you should see the response `{"isOK":true,"response":{"towns":[]}}`.
 
 ## Set up Netlify
+**Note 11/6:** The Netlify invites have not been successfully sent yet. There is a bug in Netlify's rate-limiting is effecting us, we will update this document and piazza when this is resolved.
+
 The last step to our continuous development pipeline will be to automatically deploy our frontend to Netlify. Netlify will create an optimized production build of your frontend (by running `npm run build`) and host it in their globally-distributed content delivery network. Netlify will also automatically build an deploy previews of pull requests on your repository. 
  
 1. Use the invitation that you received to your @northeastern.edu account to create an account on Netlify and join our organization. Netlify no longer offers a free product for private repositories - you will need to use our organization to create your site
