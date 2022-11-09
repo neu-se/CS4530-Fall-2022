@@ -105,4 +105,5 @@ indigenous:
   type: holiday
 teamMeetings:
   name: Team Meetings
-
+midtermReview:
+  name: Midterm Review
