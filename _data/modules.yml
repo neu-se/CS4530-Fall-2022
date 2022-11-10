@@ -54,6 +54,7 @@
   page: /modules/15-security
 10a:
   name: Technical Debt
+  page: /modules/16-technical-debt 
 10b:
   name: Work on project
 11a:
@@ -105,4 +106,5 @@ indigenous:
   type: holiday
 teamMeetings:
   name: Team Meetings
-
+midtermReview:
+  name: Midterm Review
