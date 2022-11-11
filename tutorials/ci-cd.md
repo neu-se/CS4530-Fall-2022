@@ -54,7 +54,7 @@ Note that it is possible to set up Heroku to automatically deploy every new chan
 ![Heroku Profile Menu]({{site.baseurl}}{% link tutorials/assets/continuous_dev/heroku-account-settings-menu.png %})
 Scroll down to "API Key" and click "Reveal". Copy this key, you'll use it in the next step.
 8. Return to the GitHub Settings -> Secrets -> Actions pane, and add a new repository secret: `HEROKU_API_KEY`, setting the value to the exact string that you copied from "API Key" in the last step. Add the secret `HEROKU_APP_NAME` (in this example, our app name is `covey-deployment-example`), set to the name that you choose for your Heroku app in step 2. Add the secret `HEROKU_EMAIL`, set to the email address that you used when you created your Heroku account. Even though these last two values aren't *secret* per-say, configuring them in this way keeps them out of the config files, so you won't run into merge conflicts with our upstream branch (which would have a `main.yml` file with our own settings in it).
-9. Update the CI workflow (the file `.github/workflows/main.yml`). The starter code has the Heroku deploy commented out: uncomment it.
+9. Update the CI workflow (the file `.github/workflows/main.yml`). The starter code has the Heroku deploy commented out: uncomment it. If you see the line `if: github.ref == 'refs/heads/master'` in the file, update it to match as below (`refs/heads/mail`). 
 10. Return to your GitHub Actions page, and the detail view for the most recent build - retrigger it, so that it runs again. Now that we have the Heroku secrets installed, we expect the "Deploy to Heroku" aspect of the deployment job to pass, although the "deploy to netlify" task will still fail. Here is the segment of the GitHub Actions configuration file that deploys our app to Heroku:
 
 	```yaml
@@ -75,7 +75,7 @@ Scroll down to "API Key" and click "Reveal". Copy this key, you'll use it in the
  11. To confirm that your service is successfully deployed, try to visit it in your browser. Use the URL that you noted in step 5 ("Your app can be found at https://covey-deployment-example.herokuapp.com/"). Append `towns` to the URl, and visit it in your browser (e.g. `https://covey-deployment-example.herokuapp.com/towns`). After a short delay, you should see the response `{"isOK":true,"response":{"towns":[]}}`.
 
 ## Set up Netlify
-**Note 11/6:** The Netlify invites have not been successfully sent yet. There is a bug in Netlify's rate-limiting is effecting us, we will update this document and piazza when this is resolved.
+**Note 11/10:** Due to an apparently "known limitation" with Netlify's API, it took 4 days to send out all of the invitations. Everyone should now have received an invitation. Be sure to create your account using your @northeastern.edu email (which might require you to "signup" for a Netlify account with that email instead of sign in with GitHub).
 
 The last step to our continuous development pipeline will be to automatically deploy our frontend to Netlify. Netlify will create an optimized production build of your frontend (by running `npm run build`) and host it in their globally-distributed content delivery network. Netlify will also automatically build an deploy previews of pull requests on your repository. 
  
