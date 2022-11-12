@@ -72,7 +72,7 @@ Scroll down to "API Key" and click "Reveal". Copy this key, you'll use it in the
  {% endraw %}
 	```
 
- 11. To confirm that your service is successfully deployed, try to visit it in your browser. Use the URL that you noted in step 5 ("Your app can be found at https://covey-deployment-example.herokuapp.com/"). Append `towns` to the URl, and visit it in your browser (e.g. `https://covey-deployment-example.herokuapp.com/towns`). After a short delay, you should see the response `{"isOK":true,"response":{"towns":[]}}`.
+ 11. To confirm that your service is successfully deployed, try to visit it in your browser. Use the URL that you noted in step 5 ("Your app can be found at https://covey-deployment-example.herokuapp.com/"). Append `towns` to the URl, and visit it in your browser (e.g. `https://covey-deployment-example.herokuapp.com/towns`). After a short delay, you should see the response `[]`.
 
 ## Set up Netlify
 **Note 11/10:** Due to an apparently "known limitation" with Netlify's API, it took 4 days to send out all of the invitations. Everyone should now have received an invitation. Be sure to create your account using your @northeastern.edu email (which might require you to "signup" for a Netlify account with that email instead of sign in with GitHub).
