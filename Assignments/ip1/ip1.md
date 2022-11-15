@@ -28,7 +28,7 @@ By pressing the spacebar within an `InteractableArea`, the user can trigger an i
 An `InteractableArea` in one user's browser can also emit events that are delivered in real-time to other players interacting with that same area.
 
 The objective for this semester's individual project is to implement this new `InteractableArea` abstraction, with two concrete implementations: `ConversationArea` and `ViewingArea`. While the `ConversationArea` will be implemented by refactoring last semester's code to use the new interface, the  `ViewingArea` is a new concept.
-The `ViewingArea` alows players to have "watch parties": each player who is within the `ViewingArea` sees the same streaming video.
+The `ViewingArea` allows players to have "watch parties": each player who is within the `ViewingArea` sees the same streaming video.
 If one player pauses the video, it pauses for all other players watching it, and the playback is synchronized between all players watching the video.
 
 This implementation effort will be split across two deliverables. In this first deliverable, you will implement and test the core backend components for this feature, and in the second deliverable, you will connect these new components to the rest of the backend, and implement and test the frontend components. 
@@ -39,6 +39,12 @@ The objectives of this assignment are to:
 *  Learn how to read and write code in TypeScript
 *  Translate high-level requirements into code
 *  Learn how to write unit tests with Jest
+
+## Changelog
+* 9/9/22: Added clear instructions to run eslint
+* 9/12/22: Clarified which properties to use for `fromMapObject`
+* 9/13/22: Added note about integration tests in part 4
+* 9/15/22: Added further clarification that students should *not* attempt to replicate the integaration tests in their test suite
 
 ## Getting started with this assignment
 
@@ -124,9 +130,9 @@ classDiagram
 </div>
 
 ## Grading
-This submission will be scored out of 100 points, 90 of which will be automatically awarded by the gradign script, with the remaining 10 manually awarded by the course staff.
+This submission will be scored out of 100 points, 90 of which will be automatically awarded by the grading script, with the remaining 10 manually awarded by the course staff.
 
-Your code will automatically be evaluated for linter errors and warnings. Submissions that have *any* linter errors will automatically receive a grade of 0. **Do not wait to run the linter until the last minute**.
+Your code will automatically be evaluated for linter errors and warnings. Submissions that have *any* linter errors will automatically receive a grade of 0. **Do not wait to run the linter until the last minute**. To check for linter errors, run the command `npm run lint` from the terminal. The handout contains the same eslint configuration that is used by our grading script.
 
 Your code will be automatically evaluated for functional correctness by a test suite that expands on the core tests that are distributed in the handout. 
 Your tests will be automatically evaluated for functional correctness by a process that will inject bugs into our reference solution: to receive full marks your tests must detect a minimum number of injected bugs. 
@@ -294,6 +300,8 @@ public static fromMapObject(mapObject: ITiledMapObject,
 {% endhighlight %}
 </details>
 
+(Added 9/12) `fromMapObject` should create the `BoundingBox` from the `mapObject` using its fields: `x, y, width, height`. The `id` of the corresponding `InteractableArea` should match the `name` property of the `mapObject`. If it is helpful: `fromMapObject` may throw an error if the `mapObject` is invalid.
+
 Grading for implementation tasks:
 * `toModel`: 3 points
 * `remove`: 3 points
@@ -347,6 +355,8 @@ Avery has again provided a complete test suite for `remove`, and will expect you
 {% endhighlight %}
 </details>
 
+(Added 9/12) `fromMapObject` should create the `BoundingBox` from the `mapObject` using its fields: `x, y, width, height`. The `id` of the corresponding `InteractableArea` should match the `name` property of the `mapObject`. If it is helpful: `fromMapObject` may throw an error if the `mapObject` is invalid.
+
 Grading for implementation tasks:
 * `remove`: 3 points
 * `updateModel`: 3 points
@@ -363,7 +373,11 @@ Your last task for this deliverable is to implement a function to validate the `
 
 Avery has provided you with a single test case that you can use to check your progress; you will find that it tests some basic functionality of this function, but does not test the full specification. Please add new tests in the same `describe` block as the existing one in `src/town/Town.test.ts`. You can run these tests by running the command `npx jest --watch Town.test`, which will automatically re-run the tests as you update the file. 
 
-Hint: The function takes as a parameter an `ITiledMap` object; you can learn more about the structure from reviewing the type definition, from the [Tiled JSON Map Format Specification](https://doc.mapeditor.org/en/stable/reference/json-map-format/), and from the example provided in the test case for `initializeFromMap` in the handout. The `type` property of each object in the map identifies it as a `ViewingArea`, `ConversationArea`, or other.
+Hint: The function takes as a parameter an `ITiledMap` object; you can learn more about the structure from reviewing the type definition, from the [Tiled JSON Map Format Specification](https://doc.mapeditor.org/en/stable/reference/json-map-format/), and from the example provided in the test case for `initializeFromMap` in the handout. The specific *layer* of the map that you are looking for will be of the type `ITiledMapObjectLayer`. The object layer will list all of the objects. The `type` property of each object in that layer identifies it as a `ViewingArea`, `ConversationArea`, or other - you can ignore any others.
+
+Note (9/13/22): The grading script will also run two integration tests as part of grading this task. The integration tests will check for the behavior of every single one of the methods that you were required t complete for this and the other tasks. While we aim to create test suites for each individual implementation task that are *perfect*, this is at times a difficult task, and these two integration tests check how the different units interact. These two tests are clearly identified as integration tests in the grading output. 
+
+Note (9/15/22): Do *not* try to replicate these integration tests in your tests for `initializeFromMap`. We will *only* grade your tests for `initializeFromMap` on their ability to find defects in our implementation of `initializeFromMap`, and *not* in any other functions.
 
 Grading:
 * 10 points for a correct implementation
@@ -393,3 +407,4 @@ The grading script should also accept your submission if you upload only a subse
 GradeScope will provide you with feedback on your submission, but note that it will *not* include any marks that will be assigned after we manually grade your submission for code style (it will show 0 for this until it is graded). It may take several minutes for the grading script to complete.
 
 GradeScope is configured to only provide feedback on at most 5 submissions per-24-hours per-student (submissions that fail to run or receive a grade of 0 are not counted in that limit). We strongly encourage you to lint and test your submission on your local development machine, and *not* rely on GradeScope for providing grading feedback - relying on GradeScope is a very slow feedback loop.
+To check for linter errors, run the command `npm run lint` from the terminal. The handout contains the same eslint configuration that is used by our grading script.

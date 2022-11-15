@@ -1,6 +1,7 @@
 ---
 name: Sanjana Dabbiru
 role: Teaching Assistant
-photo: staff/sanjana_dabbiru.jpg
+photo: staff/sanjana.jpg
+email:  dabbiru.sa@northeastern.edu
 
 ---
