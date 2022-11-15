@@ -1,6 +1,6 @@
 ---
 layout: page
-title: API and Backend testing
+title: API and Backend Testing
 permalink: /tutorials/backend-testig
 parent: Tutorials
 nav_order: 7
@@ -13,7 +13,7 @@ To learn how to test RESTful Web service API access, we're going to review a wor
 
 On the React side all access to RESTful Web service APIs is implemented in service files such as users-service.js one per resource. The users-service.js code below collects all CRUD operations implemented in terms of the popular axios library. The BASE_URL points to my server on Heroku and you should change it to point to your Heroku server. The createUser function posts a user object to the server and receives a response with the new user inserted in the database. The findAllUsers sends a GET request to the server and receives an array of all users. The findUserById retrieves a user by their primary key. The deleteUser removes a user by their primary key. The deleteUsersByUsername removes a user given their username.
 
-```js
+```ts
 import axios from "axios";
 // change this to point to your server on Heroku
 const BASE_URL = "https://software-engineering-node.herokuapp.com/api";
