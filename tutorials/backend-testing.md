@@ -6,7 +6,56 @@ parent: Tutorials
 nav_order: 7
 ---
 
-# Testing front end access to RESTful Web service APIs
+## Mocking axios
+
+In unit testing, mocks provide us with the capability to stub the functionality provided by a dependency and a means to observe how our code interacts with the dependency. Mocks are especially useful when it's expensive or impractical to include a dependency directly into our tests, for example, in cases where your code is making HTTP calls to an API or interacting with the database layer.
+
+It is preferable to stub out the responses for these dependencies, while making sure that they are called as required. This is where mocks come in handy.
+
+
+- Use jest.mock(...) to mock axios module to test without actually hitting the API
+- Use mockResolvedValue for .get to return data to assert against
+- Want axios.get('/users.json') to return fake response
+
+// need to add examples from code base
+
+```ts
+import axios from 'axios';
+import Users from './users';
+
+jest.mock('axios');
+
+test('should fetch users', () => {
+const users = [{name: 'Bob'}];
+const resp = {data: users};
+axios.get.mockResolvedValue(resp);
+
+// or you could use the following depending on your use case:
+// axios.get.mockImplementation(() => Promise.resolve(resp))
+
+return Users.all().then(data => expect(data).toEqual(users));
+});
+```
+
+- Use mockRejectedValue along with mockResolvedValue to reject with different expectations
+
+```ts
+test('async test', async () => {
+ const asyncMock = jest
+   .fn<() => Promise<never>>()
+   .mockRejectedValue(new Error('Async error message'));
+
+ await asyncMock(); // throws 'Async error message'
+});
+```
+
+### Testing with jest-mock-extended
+If you want to use proper dependency injection in Jest, you would need to use jest.mock() to mock out the class, or you would have to roll your on implementation using jest.fn().mockImplementation({}), returning a class like structure. Even then, TypeScript support is patchy for classes and pretty much non-existent for interfaces. Yes, spys can achieve the same functionality in some cases, but sometimes it does not feel like the right tool for the job.
+
+jest-mock-extended provides a few helpers that make the job of mocking anything Typescript based much easier.
+
+// need to add examples from code base
+## Testing front end access to RESTful Web service APIs
 Front end applications depend on servers for data access and other middleware resources. UI components in the React application use services to interact with controllers implemented in the Node server. React services send HTTP requests for data and Node servers respond with data. In this section we're going to learn how to test the access to RESTful Web service APIs.
 
 To learn how to test RESTful Web service API access, we're going to review a working set of tests that verify access to the users RESTful Web service API
@@ -179,40 +228,6 @@ describe('findCourseById', () => {
 
 ```
 
-## Mocking axios
-- Use jest.mock(...) to mock axios module to test without actually hitting the API
-- Use mockResolvedValue for .get to return data to assert against
-- Want axios.get('/users.json') to return fake response
-
-```ts
-import axios from 'axios';
-import Users from './users';
-
-jest.mock('axios');
-
-test('should fetch users', () => {
-const users = [{name: 'Bob'}];
-const resp = {data: users};
-axios.get.mockResolvedValue(resp);
-
-// or you could use the following depending on your use case:
-// axios.get.mockImplementation(() => Promise.resolve(resp))
-
-return Users.all().then(data => expect(data).toEqual(users));
-});
-```
-
-- Use mockRejectedValue along with mockResolvedValue to reject with different expectations
-
-```ts
-test('async test', async () => {
- const asyncMock = jest
-   .fn<() => Promise<never>>()
-   .mockRejectedValue(new Error('Async error message'));
-
- await asyncMock(); // throws 'Async error message'
-});
-```
 
 ## Useful resources
 - [Testing asynchronous code](https://jestjs.io/docs/asynchronous)
