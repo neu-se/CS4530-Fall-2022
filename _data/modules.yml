@@ -97,6 +97,7 @@ tp3:
 tp4:
   name: Project Final Deliverable
   type: deadline
+  page: /assignments/project-deliverable
 veteransday:
   name: Veteran's Day (No class)
   type: holiday
