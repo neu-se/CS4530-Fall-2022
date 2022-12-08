@@ -1,0 +1,795 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  
+
+  <link rel="shortcut icon" href="/CS4530-Fall-2022/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="/CS4530-Fall-2022/assets/css/just-the-docs-default.css">
+
+  
+
+  
+    <script type="text/javascript" src="/CS4530-Fall-2022/assets/js/vendor/lunr.min.js"></script>
+  
+  <script type="text/javascript" src="/CS4530-Fall-2022/assets/js/just-the-docs.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Individual Project 2 | CS4530, Fall 2022</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Individual Project 2" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Northeastern University CS 4530 “Fundamentals of Software Engineering”, Fall 2022. Professors Jonathan Bell, Adeel Bhutta and Mitch Wand." />
+<meta property="og:description" content="Northeastern University CS 4530 “Fundamentals of Software Engineering”, Fall 2022. Professors Jonathan Bell, Adeel Bhutta and Mitch Wand." />
+<link rel="canonical" href="https://neu-se.github.io/CS4530-Fall-2022/assignments/ip2" />
+<meta property="og:url" content="https://neu-se.github.io/CS4530-Fall-2022/assignments/ip2" />
+<meta property="og:site_name" content="CS4530, Fall 2022" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Individual Project 2" />
+<script type="application/ld+json">
+{"headline":"Individual Project 2","dateModified":"2022-12-08T20:13:58+00:00","description":"Northeastern University CS 4530 “Fundamentals of Software Engineering”, Fall 2022. Professors Jonathan Bell, Adeel Bhutta and Mitch Wand.","url":"https://neu-se.github.io/CS4530-Fall-2022/assignments/ip2","@type":"WebPage","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+</head>
+
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="svg-link" viewBox="0 0 24 24">
+      <title>Link</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </symbol>
+    <symbol id="svg-search" viewBox="0 0 24 24">
+      <title>Search</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+        <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+    </symbol>
+    <symbol id="svg-menu" viewBox="0 0 24 24">
+      <title>Menu</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+        <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </symbol>
+    <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+      <title>Expand</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </symbol>
+    <symbol id="svg-doc" viewBox="0 0 24 24">
+      <title>Document</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+        <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
+      </svg>
+    </symbol>
+  </svg>
+
+  <div class="side-bar">
+    <div class="site-header">
+      <a href="https://neu-se.github.io/CS4530-Fall-2022/" class="site-title lh-tight">
+  CS4530, Fall 2022
+
+</a>
+      <a href="#" id="menu-button" class="site-button">
+        <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg>
+      </a>
+    </div>
+    <nav role="navigation" aria-label="Main" id="site-nav" class="site-nav">
+      
+        <ul class="nav-list"><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://neu-se.github.io/CS4530-Fall-2022/calendar/" class="nav-list-link">Calendar</a><ul class="nav-list "><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/calendar/s2" class="nav-list-link">Section 2 - Calendar</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/calendar/s3" class="nav-list-link">Section 3 - Calendar</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/calendar/s4" class="nav-list-link">Section 4 - Calendar</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/calendar/s5" class="nav-list-link">Section 5 - Calendar</a></li></ul></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/" class="nav-list-link">Modules</a><ul class="nav-list "><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/1-requirements-testing" class="nav-list-link">1 - Orientation & Requirements</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/2-requirements-to-code" class="nav-list-link">2 - From Requirements to Code</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/3-code-level-design-principles" class="nav-list-link">3 - Code-Level Design Principles</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/4-interaction-level-design-patterns" class="nav-list-link">4 - Interaction-Level Design Patterns</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/5-concurrency-patterns-in-typescript" class="nav-list-link">5 - Concurrency Patterns in Typescript</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/6-software-process" class="nav-list-link">6 - Software Process</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/7-react" class="nav-list-link">7 - React</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/8-patterns-of-react" class="nav-list-link">8 - Patterns of React</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/9-distributed-principles" class="nav-list-link">9 - Distributed Systems Principles and Requirements</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/10-distributed-architectures" class="nav-list-link">10 - Distributed Systems Architectures</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/11-good-tests" class="nav-list-link">11 - Test Adequacy</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/12-larger-tests" class="nav-list-link">12 - Larger Tests</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/13-cloud-infrastructure" class="nav-list-link">13 - Cloud Infrastructure</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/14-continuous-development" class="nav-list-link">14 - Continuous Development</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/15-security" class="nav-list-link">15 - Security</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/16-technical-debt" class="nav-list-link">16 - Technical Debt</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/17-open-source" class="nav-list-link">17 - Open Source</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/18-equitable-software" class="nav-list-link">18 - Ethics</a></li></ul></li><li class="nav-list-item active"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://neu-se.github.io/CS4530-Fall-2022/assignments/" class="nav-list-link">Assignments</a><ul class="nav-list "><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/assignments/ip1" class="nav-list-link">Individual Project 1</a></li><li class="nav-list-item  active"><a href="https://neu-se.github.io/CS4530-Fall-2022/assignments/ip2" class="nav-list-link active">Individual Project 2</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/assignments/project-overview" class="nav-list-link">Project Overview</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/assignments/project-plan" class="nav-list-link">Project Plan</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/assignments/revised-project-plan" class="nav-list-link">Revised Project Plan</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/Assignments/project-deliverable" class="nav-list-link">Project Final Deliverable</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/assignments/project-showcase" class="nav-list-link">Project Showcase</a></li></ul></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://neu-se.github.io/CS4530-Fall-2022/tutorials/" class="nav-list-link">Tutorials</a><ul class="nav-list "><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/tutorials/week1-getting-started" class="nav-list-link">Installing a Development Environment</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/tutorials/week4-react-basics" class="nav-list-link">React Tutorial</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/tutorials/week2-typescript-basics" class="nav-list-link">Typescript Basics</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/tutorials/week5-unit-testing" class="nav-list-link">Unit Testing with Jest</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/tutorials/continuous-development" class="nav-list-link">CI/CD for Covey.Town</a></li></ul></li><li class="nav-list-item"><a href="https://neu-se.github.io/CS4530-Fall-2022/textbooks/" class="nav-list-link">Textbooks</a></li><li class="nav-list-item"><a href="https://neu-se.github.io/CS4530-Fall-2022/staff/" class="nav-list-link">Staff</a></li><li class="nav-list-item"><a href="https://neu-se.github.io/CS4530-Fall-2022/resources/" class="nav-list-link">Other Resources</a></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://neu-se.github.io/CS4530-Fall-2022/policies/" class="nav-list-link">Policies</a><ul class="nav-list "><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/policies/style/" class="nav-list-link">Code Style</a></li></ul></li></ul>
+
+      
+    </nav>
+    <footer class="site-footer">
+      This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+    </footer>
+  </div>
+  <div class="main" id="top">
+    <div id="main-header" class="main-header">
+      
+        <div class="search">
+          <div class="search-input-wrap">
+            <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search CS4530, Fall 2022" aria-label="Search CS4530, Fall 2022" autocomplete="off">
+            <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label>
+          </div>
+          <div id="search-results" class="search-results"></div>
+        </div>
+      
+      
+      
+    </div>
+    <div id="main-content-wrap" class="main-content-wrap">
+      
+        <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+            <ol class="breadcrumb-nav-list">
+              
+                <li class="breadcrumb-nav-list-item"><a href="https://neu-se.github.io/CS4530-Fall-2022/assignments/">Assignments</a></li>
+              
+              <li class="breadcrumb-nav-list-item"><span>Individual Project 2</span></li>
+            </ol>
+          </nav>
+        
+      
+      <div id="main-content" class="main-content" role="main">
+        
+          <h2 class="fs-6" id="individual-project-2">
+        
+        
+          <a href="#individual-project-2" class="anchor-heading" aria-labelledby="individual-project-2"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 
+    
+    Individual Project 2
+    
+    <strong class="label label-red">Due Wednesday October 19, 11:00am ET</strong>
+
+        
+        
+      </h2>
+    
+
+
+<p>Welcome back! We were pleased to see your thorough implementation of the new Interactables abstraction in the townService of Covey.Town.
+While you have been working on these backend features, our UX designer Calin has finished the design of the ViewingAreas feature, and we’re now ready to give you the rest of the feature.
+Calin found the <a href="https://github.com/cookpete/react-player">react-player</a> component, which seems to be a great component to use to implement video playback within Covey.Town.</p>
+
+<p>In this (final) deliverable for the ViewingAreas feature, you will create the following components:</p>
+<ul>
+  <li>Within the backend townService: REST and socket-io endpoints to process API calls from clients, dispatching them to the controllers delivered in IP1.</li>
+  <li>Within the frontend application:
+    <ul>
+      <li>An event handler for the frontend <code class="language-plaintext highlighter-rouge">TownController</code> to process <code class="language-plaintext highlighter-rouge">interactableUpdate</code> messages dispatched by the <code class="language-plaintext highlighter-rouge">townService</code> (you implemented those backend components in IP1).</li>
+      <li>A <code class="language-plaintext highlighter-rouge">ViewingAreaController</code> and <code class="language-plaintext highlighter-rouge">ConversationAreaController</code> that will maintain data structures and dispatch events to the UI in response to updates from the <code class="language-plaintext highlighter-rouge">TownController</code></li>
+      <li>React hooks to update existing React components in response to changes to <code class="language-plaintext highlighter-rouge">ViewingAreas</code>, <code class="language-plaintext highlighter-rouge">ConversationAreas</code>, and town settings</li>
+      <li>A React component for the <code class="language-plaintext highlighter-rouge">ViewingArea</code> that integrates the <code class="language-plaintext highlighter-rouge">react-player</code> with those hooks and controllers</li>
+    </ul>
+  </li>
+</ul>
+
+<p>When you complete this deliverable, you should have a fully-functioning implementation of the Viewing Area feature, and a better understanding of the covey.town architecture.</p>
+
+<p>This sequence diagram shows the interaction between these high level components to create a new viewing area and play a video back synchronized between multiple frontends.</p>
+
+<p><a href="https://mermaid.live/edit#pako:eNqdlU1vozAQhv_KiEtTqbmutDlUSujmtFWkQHPKxTVDatXYrG0SRVX_-45tCKGF7kdOQOadmfcZD7wlXBeYLBKLvxpUHB8EOxhW7RXQjzVOq6Z6RhPva2ac4KJmysFu-QjMwvKI5nxjYSfwJNRhaZDtRIEaRhTphCDVyhkt5ViZfCDK9Un10TBbG7pBVdx-Fq6C0AsyNEfBEWYrxl_HgzdrH5wyKRRV6bLCLBNVLUUp0IuiTGmHoKkfT2ABS2gsXSMJjAUGx2D-afsTnIZasnMLgoLn9_d5uqBCZ8WBk2-HVxBmCk-BHGnbDhl34khRXhyf5CklWU0ngdn2R5YDZ1K2OVbpvK2bNZyjtXDJRM-DhfaP-LzAz1V7y770NVKhSm0q8i1lMOsZ6BLISgRxIT1QUT5iypkTWnlMYboxNDQc-xUeKTXDniU-1QV1NIKoRbKj-CbEPNJxlqOBu7QzHFpLX5g6jKeMswqhW5wbOgnk647aPgWTxBrcC147ZHRYvnIYTtbA4Wb9hUON1-30-L3o2_w7aM4bE-WK0J_hBQ3GcGq2h96tTdkd6K79Z9oE0vsg0qO89HhjP1cNIB4a44U-gRd_QEX4owFAyWqLRS4qzJAP2PuhYiXc1XmNosEoV-OjH-a9_RuWE5Ihzviy6myBsB6LX65-sN1r4ZriBaJlVXsSPvJs4Y-XncC5Wf8fgfyfJKMrMxHbb01t9MHQeyIuDkwK-uXJEF-tRzEMBVFCpQ3SEjEFhRGlg4lT94fp0DCSu6RCUzFR0EfszT_eJ7ScFe6TBV0WWLJGun2yV-8U6j9oGcmThTMN3iURQPvNSxYlkxbffwNJ5Faj"><img src="https://mermaid.ink/img/pako:eNqdlU1vozAQhv_KiEtTqbmutDlUSujmtFWkQHPKxTVDatXYrG0SRVX_-45tCKGF7kdOQOadmfcZD7wlXBeYLBKLvxpUHB8EOxhW7RXQjzVOq6Z6RhPva2ac4KJmysFu-QjMwvKI5nxjYSfwJNRhaZDtRIEaRhTphCDVyhkt5ViZfCDK9Un10TBbG7pBVdx-Fq6C0AsyNEfBEWYrxl_HgzdrH5wyKRRV6bLCLBNVLUUp0IuiTGmHoKkfT2ABS2gsXSMJjAUGx2D-afsTnIZasnMLgoLn9_d5uqBCZ8WBk2-HVxBmCk-BHGnbDhl34khRXhyf5CklWU0ngdn2R5YDZ1K2OVbpvK2bNZyjtXDJRM-DhfaP-LzAz1V7y770NVKhSm0q8i1lMOsZ6BLISgRxIT1QUT5iypkTWnlMYboxNDQc-xUeKTXDniU-1QV1NIKoRbKj-CbEPNJxlqOBu7QzHFpLX5g6jKeMswqhW5wbOgnk647aPgWTxBrcC147ZHRYvnIYTtbA4Wb9hUON1-30-L3o2_w7aM4bE-WK0J_hBQ3GcGq2h96tTdkd6K79Z9oE0vsg0qO89HhjP1cNIB4a44U-gRd_QEX4owFAyWqLRS4qzJAP2PuhYiXc1XmNosEoV-OjH-a9_RuWE5Ihzviy6myBsB6LX65-sN1r4ZriBaJlVXsSPvJs4Y-XncC5Wf8fgfyfJKMrMxHbb01t9MHQeyIuDkwK-uXJEF-tRzEMBVFCpQ3SEjEFhRGlg4lT94fp0DCSu6RCUzFR0EfszT_eJ7ScFe6TBV0WWLJGun2yV-8U6j9oGcmThTMN3iURQPvNSxYlkxbffwNJ5Faj" alt="" /></a></p>
+
+<p>The sequence beings when a user selects a video to play in a viewing area, entering it into the <code class="language-plaintext highlighter-rouge">ViewingAreaVideo</code>:</p>
+<ol>
+  <li>The <code class="language-plaintext highlighter-rouge">ViewingAreaVideo</code> asks the <code class="language-plaintext highlighter-rouge">TownController</code> to create a new viewing area with the specified video</li>
+  <li>The <code class="language-plaintext highlighter-rouge">TownController</code> asks the <code class="language-plaintext highlighter-rouge">townService</code> to create the new viewing area with the specified video, making a REST call</li>
+  <li>Assuming that the request was valid, the <code class="language-plaintext highlighter-rouge">townService</code> returns success</li>
+  <li>Assuming that the request was valid, the <code class="language-plaintext highlighter-rouge">TownController</code> returns success</li>
+  <li>The <code class="language-plaintext highlighter-rouge">townService</code> broadcasts an <code class="language-plaintext highlighter-rouge">interactableUpdate</code> message with the new video URL (happening in parallel with 9)</li>
+  <li>The <code class="language-plaintext highlighter-rouge">TownController</code> receives the <code class="language-plaintext highlighter-rouge">interactableUpdate</code>, finds the correct <code class="language-plaintext highlighter-rouge">ViewingAreaController</code> and pushes an <code class="language-plaintext highlighter-rouge">updateModel</code> event to it</li>
+  <li>The <code class="language-plaintext highlighter-rouge">ViewingAreaController</code> updates its model, and emits a <code class="language-plaintext highlighter-rouge">videoChange</code> event to its listeners</li>
+  <li>The <code class="language-plaintext highlighter-rouge">ViewingAreaVideo</code> receives the update, re-renders, and now plays the video</li>
+  <li>The <code class="language-plaintext highlighter-rouge">townService</code> sends the same <code class="language-plaintext highlighter-rouge">interactableUpdate</code> to Calin’s frontend, and (6-8) happen in Calin’s frontend</li>
+  <li>During playback, Avery’s ViewingAreaVideo updates the <code class="language-plaintext highlighter-rouge">elapsedTimeSec</code> on the <code class="language-plaintext highlighter-rouge">ViewingAreaController</code></li>
+  <li>In response to the update from the <code class="language-plaintext highlighter-rouge">ViewingAreaVideo</code>, the <code class="language-plaintext highlighter-rouge">ViewingAreaController</code> asks the <code class="language-plaintext highlighter-rouge">TownController</code> to emit an update to the <code class="language-plaintext highlighter-rouge">townService</code></li>
+  <li>The <code class="language-plaintext highlighter-rouge">TownController</code> emits the <code class="language-plaintext highlighter-rouge">interactableUpdate</code> event, notifying the backend of the elapsed playack time</li>
+  <li>The <code class="language-plaintext highlighter-rouge">townService</code> relays that <code class="language-plaintext highlighter-rouge">interactableUpdate</code> to other clients, which will ensure that their video playback is synchronized</li>
+  <li>In parallel to 10-13, Calin’s client emits <code class="language-plaintext highlighter-rouge">interactableUpdate</code> updates with their <code class="language-plaintext highlighter-rouge">elapsedTimeSec</code></li>
+  <li>The <code class="language-plaintext highlighter-rouge">townService</code> forwards this update to Avery’s frontend <code class="language-plaintext highlighter-rouge">TownController</code></li>
+  <li>Avery’s <code class="language-plaintext highlighter-rouge">TownController</code> finds the <code class="language-plaintext highlighter-rouge">ViewingAreaController</code> responsible for that viewing area, and calls its <code class="language-plaintext highlighter-rouge">updateModel</code> method, updating its view of the <code class="language-plaintext highlighter-rouge">elapsedTimeSec</code></li>
+  <li>The <code class="language-plaintext highlighter-rouge">ViewingAreaController</code> emits a <code class="language-plaintext highlighter-rouge">progressChange</code> event to its listeners.</li>
+  <li>The <code class="language-plaintext highlighter-rouge">ViewingAreaVideo</code> will seek to the new <code class="language-plaintext highlighter-rouge">elapsedTimeSec</code> if it is out of sync</li>
+</ol>
+      <h2 id="objectives-of-this-assignment">
+        
+        
+          <a href="#objectives-of-this-assignment" class="anchor-heading" aria-labelledby="objectives-of-this-assignment"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Objectives of this assignment
+        
+        
+      </h2>
+    
+<p>The objectives of this assignment are to:</p>
+<ul>
+  <li>Write new TypeScript code that uses asynchronous operations</li>
+  <li>Write test cases that utilize mocks and spies</li>
+  <li>Write React components and hooks that make use of state</li>
+</ul>
+      <h2 id="getting-started-with-this-assignment">
+        
+        
+          <a href="#getting-started-with-this-assignment" class="anchor-heading" aria-labelledby="getting-started-with-this-assignment"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Getting started with this assignment
+        
+        
+      </h2>
+    
+
+<p>Start by <a href="/CS4530-Fall-2022/Assignments/ip2/ip2-handout.zip">downloading the starter code</a>. Extract the archive and run <code class="language-plaintext highlighter-rouge">npm install</code> to fetch the dependencies.</p>
+      <h3 id="installation-notes">
+        
+        
+          <a href="#installation-notes" class="anchor-heading" aria-labelledby="installation-notes"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Installation notes
+        
+        
+      </h3>
+    
+
+<p><strong>Configuring Jest and VSCode</strong>: If you would like to use the built-in Jest test runner for VSCode (where it shows the tests and their status in the sidebar), the easiest way to accomplish this for this project is to open <em>just</em> the “frontend” directory or just the “townService” directory in VSCode - not the top-level “ip2-handout” directory. If you have a quick-fix to make it work with the whole project at once, please feel free to share on Piazza and we will incorportate that here.</p>
+
+<p><strong>NPM install failures</strong>: The libraries used for React require some native binaries to be installed – code written and compiled for your computer (not JavaScript). If you run into issues with <code class="language-plaintext highlighter-rouge">npm install</code> not succeeding, please try installing the following libraries using either <a href="https://brew.sh">Homebrew (if on Mac)</a>, apt-get, or your favorite other package manager: <code class="language-plaintext highlighter-rouge">pixman</code>, <code class="language-plaintext highlighter-rouge">cairo</code>, <code class="language-plaintext highlighter-rouge">pkgconfig</code> and <code class="language-plaintext highlighter-rouge">pango</code>. For example, run <code class="language-plaintext highlighter-rouge">brew install pixman cairo pkgconfig pango</code>. If you are on a newer Mac with an M1 or M2 chip, you may need to use <code class="language-plaintext highlighter-rouge">arch -arm64 brew install pixman cairo pango</code>. On Windows: Students have reported seeing the failure <code class="language-plaintext highlighter-rouge">error /bin/bash: node: command not found</code> upon <code class="language-plaintext highlighter-rouge">npm install</code> in the <code class="language-plaintext highlighter-rouge">frontend</code> directory. If you encounter this error, please try to delete the <code class="language-plaintext highlighter-rouge">node_modules</code> directory and re-run <code class="language-plaintext highlighter-rouge">npm install</code> in the <code class="language-plaintext highlighter-rouge">frontend</code> directory from a bash shell instead of a windows command prompt.</p>
+
+<p>Changelog:</p>
+<ul>
+  <li>9/26: Update description for <code class="language-plaintext highlighter-rouge">socket.on('interactableUpdate')</code> on this page to match the handout; update the handout to remove prettier/linting issues (if you already have downloaded the handout, <code class="language-plaintext highlighter-rouge">npm run format</code> in the frontend directory will get you the same thing)</li>
+  <li>9/27: Clarify that <code class="language-plaintext highlighter-rouge">socket.on('interactableUpdate')</code>  should forward the interactableUpdate message to the other players in the town using the emitter <code class="language-plaintext highlighter-rouge">newPlayer.townEmitter</code>. Update handout so that <code class="language-plaintext highlighter-rouge">ViewingAreaController</code> getter for <code class="language-plaintext highlighter-rouge">video</code> return type is <code class="language-plaintext highlighter-rouge">string | undefined</code>. Add installation suggestions.</li>
+  <li>9/29: Added sequence diagram of hook that uses town events.</li>
+</ul>
+      <h2 id="grading">
+        
+        
+          <a href="#grading" class="anchor-heading" aria-labelledby="grading"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Grading
+        
+        
+      </h2>
+    
+<p>This submission will be scored out of 200 points, 180 of which will be automatically awarded by the grading script, with the remaining 20 manually awarded by the course staff.</p>
+
+<p>Your code will automatically be evaluated for linter errors and warnings. Submissions that have <em>any</em> linter errors will automatically receive a grade of 0. <strong>Do not wait to run the linter until the last minute</strong>. To check for linter errors, run the command <code class="language-plaintext highlighter-rouge">npm run lint</code> from the terminal. The handout contains the same eslint configuration that is used by our grading script.</p>
+
+<p>Your code will be automatically evaluated for functional correctness by a test suite that expands on the core tests that are distributed in the handout. 
+Your tests will be automatically evaluated for functional correctness by a process that will inject bugs into our reference solution: to receive full marks your tests must detect a minimum number of injected bugs. 
+You will <strong>not</strong> receive detailed feedback on which injected bugs you do or do not find.</p>
+
+<p>The autograding script will impose a strict rate limit of 5 submissions per 24 hours.
+Submissions that fail to grade will not count against the quota.
+This limit exists to encourage you to start early on this assignment: students generally report that assignments like this take between 10-36 hours.
+If you start early, you will be able to take full advantage of the resources that we provide to help you succeed: office hours, discussion on Piazza — and the ability to have a greater total number of submission attempts.</p>
+
+<p>Your code will be manually evaluated for conformance to our course <a href="/CS4530-Fall-2022/policies/style/">style guide</a>. This manual evaluation will account for 10% of your total grade on this assignment. We will manually evaluate your code for style on the following rubric:</p>
+
+<p>To receive all 20 points:</p>
+<ul>
+  <li>All new names (e.g. for local variables, methods, and properties) follow the naming conventions defined in our style guide</li>
+  <li>There are no unused local variables</li>
+  <li>All public properties and methods (other than getters, setters, and constructors) are documented with JSDoc-style comments that describes what the property/method does, as defined in our style guide</li>
+  <li>The code and tests that you write generally follows the design principles discussed in week one. In particular, your design does not have duplicated code that could have been refactored into a shared method.</li>
+</ul>
+
+<p>We will review your code and note each violation of this rubric. We will deduct four points for each violation, up to a maximum of deducting all 20 style points.</p>
+      <h2 id="implementation-tasks">
+        
+        
+          <a href="#implementation-tasks" class="anchor-heading" aria-labelledby="implementation-tasks"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Implementation Tasks
+        
+        
+      </h2>
+    
+<p>This deliverable has four parts; each part will be graded on its own rubric. You should complete the assignment one part at a time, in the order presented here:</p>
+      <h3 id="task-1-implement-backend-handlers-15-points-total">
+        
+        
+          <a href="#task-1-implement-backend-handlers-15-points-total" class="anchor-heading" aria-labelledby="task-1-implement-backend-handlers-15-points-total"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Task 1: Implement Backend Handlers (15 points total)
+        
+        
+      </h3>
+    
+<p>In your last deliverable for the indivdiual project, you implemented a considerable portion of the backend code to support Interactables. What remains are the public-facing web service APIs that the client can directly invoke.</p>
+
+<p>These methods are located in two files:</p>
+<ul>
+  <li>townService/src/town/Town.ts (<code class="language-plaintext highlighter-rouge">socket.on('interactableUpdate')</code> handler and <code class="language-plaintext highlighter-rouge">addViewingArea</code>)</li>
+  <li>townService/src/town/TownsController.ts (<code class="language-plaintext highlighter-rouge">createViewingArea</code>)</li>
+</ul>
+
+<p>The <code class="language-plaintext highlighter-rouge">socket.on</code> handler is automatically invoked by the <a href="https://socket.io">socket-io library</a> when an event is received from a remote client.
+The <code class="language-plaintext highlighter-rouge">createViewingArea</code> function is automatically invoked by the <a href="https://github.com/lukeautry/tsoa">tsoa REST middleware</a> when a REST request is made by a remote client.
+We will learn more about both technologies in modules 9 and 10; for the purposes of this assignment you need only implement the functions as specified (such that they pass the provided test cases).</p>
+
+<p>To run the tests for this part, run the command <code class="language-plaintext highlighter-rouge">npm test TestName</code> in the <code class="language-plaintext highlighter-rouge">townService</code> directory, where <code class="language-plaintext highlighter-rouge">TestName</code> is either <code class="language-plaintext highlighter-rouge">Town.test</code> or <code class="language-plaintext highlighter-rouge">TownsController</code>.</p>
+
+<p>Clarification (9/24): A viewing area is “active” if there is a video set.</p>
+
+<details>
+  <summary>View the specification for these tasks</summary>
+
+  <figure class="highlight">
+    <pre><code class="language-typescript" data-lang="typescript"><span class="c1">//townService/src/town/Town.ts</span>
+<span class="cm">/**
+   * Creates a new viewing area in this town if there is not currently an active
+   * viewing area with the same ID. The viewing area ID must match the name of a
+   * viewing area that exists in this town's map, and the viewing area must not
+   * already have a video set.
+   *
+   * If successful creating the viewing area, this method:
+   *    Adds any players who are in the region defined by the viewing area to it
+   *    Notifies all players in the town that the viewing area has been updated by
+   *      emitting an interactableUpdate event
+   *
+   * @param viewingArea Information describing the viewing area to create.
+   *
+   * @returns True if the viewing area was created or false if there is no known
+   * viewing area with the specified ID or if there is already an active viewing area
+   * with the specified ID or if there is no video URL specified
+   */</span>
+  <span class="k">public</span> <span class="nx">addViewingArea</span><span class="p">(</span><span class="nx">viewingArea</span><span class="p">:</span> <span class="nx">ViewingAreaModel</span><span class="p">):</span> <span class="nx">boolean</span>
+
+<span class="c1">// townService/src/town/TownsController.ts</span>
+  <span class="cm">/**
+   * Creates a viewing area in a given town
+   *
+   * @param townID ID of the town in which to create the new viewing area
+   * @param sessionToken session token of the player making the request, must
+   *        match the session token returned when the player joined the town
+   * @param requestBody The new viewing area to create
+   *
+   * @throws InvalidParametersError if the session token is not valid, or if the
+   *          viewing area could not be created
+   */</span>
+  <span class="p">@</span><span class="nd">Post</span><span class="p">(</span><span class="dl">'</span><span class="s1">{townID}/viewingArea</span><span class="dl">'</span><span class="p">)</span>
+  <span class="p">@</span><span class="nd">Response</span><span class="o">&lt;</span><span class="nx">InvalidParametersError</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">400</span><span class="p">,</span> <span class="dl">'</span><span class="s1">Invalid values specified</span><span class="dl">'</span><span class="p">)</span>
+  <span class="k">public</span> <span class="k">async</span> <span class="nx">createViewingArea</span><span class="p">(</span>
+    <span class="p">@</span><span class="nd">Path</span><span class="p">()</span> <span class="nx">townID</span><span class="p">:</span> <span class="kr">string</span><span class="p">,</span>
+    <span class="p">@</span><span class="nd">Header</span><span class="p">(</span><span class="dl">'</span><span class="s1">X-Session-Token</span><span class="dl">'</span><span class="p">)</span> <span class="nx">sessionToken</span><span class="p">:</span> <span class="kr">string</span><span class="p">,</span>
+    <span class="p">@</span><span class="nd">Body</span><span class="p">()</span> <span class="nx">requestBody</span><span class="p">:</span> <span class="nx">ViewingArea</span><span class="p">,</span>
+  <span class="p">):</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="k">void</span><span class="o">&gt;</span>
+
+<span class="c1">// townService/src/town/Town.ts</span>
+
+<span class="c1">// Set up a listener to process updates to interactables.</span>
+<span class="c1">// Currently only knows how to process updates for ViewingArea's, and</span>
+<span class="c1">// ignores any other updates for any other kind of interactable.</span>
+<span class="c1">// For ViewingArea's: Uses the 'newPlayer' object's 'towmEmitter' to forward</span>
+<span class="c1">// the interactableUpdate to the other players in the town. Also dispatches an</span>
+<span class="c1">// updateModel call to the viewingArea that corresponds to the interactable being</span>
+<span class="c1">// updated. Does not throw an error if the specified viewing area does not exist.</span>
+  <span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">interactableUpdate</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="nx">update</span><span class="p">:</span> <span class="nx">Interactable</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{});</span></code></pre>
+  </figure>
+
+</details>
+      <h4 id="grading-for-task-1">
+        
+        
+          <a href="#grading-for-task-1" class="anchor-heading" aria-labelledby="grading-for-task-1"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Grading for Task 1:
+        
+        
+      </h4>
+    
+<p>You do not need to write any tests for task 1. The handout contains all of the tests that our grading script will use.</p>
+
+<p>Point break down for each of the implementation tasks:</p>
+<ul>
+  <li>Implement Town.ts socket.on(‘interactableUpdate’): 5 points</li>
+  <li>Implement Town.ts addViewingArea: 5 points</li>
+  <li>Implement TownController.ts createViewingArea: 5 points</li>
+</ul>
+
+<p>To receive marks for implementing each feature, your implementation must pass all of our tests for it.</p>
+      <h3 id="task-2-implement-and-test-frontend-controllers-65-points-total">
+        
+        
+          <a href="#task-2-implement-and-test-frontend-controllers-65-points-total" class="anchor-heading" aria-labelledby="task-2-implement-and-test-frontend-controllers-65-points-total"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Task 2: Implement and Test Frontend Controllers (65 points total)
+        
+        
+      </h3>
+    
+<p>Similar to the organization of the backend townService, the frontend application also has controllers that maintain the state of each interactable.</p>
+
+<p>The relevant files for this task are located in the directory <code class="language-plaintext highlighter-rouge">frontend/src/classes/</code>.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">TownController</code> interacts with the <code class="language-plaintext highlighter-rouge">townService</code>, receiving <code class="language-plaintext highlighter-rouge">ServerToClientEvents</code> from the backend and emitting <code class="language-plaintext highlighter-rouge">ClientToServerEvents</code> to the backend.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">TownController</code>, in turn, emits <code class="language-plaintext highlighter-rouge">TownEvents</code> to components in the frontend. These events are the events that the GUI components will observe. Each Viewing Area is represented by a <code class="language-plaintext highlighter-rouge">ViewingAreaController</code>, which emits <code class="language-plaintext highlighter-rouge">ViewingAreaEvents</code>. Each Conversation Area is represented by a <code class="language-plaintext highlighter-rouge">ConversationAreaController</code>, which emits <code class="language-plaintext highlighter-rouge">ConversationAreaEvents</code>. GUI components that display details about each converation area or viewing area will subscribe to these events so that they can remain up-to-date with the current state of the interactable.</p>
+
+<p>Your next task is to implement the <code class="language-plaintext highlighter-rouge">ViewingAreaController</code> and <code class="language-plaintext highlighter-rouge">ConversationAreaController</code>, along with the event handler for <code class="language-plaintext highlighter-rouge">TownController</code> to receive <code class="language-plaintext highlighter-rouge">interactableUpdate</code> messages from the townService.
+Each of these classes are stubbed out in the handout.</p>
+
+<p>Our handout does <em>not</em> include all of the tests in <code class="language-plaintext highlighter-rouge">ViewingAreaController.test.ts</code> or <code class="language-plaintext highlighter-rouge">ConversationAreaController.test.ts</code>. To receive full marks on task 2, you will <em>also</em> need enhance these test suites to check all of the behaviors of the methods that you are implementing.
+Testing the behavior of the <code class="language-plaintext highlighter-rouge">ViewingAreaController</code> and <code class="language-plaintext highlighter-rouge">ConversationAreaController</code> will require you to use <em>mocks</em>. 
+The <code class="language-plaintext highlighter-rouge">ViewingAreaController.test.ts</code> and <code class="language-plaintext highlighter-rouge">ConversationAreaController.test.ts</code> files in the handout contain all of the setup code that you will need to write tests to check that the correct listeners are invoked.
+The <code class="language-plaintext highlighter-rouge">mockListeners</code> object (in each test) are <em>mock</em> objects, which do not provide any implementation of the listener callbacks, but keep track of when they have been called.
+In this way, you can write an assertion that some listener method is called by asserting that the mock listener was called.</p>
+
+<p>To write an assertion that, for example, the <code class="language-plaintext highlighter-rouge">occupantsChange</code> listener is invoked in <code class="language-plaintext highlighter-rouge">ConversationAreaController</code>, you could use Jest’s <a href="https://jestjs.io/docs/expect#tohavebeencalled">toHaveBeenCalled()</a> matcher, as in:
+<code class="language-plaintext highlighter-rouge">expect(mockListeners.occupantsChange).toHaveBeenCalled()</code>. You might also find it useful to use the <a href="https://jestjs.io/docs/expect#tohavebeencalledwitharg1-arg2-">toHaveBeenCalledWith(args..)</a> matcher to check the arguments that are passed to the listener.
+To assert that a listener was <em>not</em> called, chain the <a href="https://jestjs.io/docs/expect#not"><code class="language-plaintext highlighter-rouge">not</code> matcher</a>, as in <code class="language-plaintext highlighter-rouge">expect(...).not.toHaveBeenCalled()</code>.</p>
+
+<p>We strongly suggest writing the tests before (or concurrent) with implementing the classes, so that you can use your own tests to help you develop your implementation.</p>
+
+<p>Note: you may find it useful to use the helper methods <code class="language-plaintext highlighter-rouge">isConversationArea</code> and <code class="language-plaintext highlighter-rouge">isViewingArea</code>, defined in <code class="language-plaintext highlighter-rouge">TypeUtils.ts</code></p>
+
+<p>To run the tests for this part, run the command <code class="language-plaintext highlighter-rouge">npm test TestName</code> in the <code class="language-plaintext highlighter-rouge">frontend</code> directory, where <code class="language-plaintext highlighter-rouge">TestName</code> is either <code class="language-plaintext highlighter-rouge">ViewingAreaController</code>, <code class="language-plaintext highlighter-rouge">ConversationAreaController</code>, or <code class="language-plaintext highlighter-rouge">TownController</code>.</p>
+
+<details>
+  <summary>View the specification for these tasks</summary>
+  <p>ConversationAreaController:</p>
+
+  <figure class="highlight">
+    <pre><code class="language-typescript" data-lang="typescript">  <span class="cm">/**
+   * Create a new ConversationAreaController
+   * @param id
+   * @param topic
+   */</span>
+  <span class="kd">constructor</span><span class="p">(</span><span class="nx">id</span><span class="p">:</span> <span class="kr">string</span><span class="p">,</span> <span class="nx">topic</span><span class="p">?:</span> <span class="kr">string</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">super</span><span class="p">();</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">_id</span> <span class="o">=</span> <span class="nx">id</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">_topic</span> <span class="o">=</span> <span class="nx">topic</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="cm">/**
+   * The ID of this conversation area (read only)
+   */</span>
+  <span class="kd">get</span> <span class="nx">id</span><span class="p">()</span> 
+  <span class="cm">/**
+   * The list of occupants in this conversation area. Changing the set of occupants
+   * will emit an occupantsChange event.
+   */</span>
+  <span class="kd">set</span> <span class="nx">occupants</span><span class="p">(</span><span class="nx">newOccupants</span><span class="p">:</span> <span class="nx">PlayerController</span><span class="p">[])</span> 
+  <span class="kd">get</span> <span class="nx">occupants</span><span class="p">()</span> 
+
+  <span class="cm">/**
+   * The topic of the conversation area. Changing the topic will emit a topicChange event
+   *
+   * Setting the topic to the value `undefined` will indicate that the conversation area is not active
+   */</span>
+  <span class="kd">set</span> <span class="nx">topic</span><span class="p">(</span><span class="nx">newTopic</span><span class="p">:</span> <span class="kr">string</span> <span class="o">|</span> <span class="kc">undefined</span><span class="p">)</span> 
+  <span class="kd">get</span> <span class="nx">topic</span><span class="p">():</span> <span class="kr">string</span> <span class="o">|</span> <span class="kc">undefined</span>
+
+  <span class="cm">/**
+   * A conversation area is empty if there are no occupants in it, or the topic is undefined.
+   */</span>
+  <span class="nx">isEmpty</span><span class="p">():</span> <span class="nx">boolean</span>
+
+  <span class="cm">/**
+   * Return a representation of this ConversationAreaController that matches the
+   * townService's representation and is suitable for transmitting over the network.
+   */</span>
+  <span class="nx">toConversationAreaModel</span><span class="p">():</span> <span class="nx">ConversationAreaModel</span></code></pre>
+  </figure>
+
+  <p>ViewingAreaController</p>
+
+  <figure class="highlight">
+    <pre><code class="language-typescript" data-lang="typescript">  <span class="cm">/**
+   * Constructs a new ViewingAreaController, initialized with the state of the
+   * provided viewingAreaModel.
+   *
+   * @param viewingAreaModel The viewing area model that this controller should represent
+   */</span>
+  <span class="kd">constructor</span><span class="p">(</span><span class="nx">viewingAreaModel</span><span class="p">:</span> <span class="nx">ViewingAreaModel</span><span class="p">)</span> 
+
+  <span class="cm">/**
+   * The ID of the viewing area represented by this viewing area controller
+   * This property is read-only: once a ViewingAreaController is created, it will always be
+   * tied to the same viewing area ID.
+   */</span>
+  <span class="k">public</span> <span class="kd">get</span> <span class="nx">id</span><span class="p">()</span>
+
+  <span class="cm">/**
+   * The URL of the video assigned to this viewing area, or undefined if there is not one.
+   */</span>
+  <span class="k">public</span> <span class="kd">get</span> <span class="nx">video</span><span class="p">()</span>
+
+  <span class="cm">/**
+   * The URL of the video assigned to this viewing area, or undefined if there is not one.
+   *
+   * Changing this value will emit a 'videoChange' event to listeners
+   */</span>
+  <span class="k">public</span> <span class="kd">set</span> <span class="nx">video</span><span class="p">(</span><span class="nx">video</span><span class="p">:</span> <span class="kr">string</span> <span class="o">|</span> <span class="kc">undefined</span><span class="p">)</span>
+
+  <span class="cm">/**
+   * The playback position of the video, in seconds (a floating point number)
+   */</span>
+  <span class="k">public</span> <span class="kd">get</span> <span class="nx">elapsedTimeSec</span><span class="p">()</span>
+
+  <span class="cm">/**
+   * The playback position of the video, in seconds (a floating point number)
+   *
+   * Changing this value will emit a 'progressChange' event to listeners
+   */</span>
+  <span class="k">public</span> <span class="kd">set</span> <span class="nx">elapsedTimeSec</span><span class="p">(</span><span class="nx">elapsedTimeSec</span><span class="p">:</span> <span class="kr">number</span><span class="p">)</span>
+
+  <span class="cm">/**
+   * The playback state - true indicating that the video is playing, false indicating
+   * that the video is paused.
+   */</span>
+  <span class="k">public</span> <span class="kd">get</span> <span class="nx">isPlaying</span><span class="p">()</span> 
+
+  <span class="cm">/**
+   * The playback state - true indicating that the video is playing, false indicating
+   * that the video is paused.
+   *
+   * Changing this value will emit a 'playbackChange' event to listeners
+   */</span>
+  <span class="k">public</span> <span class="kd">set</span> <span class="nx">isPlaying</span><span class="p">(</span><span class="nx">isPlaying</span><span class="p">:</span> <span class="nx">boolean</span><span class="p">)</span>
+
+  <span class="cm">/**
+   * @returns ViewingAreaModel that represents the current state of this ViewingAreaController
+   */</span>
+  <span class="k">public</span> <span class="nx">viewingAreaModel</span><span class="p">():</span> <span class="nx">ViewingAreaModel</span> </code></pre>
+  </figure>
+
+  <p>TownController <code class="language-plaintext highlighter-rouge">socket.on('interactableUpdate')</code></p>
+
+  <figure class="highlight">
+    <pre><code class="language-typescript" data-lang="typescript">    <span class="cm">/**
+     * When an interactable's state changes, push that update into the relevant controller, which is assumed
+     * to be either a Viewing Area or a Conversation Area, and which is assumed to already be represented by a
+     * ViewingAreaController or ConversationAreaController that this TownController has.
+     *
+     * If a conversation area transitions from empty to occupied (or occupied to empty), this handler will emit
+     * a conversationAreasChagned event to listeners of this TownController.
+     *
+     * If the update changes properties of the interactable, the interactable is also expected to emit its own
+     * events (@see ViewingAreaController and @see ConversationAreaController)
+     */</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">_socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">interactableUpdate</span><span class="dl">'</span><span class="p">,</span> <span class="nx">interactable</span> <span class="o">=&gt;</span> <span class="p">{})</span></code></pre>
+  </figure>
+
+</details>
+      <h4 id="grading-for-task-2">
+        
+        
+          <a href="#grading-for-task-2" class="anchor-heading" aria-labelledby="grading-for-task-2"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Grading for Task 2:
+        
+        
+      </h4>
+    
+<p>Point break down for each of the implementation tasks:</p>
+<ul>
+  <li>Implement ConversationAreaController: 7 points</li>
+  <li>Implement ViewingAreaController: 7 points</li>
+  <li>Implement TownController.interactableUpdate: 6 points</li>
+</ul>
+
+<p>To receive marks for implementing each feature, your implementation must pass all of our tests for it.</p>
+
+<p>Point break down for each of the testing tasks:</p>
+<ul>
+  <li>Test ConversationAreaController occupants property: 7 points</li>
+  <li>Test ConversationAreaController topic property: 7 points</li>
+  <li>Test ConversationAreaController isEmpty: 7 points</li>
+  <li>Test ConversationAreaController toConversationAreaModel: 2 points</li>
+  <li>Test ViewingAreaController video property: 7 points</li>
+  <li>Test ViewingAreaController elapsedTimeSec property: 7 points</li>
+  <li>Test ViewingAreaController isPlaying property: 7 points</li>
+  <li>Test ViewingAreaController viewingAreaModel: 1 points</li>
+</ul>
+
+<p>Partial marks are available for detecting some (but not all) faults. The number of faults detected may not directly correlate with the difficulty of writing the test: there are several faults that are nearly guaranteed to be detected together (writing a test that finds one of them is guaranteed to find both of them), which is why there are different cutoffs for partial and full marks for the tests.</p>
+      <h3 id="task-3-implement-react-hooks-60-points-total">
+        
+        
+          <a href="#task-3-implement-react-hooks-60-points-total" class="anchor-heading" aria-labelledby="task-3-implement-react-hooks-60-points-total"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Task 3: Implement React Hooks (60 points total)
+        
+        
+      </h3>
+    
+<p>As discussed in Module 8, an effective pattern for building React applications is to use <em>hooks</em> within components to access global state. 
+As part of the refactoring to implement the <em>Interactable</em> abstraction throughout Covey.Town, Avery also refactored the entire React-based frontend to use this pattern of hooks.
+Before implementing the final component that displays and synchronizes video playback in Viewing Areas, your next task will be to implement these hooks - some of which are related to the interactables, and some of which 
+are related to Avery’s overall refactoring to use more hooks.</p>
+
+<p>Some of these hooks may require you to include <code class="language-plaintext highlighter-rouge">useEffect</code> and/or <code class="language-plaintext highlighter-rouge">useState</code> hooks within the hook that you are building.
+For each of the hooks, consider the events that they might need to listen to (i.e. <code class="language-plaintext highlighter-rouge">TownEvents</code> for the hooks that monitor a <code class="language-plaintext highlighter-rouge">TownController</code> and <code class="language-plaintext highlighter-rouge">ConversationAreaEvents</code> for those that monitor a <code class="language-plaintext highlighter-rouge">ConversationAreaController</code>).
+Hooks that need to monitor <code class="language-plaintext highlighter-rouge">TownController</code> events may require you to use our own <code class="language-plaintext highlighter-rouge">useTownController()</code> hook, which returns the current <code class="language-plaintext highlighter-rouge">TownController</code>.</p>
+
+<p>The sequence diagram below shows the expected interactions between hooks that subscribe to <code class="language-plaintext highlighter-rouge">TownEvents</code>, indicating the interfaces that the hook uses:
+<a href="https://mermaid.live/edit#pako:eNqNU8tu2zAQ_JUFTwlg-wN0CFAoAXRoL5V604UWVzFRkqsuSRdGkH_PUrQB5YGiOvExOzM7K76oiQyqRkX8kzFM-Gj1M2s_BpBP50Qh-yNy3S-ak53sokOCoQcdYaC_oUc-2wm_gLQ3SEshMTmHDJ9hXUG1OSby0BH9_oxYeVryCwWU7aSds-EZKDOc1oJaEigh0FlE2mYD18aggUQQJ0a8Ytv9_uGha-AnBoMcYb-yRsgRh5ON1U5xc3dfC7pSMAhxn49CZI9YKPXa3tNZdDYeHM4JaAbhT3J9EAffbUwYkO8Oh8P9DmbLMQGv4kDBXWr10N9UnrwV51CyRR6odVYkNjrDrYEr8ION7nrbrk1piEmLr4gp3WZZEKLzLV7CdGIKlKO7iKN9NSWJlel7LUMQjss_E2b0cmhgZhnhVylXG5NDHfKyzixufEJp-FeI22DTCf8r2ir9Lt0xqJ3yyF5bI3_2S6kelRB6HFUjS4Ozzi6NagyvAi199pKCahJn3Km8GAnr-hBUM2sX5RSNTcQ_6mtZH83rGxqDFX0"><img src="https://mermaid.ink/img/pako:eNqNU8tu2zAQ_JUFTwlg-wN0CFAoAXRoL5V604UWVzFRkqsuSRdGkH_PUrQB5YGiOvExOzM7K76oiQyqRkX8kzFM-Gj1M2s_BpBP50Qh-yNy3S-ak53sokOCoQcdYaC_oUc-2wm_gLQ3SEshMTmHDJ9hXUG1OSby0BH9_oxYeVryCwWU7aSds-EZKDOc1oJaEigh0FlE2mYD18aggUQQJ0a8Ytv9_uGha-AnBoMcYb-yRsgRh5ON1U5xc3dfC7pSMAhxn49CZI9YKPXa3tNZdDYeHM4JaAbhT3J9EAffbUwYkO8Oh8P9DmbLMQGv4kDBXWr10N9UnrwV51CyRR6odVYkNjrDrYEr8ION7nrbrk1piEmLr4gp3WZZEKLzLV7CdGIKlKO7iKN9NSWJlel7LUMQjss_E2b0cmhgZhnhVylXG5NDHfKyzixufEJp-FeI22DTCf8r2ir9Lt0xqJ3yyF5bI3_2S6kelRB6HFUjS4Ozzi6NagyvAi199pKCahJn3Km8GAnr-hBUM2sX5RSNTcQ_6mtZH83rGxqDFX0" alt="" /></a></p>
+
+<p>Be sure to follow the <a href="https://reactjs.org/docs/hooks-rules.html">rules of hooks</a> when implementing your hooks - these will be enforced by the linter, and also by the TAs when grading for style.</p>
+
+<p>To run the tests for this part, run the command <code class="language-plaintext highlighter-rouge">npm test hooks</code> in the <code class="language-plaintext highlighter-rouge">frontend</code> directory.</p>
+
+<details>
+  <summary>View the specification for the hooks</summary>
+  <p>In <code class="language-plaintext highlighter-rouge">frontend/src/classes/TownController.ts</code></p>
+
+  <figure class="highlight">
+    <pre><code class="language-typescript" data-lang="typescript"><span class="cm">/**
+ * A react hook to retrieve the settings for this town
+ *
+ * This hook will cause components that use it to re-render when the settings change.
+ *
+ * This hook relies on the TownControllerContext.
+ * @returns an object with the properties "friendlyName" and "isPubliclyListed",
+ *  representing the current settings of the current town
+ */</span>
+<span class="k">export</span> <span class="kd">function</span> <span class="nx">useTownSettings</span><span class="p">()</span>
+
+<span class="cm">/**
+ * A react hook to retrieve the active conversation areas. This hook will re-render any components
+ * that use it when the set of conversation areas changes. It does *not* re-render its dependent components
+ * when the state of one of those areas changes - if that is desired, @see useConversationAreaTopic and @see useConversationAreaOccupants
+ *
+ * This hook relies on the TownControllerContext.
+ *
+ * @returns the list of conversation area controllers that are currently "active"
+ */</span>
+<span class="k">export</span> <span class="kd">function</span> <span class="nx">useActiveConversationAreas</span><span class="p">():</span> <span class="nx">ConversationAreaController</span><span class="p">[]</span> 
+
+<span class="cm">/**
+ * A react hook to return the PlayerController's corresponding to each player in the town.
+ *
+ * This hook will cause components that use it to re-render when the set of players in the town changes.
+ *
+ * This hook will *not* trigger re-renders if a player moves.
+ *
+ * This hook relies on the TownControllerContext.
+ *
+ * @returns an array of PlayerController's, representing the current set of players in the town
+ */</span>
+<span class="k">export</span> <span class="kd">function</span> <span class="nx">usePlayers</span><span class="p">():</span> <span class="nx">PlayerController</span><span class="p">[]</span> </code></pre>
+  </figure>
+
+  <p>In <code class="language-plaintext highlighter-rouge">frontend/src/classes/ConversationAreaController.ts</code>:</p>
+
+  <figure class="highlight">
+    <pre><code class="language-typescript" data-lang="typescript"><span class="cm">/**
+ * A react hook to retrieve the occupants of a ConversationAreaController, returning an array of PlayerController.
+ *
+ * This hook will re-render any components that use it when the set of occupants changes.
+ */</span>
+<span class="k">export</span> <span class="kd">function</span> <span class="nx">useConversationAreaOccupants</span><span class="p">(</span><span class="nx">area</span><span class="p">:</span> <span class="nx">ConversationAreaController</span><span class="p">):</span> <span class="nx">PlayerController</span><span class="p">[]</span>
+
+<span class="cm">/**
+ * A react hook to retrieve the topic of a ConversationAreaController.
+ * If there is currently no topic defined, it will return NO_TOPIC_STRING.
+ *
+ * This hook will re-render any components that use it when the topic changes.
+ */</span>
+<span class="k">export</span> <span class="kd">function</span> <span class="nx">useConversationAreaTopic</span><span class="p">(</span><span class="nx">area</span><span class="p">:</span> <span class="nx">ConversationAreaController</span><span class="p">):</span> <span class="kr">string</span></code></pre>
+  </figure>
+
+</details>
+
+<p>There are no hooks for the <code class="language-plaintext highlighter-rouge">ViewingAreaController</code> at this point - Avery noticed that the data in the <code class="language-plaintext highlighter-rouge">ViewingAreaController</code> is only used by at most one component, so felt that it would be an over-eager design optimization to define reusable hooks to access that data now.</p>
+      <h4 id="grading-for-task-3">
+        
+        
+          <a href="#grading-for-task-3" class="anchor-heading" aria-labelledby="grading-for-task-3"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Grading for Task 3:
+        
+        
+      </h4>
+    
+<p>You do not need to write any tests for task 1. The handout contains all of the tests that our grading script will use.</p>
+
+<p>Point break down for each of the implementation tasks:</p>
+<ul>
+  <li>Implement TownController.ts useTownSettings: 12 points</li>
+  <li>Implement TownController.ts useActiveConversationAreas: 12 points</li>
+  <li>Implement TownController.ts usePlayers: 12 points</li>
+  <li>Implement ConversationAreaController.ts useConversationAreaOccupants: 12 points</li>
+  <li>Implement ConversationAreaController.ts useConversationAreaTopic: 12 points</li>
+</ul>
+
+<p>To receive marks for implementing each feature, your implementation must pass all of our tests for it.</p>
+      <h3 id="task-4-gui-component-for-viewing-area-videos-40-points">
+        
+        
+          <a href="#task-4-gui-component-for-viewing-area-videos-40-points" class="anchor-heading" aria-labelledby="task-4-gui-component-for-viewing-area-videos-40-points"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Task 4: GUI Component for Viewing Area Videos (40 points)
+        
+        
+      </h3>
+    
+<p>With the controllers implemented, the last task will be to implement the frontend GUI component to play back videos in a Viewing Area. Avery has implemented the skeleton for this component, which also includes a form to set the video for a viewing area if it hasn’t already been set.</p>
+
+<p>Your task is to implement the component <code class="language-plaintext highlighter-rouge">ViewingAreaVideo</code>, which renders the viewing area’s video and synchronizes playback with the <code class="language-plaintext highlighter-rouge">ViewingAreaController</code>. You will find that there is already a skeleton of this component created, which renders a <code class="language-plaintext highlighter-rouge">&lt;ReactPlayer&gt;</code> component inside of a <code class="language-plaintext highlighter-rouge">&lt;Container&gt;</code>, along with the ID of the <code class="language-plaintext highlighter-rouge">ViewingArea</code>.</p>
+
+<p>In addition to <code class="language-plaintext highlighter-rouge">useState</code> and <code class="language-plaintext highlighter-rouge">useEffect</code>, this component will also need to make use of React’s <a href="https://reactjs.org/docs/hooks-reference.html#useref"><code class="language-plaintext highlighter-rouge">useRef</code> hook</a>. <code class="language-plaintext highlighter-rouge">useRef</code> is used to make a reference to a child component - the React documentation shows how <code class="language-plaintext highlighter-rouge">useRef</code> is used to make a reference to a text input that can be used from within an event handler.
+The handout code contains the declaration of a <code class="language-plaintext highlighter-rouge">useRef</code> hook and ties that reference to the <code class="language-plaintext highlighter-rouge">ReactPlayer</code> component. You will find it necessary to reference the <code class="language-plaintext highlighter-rouge">ReactPlayer</code> component in order to retrieve its current playback timecode, and to seek to a new timecode.</p>
+
+<p>To run the tests for this part, run the command <code class="language-plaintext highlighter-rouge">npm test ViewingAreaVideo</code> in the <code class="language-plaintext highlighter-rouge">frontend</code> directory.</p>
+
+<p>The specification for this component is provided in comments in the file <code class="language-plaintext highlighter-rouge">frontend/src/components/Town/interactables/ViewingAreaVideo.tsx</code>, and reproduced below:
+</p>
+<details>
+  <summary>View the specification for this component</summary>
+
+  <figure class="highlight">
+    <pre><code class="language-typescript" data-lang="typescript"><span class="cm">/**
+ * The ViewingAreaVideo component renders a ViewingArea's video, using the ReactPlayer component.
+ * The URL property of the ReactPlayer is set to the ViewingAreaController's video property, and the isPlaying
+ * property is set, by default, to the controller's isPlaying property.
+ *
+ * The ViewingAreaVideo subscribes to the ViewingAreaController's events, and responds to
+ * playbackChange events by pausing (or resuming) the video playback as appropriate. In response to
+ * progressChange events, the ViewingAreaVideo component will seek the video playback to the same timecode.
+ * To avoid jittering, the playback is allowed to drift by up to ALLOWED_DRIFT before seeking: the video should
+ * not be seek'ed to the newTime from a progressChange event unless the difference between the current time of
+ * the video playback exceeds ALLOWED_DRIFT.
+ *
+ * The ViewingAreaVideo also subscribes to onProgress, onPause, onPlay, and onEnded events of the ReactPlayer.
+ * In response to these events, the ViewingAreaVideo updates the ViewingAreaController's properties, and
+ * uses the TownController to emit a viewing area update.
+ *
+ * @param props: A single property 'controller', which is the ViewingAreaController corresponding to the 
+ *               current viewing area.
+ */</span>
+<span class="k">export</span> <span class="kd">function</span> <span class="nx">ViewingAreaVideo</span><span class="p">({</span>
+  <span class="nx">controller</span><span class="p">,</span>
+<span class="p">}:</span> <span class="p">{</span>
+  <span class="nl">controller</span><span class="p">:</span> <span class="nx">ViewingAreaController</span><span class="p">;</span>
+<span class="p">}):</span> <span class="nx">JSX</span><span class="p">.</span><span class="nx">Element</span></code></pre>
+  </figure>
+
+</details>
+
+<p><em>Hints</em>: The <code class="language-plaintext highlighter-rouge">playing</code> property of the <code class="language-plaintext highlighter-rouge">ReactPlayer</code> will need to be changed during the component’s lifetime: set to <code class="language-plaintext highlighter-rouge">false</code> when another player pauses the video, or <code class="language-plaintext highlighter-rouge">true</code> when it is resumed. This might be a good use-case for <code class="language-plaintext highlighter-rouge">useState</code>. In contrast, seeking the video to a new timecode is accomplished not by changing a property, but by using the <a href="https://github.com/CookPete/react-player#instance-methods">instance method <code class="language-plaintext highlighter-rouge">seekTo</code></a> of the ReactPlayer. The handout code already has a <code class="language-plaintext highlighter-rouge">useRef()</code> hook to demonstrate how to get a reference to the component.</p>
+      <h4 id="grading-for-task-4">
+        
+        
+          <a href="#grading-for-task-4" class="anchor-heading" aria-labelledby="grading-for-task-4"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Grading for Task 4:
+        
+        
+      </h4>
+    
+<p>You do not need to write any tests for task 4. The handout contains all of the tests that our grading script will use.</p>
+
+<p>Point break down for each of the implementation tasks:</p>
+<ul>
+  <li>Implement ViewingAreaVideo - Set properties of the ReactPlayer: 6 points</li>
+  <li>Implement ViewingAreaVideo - Bridging events from the ViewingAreaController to the ReactPlayer: 17 points</li>
+  <li>Implement ViewingAreaVideo - Bridging events from the ReactPlayer to the ViewingAreaController: 17 points</li>
+</ul>
+
+<p>To receive marks for implementing each feature, your implementation must pass all of our tests for it.</p>
+      <h2 id="submission-instructions">
+        
+        
+          <a href="#submission-instructions" class="anchor-heading" aria-labelledby="submission-instructions"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Submission Instructions
+        
+        
+      </h2>
+    
+<p>Submit your assignment in GradeScope. The easiest way to get into GradeScope the first time is to first
+<a href="https://northeastern.instructure.com/courses/99531">sign into Canvas</a> and then click the link on our course for “GradeScope”. 
+You should then also have the option to create an account on GradeScope (if you don’t already have one) so that you can log in to GradeScope directly.
+Please contact the instructors immediately if you have difficulty accessing the course on GradeScope.</p>
+
+<p>To submit your assignment: run the command <code class="language-plaintext highlighter-rouge">npm run zip</code> <strong>in the top-level directory of the handout</strong>. This will produce a file called <code class="language-plaintext highlighter-rouge">covey-town.zip</code> which should contain these files:</p>
+<ul>
+  <li>townService/src/town/Town.ts</li>
+  <li>townService/src/town/TownsController.ts</li>
+  <li>frontend/src/classes/TownController.ts</li>
+  <li>frontend/src/classes/ConversationAreaController.ts</li>
+  <li>frontend/src/classes/ConversationAreaController.test.ts</li>
+  <li>frontend/src/classes/ViewingAreaController.ts</li>
+  <li>frontend/src/classes/ViewingAreaController.test.ts</li>
+  <li>frontend/src/components/Town/interactables/ViewingAreaVideo.tsx</li>
+</ul>
+
+<p>GradeScope will provide you with feedback on your submission, but note that it will <em>not</em> include any marks that will be assigned after we manually grade your submission for code style (it will show 0 for this until it is graded). It may take several minutes for the grading script to complete.</p>
+
+<p>GradeScope is configured to only provide feedback on at most 5 submissions per-24-hours per-student (submissions that fail to run or receive a grade of 0 are not counted in that limit). We strongly encourage you to lint and test your submission on your local development machine, and <em>not</em> rely on GradeScope for providing grading feedback - relying on GradeScope is a very slow feedback loop.
+To check for linter errors, run the command <code class="language-plaintext highlighter-rouge">npm run lint</code> from the terminal. The handout contains the same eslint configuration that is used by our grading script.</p>
+
+        
+
+        
+
+        
+        
+          <hr>
+          <footer>
+            
+
+            <p class="text-small text-grey-dk-100 mb-0">&copy; 2022 Jonathan Bell, Adeel Bhutta and Mitch Wand. Released under the <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a> license</p>
+
+            
+          </footer>
+        
+
+      </div>
+    </div>
+
+    
+      
+
+      <div class="search-overlay"></div>
+    
+  </div>
+</body>
+</html>
+

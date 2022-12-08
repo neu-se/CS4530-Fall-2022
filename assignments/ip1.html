@@ -1,0 +1,665 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  
+
+  <link rel="shortcut icon" href="/CS4530-Fall-2022/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="/CS4530-Fall-2022/assets/css/just-the-docs-default.css">
+
+  
+
+  
+    <script type="text/javascript" src="/CS4530-Fall-2022/assets/js/vendor/lunr.min.js"></script>
+  
+  <script type="text/javascript" src="/CS4530-Fall-2022/assets/js/just-the-docs.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Individual Project 1 | CS4530, Fall 2022</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Individual Project 1" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Northeastern University CS 4530 “Fundamentals of Software Engineering”, Fall 2022. Professors Jonathan Bell, Adeel Bhutta and Mitch Wand." />
+<meta property="og:description" content="Northeastern University CS 4530 “Fundamentals of Software Engineering”, Fall 2022. Professors Jonathan Bell, Adeel Bhutta and Mitch Wand." />
+<link rel="canonical" href="https://neu-se.github.io/CS4530-Fall-2022/assignments/ip1" />
+<meta property="og:url" content="https://neu-se.github.io/CS4530-Fall-2022/assignments/ip1" />
+<meta property="og:site_name" content="CS4530, Fall 2022" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Individual Project 1" />
+<script type="application/ld+json">
+{"headline":"Individual Project 1","dateModified":"2022-12-08T20:13:58+00:00","description":"Northeastern University CS 4530 “Fundamentals of Software Engineering”, Fall 2022. Professors Jonathan Bell, Adeel Bhutta and Mitch Wand.","url":"https://neu-se.github.io/CS4530-Fall-2022/assignments/ip1","@type":"WebPage","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+</head>
+
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="svg-link" viewBox="0 0 24 24">
+      <title>Link</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </symbol>
+    <symbol id="svg-search" viewBox="0 0 24 24">
+      <title>Search</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+        <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+    </symbol>
+    <symbol id="svg-menu" viewBox="0 0 24 24">
+      <title>Menu</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+        <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </symbol>
+    <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+      <title>Expand</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </symbol>
+    <symbol id="svg-doc" viewBox="0 0 24 24">
+      <title>Document</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+        <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
+      </svg>
+    </symbol>
+  </svg>
+
+  <div class="side-bar">
+    <div class="site-header">
+      <a href="https://neu-se.github.io/CS4530-Fall-2022/" class="site-title lh-tight">
+  CS4530, Fall 2022
+
+</a>
+      <a href="#" id="menu-button" class="site-button">
+        <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg>
+      </a>
+    </div>
+    <nav role="navigation" aria-label="Main" id="site-nav" class="site-nav">
+      
+        <ul class="nav-list"><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://neu-se.github.io/CS4530-Fall-2022/calendar/" class="nav-list-link">Calendar</a><ul class="nav-list "><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/calendar/s2" class="nav-list-link">Section 2 - Calendar</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/calendar/s3" class="nav-list-link">Section 3 - Calendar</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/calendar/s4" class="nav-list-link">Section 4 - Calendar</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/calendar/s5" class="nav-list-link">Section 5 - Calendar</a></li></ul></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/" class="nav-list-link">Modules</a><ul class="nav-list "><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/1-requirements-testing" class="nav-list-link">1 - Orientation & Requirements</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/2-requirements-to-code" class="nav-list-link">2 - From Requirements to Code</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/3-code-level-design-principles" class="nav-list-link">3 - Code-Level Design Principles</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/4-interaction-level-design-patterns" class="nav-list-link">4 - Interaction-Level Design Patterns</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/5-concurrency-patterns-in-typescript" class="nav-list-link">5 - Concurrency Patterns in Typescript</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/6-software-process" class="nav-list-link">6 - Software Process</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/7-react" class="nav-list-link">7 - React</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/8-patterns-of-react" class="nav-list-link">8 - Patterns of React</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/9-distributed-principles" class="nav-list-link">9 - Distributed Systems Principles and Requirements</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/10-distributed-architectures" class="nav-list-link">10 - Distributed Systems Architectures</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/11-good-tests" class="nav-list-link">11 - Test Adequacy</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/12-larger-tests" class="nav-list-link">12 - Larger Tests</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/13-cloud-infrastructure" class="nav-list-link">13 - Cloud Infrastructure</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/14-continuous-development" class="nav-list-link">14 - Continuous Development</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/15-security" class="nav-list-link">15 - Security</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/16-technical-debt" class="nav-list-link">16 - Technical Debt</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/17-open-source" class="nav-list-link">17 - Open Source</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/18-equitable-software" class="nav-list-link">18 - Ethics</a></li></ul></li><li class="nav-list-item active"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://neu-se.github.io/CS4530-Fall-2022/assignments/" class="nav-list-link">Assignments</a><ul class="nav-list "><li class="nav-list-item  active"><a href="https://neu-se.github.io/CS4530-Fall-2022/assignments/ip1" class="nav-list-link active">Individual Project 1</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/assignments/ip2" class="nav-list-link">Individual Project 2</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/assignments/project-overview" class="nav-list-link">Project Overview</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/assignments/project-plan" class="nav-list-link">Project Plan</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/assignments/revised-project-plan" class="nav-list-link">Revised Project Plan</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/Assignments/project-deliverable" class="nav-list-link">Project Final Deliverable</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/assignments/project-showcase" class="nav-list-link">Project Showcase</a></li></ul></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://neu-se.github.io/CS4530-Fall-2022/tutorials/" class="nav-list-link">Tutorials</a><ul class="nav-list "><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/tutorials/week1-getting-started" class="nav-list-link">Installing a Development Environment</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/tutorials/week4-react-basics" class="nav-list-link">React Tutorial</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/tutorials/week2-typescript-basics" class="nav-list-link">Typescript Basics</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/tutorials/week5-unit-testing" class="nav-list-link">Unit Testing with Jest</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/tutorials/continuous-development" class="nav-list-link">CI/CD for Covey.Town</a></li></ul></li><li class="nav-list-item"><a href="https://neu-se.github.io/CS4530-Fall-2022/textbooks/" class="nav-list-link">Textbooks</a></li><li class="nav-list-item"><a href="https://neu-se.github.io/CS4530-Fall-2022/staff/" class="nav-list-link">Staff</a></li><li class="nav-list-item"><a href="https://neu-se.github.io/CS4530-Fall-2022/resources/" class="nav-list-link">Other Resources</a></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://neu-se.github.io/CS4530-Fall-2022/policies/" class="nav-list-link">Policies</a><ul class="nav-list "><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/policies/style/" class="nav-list-link">Code Style</a></li></ul></li></ul>
+
+      
+    </nav>
+    <footer class="site-footer">
+      This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+    </footer>
+  </div>
+  <div class="main" id="top">
+    <div id="main-header" class="main-header">
+      
+        <div class="search">
+          <div class="search-input-wrap">
+            <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search CS4530, Fall 2022" aria-label="Search CS4530, Fall 2022" autocomplete="off">
+            <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label>
+          </div>
+          <div id="search-results" class="search-results"></div>
+        </div>
+      
+      
+      
+    </div>
+    <div id="main-content-wrap" class="main-content-wrap">
+      
+        <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+            <ol class="breadcrumb-nav-list">
+              
+                <li class="breadcrumb-nav-list-item"><a href="https://neu-se.github.io/CS4530-Fall-2022/assignments/">Assignments</a></li>
+              
+              <li class="breadcrumb-nav-list-item"><span>Individual Project 1</span></li>
+            </ol>
+          </nav>
+        
+      
+      <div id="main-content" class="main-content" role="main">
+        
+          <h2 class="fs-6" id="individual-project-1">
+        
+        
+          <a href="#individual-project-1" class="anchor-heading" aria-labelledby="individual-project-1"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 
+    
+    Individual Project 1
+    
+    <strong class="label label-red">Due Wednesday September 21, 11:00am ET</strong>
+
+        
+        
+      </h2>
+    
+
+
+<p>Welcome aboard to the Covey.Town team! We’re glad that you’re here and ready to join our development team as a new software engineer.
+We’re building an open source virtual meeting application, and are very happy to see that we have so many new developers who can help make this application a reality.
+By the end of the semester, you’ll be able to propose, design, implement and test a new feature for our project.
+We understand that some of you may have some web development experience, but don’t expect that most of you do, and hence, have created an individual project to help you get up to speed with our existing codebase and development environment.</p>
+
+<p>Covey.Town is a web application that consists of some code that runs in each client’s web browser, and also code that runs on a server.
+Users join the application in a “town”: a 2D arcade-style map with different rooms to explore.
+Each town is also a video call: when two players get close to each other, they can see and hear each other; there is also a text chat available within the town.
+In Winter of 2021, our lead software engineer, Avery, developed a prototype for Covey.Town, and since then, hundreds of students in this class have built on that codebase.
+The most recent class-wide effort added a concept called <a href="https://neu-se.github.io/CS4530-Spring-2022/assignments/hw2">Conversation Areas</a>, allowing players to post a textual description of the topic of their conversation, and making those video conversations private to those players standing within that same area.
+Many student projects in Spring 2022 (some of which are <a href="https://neu-se.github.io/CS4530-Spring-2022/assignments/project-showcase">publicly showcased</a>) involved creating other kinds of flexible interactions that involve objects in the arcade game, other elements displayed in the browser, and video chat.
+For example: students created game areas, where players who approached a game board could play a simple game (like tic-tac-toe) together; others created bulletin boards that stored persistent messages; others created viewing areas that allowed multiple players to simultaneously playback the same video as a “watch party.”</p>
+
+<p>After studying all of the student projects and their implementation challenges, our lead software engineer, Avery, has refactored Covey.Town, designing a new abstraction to make it easier to create features like these. 
+Avery’s new abstraction, <code class="language-plaintext highlighter-rouge">InteractableArea</code>, is a region of the town that provides some interactive elements for players when they enter.
+The abstraction cuts across the entire technology stack: <code class="language-plaintext highlighter-rouge">InteractableArea</code>s exist in the 2D map and the application automatically tracks when players enter and exit them.
+By pressing the spacebar within an <code class="language-plaintext highlighter-rouge">InteractableArea</code>, the user can trigger an interaction with that area, which in turn can be easily used to display new content in the web app using React.
+An <code class="language-plaintext highlighter-rouge">InteractableArea</code> in one user’s browser can also emit events that are delivered in real-time to other players interacting with that same area.</p>
+
+<p>The objective for this semester’s individual project is to implement this new <code class="language-plaintext highlighter-rouge">InteractableArea</code> abstraction, with two concrete implementations: <code class="language-plaintext highlighter-rouge">ConversationArea</code> and <code class="language-plaintext highlighter-rouge">ViewingArea</code>. While the <code class="language-plaintext highlighter-rouge">ConversationArea</code> will be implemented by refactoring last semester’s code to use the new interface, the  <code class="language-plaintext highlighter-rouge">ViewingArea</code> is a new concept.
+The <code class="language-plaintext highlighter-rouge">ViewingArea</code> allows players to have “watch parties”: each player who is within the <code class="language-plaintext highlighter-rouge">ViewingArea</code> sees the same streaming video.
+If one player pauses the video, it pauses for all other players watching it, and the playback is synchronized between all players watching the video.</p>
+
+<p>This implementation effort will be split across two deliverables. In this first deliverable, you will implement and test the core backend components for this feature, and in the second deliverable, you will connect these new components to the rest of the backend, and implement and test the frontend components.</p>
+      <h2 id="objectives-of-this-assignment">
+        
+        
+          <a href="#objectives-of-this-assignment" class="anchor-heading" aria-labelledby="objectives-of-this-assignment"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Objectives of this assignment
+        
+        
+      </h2>
+    
+<p>The objectives of this assignment are to:</p>
+<ul>
+  <li>Get you familiar with the basics of TypeScript, VSCode, and the project codebase</li>
+  <li>Learn how to read and write code in TypeScript</li>
+  <li>Translate high-level requirements into code</li>
+  <li>Learn how to write unit tests with Jest</li>
+</ul>
+      <h2 id="changelog">
+        
+        
+          <a href="#changelog" class="anchor-heading" aria-labelledby="changelog"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Changelog
+        
+        
+      </h2>
+    
+<ul>
+  <li>9/9/22: Added clear instructions to run eslint</li>
+  <li>9/12/22: Clarified which properties to use for <code class="language-plaintext highlighter-rouge">fromMapObject</code></li>
+  <li>9/13/22: Added note about integration tests in part 4</li>
+  <li>9/15/22: Added further clarification that students should <em>not</em> attempt to replicate the integaration tests in their test suite</li>
+</ul>
+      <h2 id="getting-started-with-this-assignment">
+        
+        
+          <a href="#getting-started-with-this-assignment" class="anchor-heading" aria-labelledby="getting-started-with-this-assignment"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Getting started with this assignment
+        
+        
+      </h2>
+    
+
+<p>Before you begin, be sure to check that you have NodeJS 16.x installed, along with VSCode. We have provided a <a href="/CS4530-Fall-2022/tutorials/week1-getting-started">tutorial on setting up a development environment for this class</a>
+Start by <a href="/CS4530-Fall-2022/Assignments/ip1/ip1-handout.zip">downloading the starter code</a>. Extract the archive and run <code class="language-plaintext highlighter-rouge">npm install</code> to fetch the dependencies. Avery has provided you with some very basic sanity tests that you can extend for testing your implementation as you go.</p>
+      <h3 id="overview-of-relevant-classes">
+        
+        
+          <a href="#overview-of-relevant-classes" class="anchor-heading" aria-labelledby="overview-of-relevant-classes"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Overview of relevant classes
+        
+        
+      </h3>
+    
+<p>The UML class diagram below shows the three main classes that you will be implementing for this deliverable (<code class="language-plaintext highlighter-rouge">InteractableArea</code>, <code class="language-plaintext highlighter-rouge">ViewingArea</code>, and <code class="language-plaintext highlighter-rouge">ConversationArea</code>), along with several relevant classes that you will need to interact with. For <code class="language-plaintext highlighter-rouge">Town</code> and <code class="language-plaintext highlighter-rouge">ServerToClientEvents</code>, we show only the most relevant methods.
+<script src="/CS4530-Fall-2022/assets/js/mermaid.min.js"></script></p>
+<div class="mermaid">
+ %%{init: { 'theme':'forest', } }%%
+classDiagram
+   class InteractableArea {
+       +string id
+       ~Player[] _occupants
+       +string[] occupantsByID
+       +boolean isActive
+       +BoundingBox boundingBox
+       +add(player: Player)
+       +remove(player: Player)
+       +addPlayersWithinBounds(allPlayers: Player[])
+       +toModel()
+       +contains(location: PlayerLocation)
+       +overlaps(otherInteractable: Interactable)
+       #_emitAreaChanged()
+   }
+
+   class ViewingArea {
+       +string video
+       +number progress
+       +boolean isPlaying
+       +updateModel(updatedModel:ViewingAreaModel)
+       +fromMapObject(mapObject, townEmitter)
+   }
+
+   class ConversationArea {
+       +string? topic
+       +fromMapObject(mapObject, townEmitter)
+   }
+   class BoundingBox {
+       +number x
+       +number y
+       +number width
+       +number height
+   }
+   class Player {
+       +PlayerLocation location
+       +string id
+       +string username
+   }
+   class PlayerLocation {
+       +number x
+       +number y
+       +Direction rotation
+       +boolean moving
+       +string? interactableID
+   }
+   class Town {
+       +string townID
+       +string friendlyName
+       +InteractableArea[] interactables
+       +Player[] players
+       +void initializeMap(mapFile: string)
+   }
+   class TownEmitter {
+       +void emit(eventName: ServerToClientEvents, eventData)
+   }
+   class ServerToClientEvents {
+       +void playerMoved(movedPlayer: Player)
+       +void interactableUpdate(updatedInteractable: Interactable)
+   }
+   ViewingArea ..|&gt; InteractableArea
+   ConversationArea ..|&gt; InteractableArea
+   InteractableArea o-- BoundingBox
+   InteractableArea o-- Player
+   InteractableArea o-- TownEmitter
+   Player o-- PlayerLocation
+   Town o-- Player
+   Town o-- InteractableArea
+   Town o-- TownEmitter
+   TownEmitter -- ServerToClientEvents
+</div>
+      <h2 id="grading">
+        
+        
+          <a href="#grading" class="anchor-heading" aria-labelledby="grading"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Grading
+        
+        
+      </h2>
+    
+<p>This submission will be scored out of 100 points, 90 of which will be automatically awarded by the grading script, with the remaining 10 manually awarded by the course staff.</p>
+
+<p>Your code will automatically be evaluated for linter errors and warnings. Submissions that have <em>any</em> linter errors will automatically receive a grade of 0. <strong>Do not wait to run the linter until the last minute</strong>. To check for linter errors, run the command <code class="language-plaintext highlighter-rouge">npm run lint</code> from the terminal. The handout contains the same eslint configuration that is used by our grading script.</p>
+
+<p>Your code will be automatically evaluated for functional correctness by a test suite that expands on the core tests that are distributed in the handout. 
+Your tests will be automatically evaluated for functional correctness by a process that will inject bugs into our reference solution: to receive full marks your tests must detect a minimum number of injected bugs. 
+You will <strong>not</strong> receive detailed feedback on which injected bugs you do or do not find, and you will <strong>not</strong> receive detailed feedback on which tests you do or do not pass.</p>
+
+<p>The autograding script will impose a strict rate limit of 5 submissions per 24 hours.
+Submissions that fail to grade will not count against the quota.
+This limit exists to encourage you to start early on this assignment: students generally report that assignments like this take between 3-20 hours.
+If you start early, you will be able to take full advantage of the resources that we provide to help you succeed: office hours, discussion on Piazza — and the ability to have a greater total number of submission attempts.</p>
+
+<p>Your code will be manually evaluated for conformance to our course <a href="/CS4530-Fall-2022/policies/style/">style guide</a>. This manual evaluation will account for 10% of your total grade on this assignment. We will manually evaluate your code for style on the following rubric:</p>
+
+<p>To receive all 10 points:</p>
+<ul>
+  <li>All new names (e.g. for local variables, methods, and properties) follow the naming conventions defined in our style guide</li>
+  <li>There are no unused local variables</li>
+  <li>All public properties and methods (other than getters, setters, and constructors) are documented with JSDoc-style comments that describes what the property/method does, as defined in our style guide</li>
+  <li>The code and tests that you write generally follows the design principles discussed in week one. In particular, your design does not have duplicated code that could have been refactored into a shared method.</li>
+</ul>
+
+<p>We will review your code and note each violation of this rubric. We will deduct two points for each violation, up to a maximum of deducting all 10 style points.</p>
+      <h2 id="implementation-tasks">
+        
+        
+          <a href="#implementation-tasks" class="anchor-heading" aria-labelledby="implementation-tasks"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Implementation Tasks
+        
+        
+      </h2>
+    
+<p>This deliverable has four parts; each part will be graded on its own rubric. You should complete the assignment one part at a time, in the order presented here:</p>
+      <h3 id="task-1-implement-and-test-the-abstract-class-34-points-total">
+        
+        
+          <a href="#task-1-implement-and-test-the-abstract-class-34-points-total" class="anchor-heading" aria-labelledby="task-1-implement-and-test-the-abstract-class-34-points-total"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Task 1: Implement and test the abstract class (34 points total)
+        
+        
+      </h3>
+    
+<p>Your first objective is to implement the abstract class <code class="language-plaintext highlighter-rouge">InteractableArea</code>. Avery has provided a skeleton for this class, specifying the properties that are expected and implementing the constructor.</p>
+
+<p>There are six methods for you to implement in this class: <code class="language-plaintext highlighter-rouge">add</code>, <code class="language-plaintext highlighter-rouge">remove</code>, <code class="language-plaintext highlighter-rouge">contains</code>, <code class="language-plaintext highlighter-rouge">addPlayersWithinBounds</code> and <code class="language-plaintext highlighter-rouge">overlaps</code> (we suggest implementing them in this order). The specification for each method is provided in comments in the file, and reproduced below:
+</p>
+<details><summary>View the specification for these methods</summary>
+
+<figure class="highlight"><pre><code class="language-typescript" data-lang="typescript"><span class="cm">/**
+* Adds a new player to this interactable area.
+* 
+* Adds the player to this area's occupants array, sets the player's
+* interactableID, informs players in the town that the player's
+* interactableID has changed, and informs players in the town that
+* the area has changed.
+* 
+* Assumes that the player specified is a member of this town. 
+* 
+* @param player Player to add
+*/</span>
+<span class="k">public</span> <span class="nx">add</span><span class="p">(</span><span class="nx">player</span><span class="p">:</span> <span class="nx">Player</span><span class="p">):</span> <span class="k">void</span><span class="p">;</span>
+
+<span class="cm">/**
+* Removes a player from this interactable area.
+* 
+* Removes the player from this area's occupants array, clears the player's
+* interactableID, informs players in the town that the player's interactableID
+* has changed, and informs players in the town that the area has changed
+* 
+* Assumes that the player specified is an occupant of this interactable area
+* 
+* @param player Player to remove
+*/</span>
+<span class="k">public</span> <span class="nx">remove</span><span class="p">(</span><span class="nx">player</span><span class="p">:</span> <span class="nx">Player</span><span class="p">):</span> <span class="k">void</span><span class="p">;</span>
+
+<span class="cm">/**
+* Tests if a player location is contained within this InteractableArea.
+* 
+* This interactable area contains a PlayerLocation if any part of the player
+* is within any part of this area.
+* A PlayerLocation specifies only the center (x,y) coordinate of the player; 
+* the width and height of the player are PLAYER_SPRITE_WIDTH and
+* PLAYER_SPRITE_HEIGHT, respectively
+* 
+* @param location location to check
+* 
+* @returns true if location is within this area
+*/</span>
+<span class="k">public</span> <span class="nx">contains</span><span class="p">(</span><span class="nx">location</span><span class="p">:</span> <span class="nx">PlayerLocation</span><span class="p">):</span> <span class="nx">boolean</span><span class="p">;</span>
+
+<span class="cm">/**
+* Given a list of players, adds all of the players that are within this
+* interactable area
+* 
+* @param allPlayers list of players to examine and potentially add to this
+* interactable area
+*/</span>
+<span class="k">public</span> <span class="nx">addPlayersWithinBounds</span><span class="p">(</span><span class="nx">allPlayers</span><span class="p">:</span> <span class="nx">Player</span><span class="p">[]);</span>
+
+<span class="cm">/**
+* Tests if another InteractableArea overlaps with this . Two InteractableArea's
+* overlap if it is possible for one player to overlap with both of them
+* simultaneously. That is: There is an overlap if the rectangles of the two
+* InteractableAreas overlap, where the rectangles are expanded by
+* PLAYER_SPRITE_WIDTH/2 in each X dimension and PLAYER_SPRITE_HEIGHT/2 in each Y
+* dimension.
+* 
+* @param otherInteractable interactable to checko
+* 
+* @returns true if a player could be contained within both InteractableAreas
+* simultaneously
+*/</span>
+<span class="k">public</span> <span class="nx">overlaps</span><span class="p">(</span><span class="nx">otherInteractable</span><span class="p">:</span> <span class="nx">InteractableArea</span><span class="p">):</span> <span class="nx">boolean</span><span class="p">;</span>
+
+<span class="cm">/**
+* Emits an event to the players in the town notifying them that this
+* InteractableArea has changed, passing the model for this
+* InteractableArea in that event.
+*/</span>
+<span class="k">protected</span> <span class="nx">_emitAreaChanged</span><span class="p">();</span></code></pre></figure>
+
+
+</details>
+
+<p><em>Testing</em>: Avery has provided you with test cases for <code class="language-plaintext highlighter-rouge">add</code> and <code class="language-plaintext highlighter-rouge">remove</code>, as well as some very simple (and incomplete) tests for <code class="language-plaintext highlighter-rouge">contains</code> and <code class="language-plaintext highlighter-rouge">overlaps</code>. You can run these tests by running the command <code class="language-plaintext highlighter-rouge">npx jest --watch InteractableArea</code>, which will automatically re-run the tests as you update the file. You should add tests for <code class="language-plaintext highlighter-rouge">addPlayersWithinBounds</code>, and improve the <code class="language-plaintext highlighter-rouge">contains</code> and <code class="language-plaintext highlighter-rouge">overlaps</code> tests to consider all of the boundary conditions. Please implement these additional tests in the file <code class="language-plaintext highlighter-rouge">src/town/InteractableArea.test.ts</code>.</p>
+
+<p>Grading for implementation tasks:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">add</code>: 3 points</li>
+  <li><code class="language-plaintext highlighter-rouge">remove</code>: 3 points</li>
+  <li><code class="language-plaintext highlighter-rouge">contains</code>: 4 points</li>
+  <li><code class="language-plaintext highlighter-rouge">addPlayersWithinBounds</code>: 3 points</li>
+  <li><code class="language-plaintext highlighter-rouge">overlaps</code>: 4 points</li>
+</ul>
+
+<p>Grading for testing tasks:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">addPlayersWithinBounds</code>: 3 points</li>
+  <li><code class="language-plaintext highlighter-rouge">contains</code>:
+    <ul>
+      <li>7 points for detecting all 10 faults, or</li>
+      <li>2 points for detecting at least 3 faults</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">overlaps</code>
+    <ul>
+      <li>7 points for detecting all 12 faults, or</li>
+      <li>5 points for detecting at least 8 faults</li>
+    </ul>
+  </li>
+</ul>
+      <h3 id="task-2-implement-and-test-the-conversationarea-15-points-total">
+        
+        
+          <a href="#task-2-implement-and-test-the-conversationarea-15-points-total" class="anchor-heading" aria-labelledby="task-2-implement-and-test-the-conversationarea-15-points-total"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Task 2: Implement and test the ConversationArea (15 points total)
+        
+        
+      </h3>
+    
+<p>Now that we have the core functionality for the <code class="language-plaintext highlighter-rouge">InteractableArea</code> abstraction implemented, we can move on to implement one of its concrete instantiations: the <code class="language-plaintext highlighter-rouge">ConversationArea</code>.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">ConversationArea</code> specialized the <code class="language-plaintext highlighter-rouge">InteractableArea</code>, storing a <code class="language-plaintext highlighter-rouge">topic</code> field to represent the current topic of the conversation, which is included in the corresponding <code class="language-plaintext highlighter-rouge">ConversationAreaModel</code>. The <code class="language-plaintext highlighter-rouge">ConversationArea</code> has the same semantics for <code class="language-plaintext highlighter-rouge">add(Player)</code> as its generic supertype, and adds a special behavior to the <code class="language-plaintext highlighter-rouge">remove(Player)</code> method. When the last player exits a <code class="language-plaintext highlighter-rouge">ConversationArea</code>, the <code class="language-plaintext highlighter-rouge">topic</code> field for that <code class="language-plaintext highlighter-rouge">ConversationArea</code> should be reset to <code class="language-plaintext highlighter-rouge">undefined</code>, and an update should be emitted to players in the town (by invoking <code class="language-plaintext highlighter-rouge">this._emitAreaChanged()</code>).</p>
+
+<p>For this task, Avery has provided the complete test suite for <code class="language-plaintext highlighter-rouge">remove</code>, however, you will need to provide a complete set of tests for <code class="language-plaintext highlighter-rouge">toModel</code> and <code class="language-plaintext highlighter-rouge">fromMapObject</code>. Please add these tests to the existing test suite in <code class="language-plaintext highlighter-rouge">src/town/ConversationArea.test.ts</code>. You can run these tests by running the command <code class="language-plaintext highlighter-rouge">npx jest --watch ConversationArea</code>, which will automatically re-run the tests as you update the file.</p>
+
+<details><summary>View the specification for these methods</summary>
+
+<figure class="highlight"><pre><code class="language-typescript" data-lang="typescript"><span class="cm">/**
+* Convert this ConversationArea instance to a simple ConversationAreaModel
+* suitable for transporting over a socket to a client.
+*/</span>
+<span class="k">public</span> <span class="nx">toModel</span><span class="p">():</span> <span class="nx">ConversationAreaModel</span><span class="p">;</span>
+
+<span class="cm">/**
+* Removes a player from this conversation area. 
+* 
+* Extends the base behavior of InteractableArea to set the topic of this
+* ConversationArea to undefined and emit an update to other players in the
+* town when the last player leaves.
+* 
+* @param player 
+*/</span>
+<span class="k">public</span> <span class="nx">remove</span><span class="p">(</span><span class="nx">player</span><span class="p">:</span> <span class="nx">Player</span><span class="p">);</span>
+
+<span class="cm">/**
+* Creates a new ConversationArea object that will represent a Conversation Area
+* object in the town map.
+* 
+* @param mapObject An ITiledMapObject that represents a rectangle in which this
+* conversation area exists
+* @param broadcastEmitter An emitter that can be used by this conversation area
+* to broadcast updates 
+* @returns 
+*/</span>
+<span class="k">public</span> <span class="k">static</span> <span class="nx">fromMapObject</span><span class="p">(</span><span class="nx">mapObject</span><span class="p">:</span> <span class="nx">ITiledMapObject</span><span class="p">,</span>
+                              <span class="nx">broadcastEmitter</span><span class="p">:</span> <span class="nx">TownEmitter</span><span class="p">):</span> <span class="nx">ConversationArea</span><span class="p">;</span></code></pre></figure>
+
+</details>
+
+<p>(Added 9/12) <code class="language-plaintext highlighter-rouge">fromMapObject</code> should create the <code class="language-plaintext highlighter-rouge">BoundingBox</code> from the <code class="language-plaintext highlighter-rouge">mapObject</code> using its fields: <code class="language-plaintext highlighter-rouge">x, y, width, height</code>. The <code class="language-plaintext highlighter-rouge">id</code> of the corresponding <code class="language-plaintext highlighter-rouge">InteractableArea</code> should match the <code class="language-plaintext highlighter-rouge">name</code> property of the <code class="language-plaintext highlighter-rouge">mapObject</code>. If it is helpful: <code class="language-plaintext highlighter-rouge">fromMapObject</code> may throw an error if the <code class="language-plaintext highlighter-rouge">mapObject</code> is invalid.</p>
+
+<p>Grading for implementation tasks:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">toModel</code>: 3 points</li>
+  <li><code class="language-plaintext highlighter-rouge">remove</code>: 3 points</li>
+  <li><code class="language-plaintext highlighter-rouge">fromMapObject</code>: 3 points</li>
+</ul>
+
+<p>Grading for testing tasks:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">toModel</code>: 3 points</li>
+  <li><code class="language-plaintext highlighter-rouge">fromMapObject</code>: 3 points</li>
+</ul>
+      <h3 id="task-3-implement-and-test-the-viewingarea-21-points-total">
+        
+        
+          <a href="#task-3-implement-and-test-the-viewingarea-21-points-total" class="anchor-heading" aria-labelledby="task-3-implement-and-test-the-viewingarea-21-points-total"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Task 3: Implement and test the ViewingArea (21 points total)
+        
+        
+      </h3>
+    
+<p>The <code class="language-plaintext highlighter-rouge">ViewingArea</code> specializes <code class="language-plaintext highlighter-rouge">InteractableArea</code> to store the state of the viewing area, these three properties: <code class="language-plaintext highlighter-rouge">video</code> (a string, representing the URL of the video to be played or <code class="language-plaintext highlighter-rouge">undefined</code> if none is set), <code class="language-plaintext highlighter-rouge">isPlaying</code> (a boolean, representing whether the video should be shown as playing or paused), and <code class="language-plaintext highlighter-rouge">elapsedTimeSec</code> (a number, representing the number of seconds elapsed in the playback of the video).</p>
+
+<p>Like the <code class="language-plaintext highlighter-rouge">ConversationArea</code>, the <code class="language-plaintext highlighter-rouge">ViewingArea</code> specializes the behavior of <code class="language-plaintext highlighter-rouge">remove</code>, in this case setting the <code class="language-plaintext highlighter-rouge">video</code> property to <code class="language-plaintext highlighter-rouge">undefined</code> and emitting this update to the players in the town when the last player leaves the <code class="language-plaintext highlighter-rouge">ViewingArea</code>.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">ViewingArea</code> also adds a new method, <code class="language-plaintext highlighter-rouge">updateModel</code>, which will be used in the next deliverable to apply updates to the <code class="language-plaintext highlighter-rouge">ViewingArea</code>s state while clients are playing videos.</p>
+
+<p>Avery has again provided a complete test suite for <code class="language-plaintext highlighter-rouge">remove</code>, and will expect you to provide a complete set of tests for <code class="language-plaintext highlighter-rouge">updateModel</code>, <code class="language-plaintext highlighter-rouge">toModel</code> and <code class="language-plaintext highlighter-rouge">fromMapObject</code>. Please add these tests in the <code class="language-plaintext highlighter-rouge">src/town/ViewingArea.test.ts</code> file. You can run these tests by running the command <code class="language-plaintext highlighter-rouge">npx jest --watch ViewingArea</code>, which will automatically re-run the tests as you update the file.</p>
+
+<details><summary>View the specification for these methods</summary>
+
+<figure class="highlight"><pre><code class="language-typescript" data-lang="typescript">    <span class="cm">/**
+     * Removes a player from this viewing area.
+     * 
+     * When the last player leaves, this method clears the video of this area and
+     * emits that update to all of the players
+     * 
+     * @param player 
+     */</span>
+    <span class="k">public</span> <span class="nx">remove</span><span class="p">(</span><span class="nx">player</span><span class="p">:</span> <span class="nx">Player</span><span class="p">):</span> <span class="k">void</span><span class="p">;</span>
+
+    <span class="cm">/**
+     * Updates the state of this ViewingArea, setting the video, isPlaying and progress properties
+     * 
+     * @param viewingArea updated model 
+     */</span>
+    <span class="k">public</span> <span class="nx">updateModel</span><span class="p">({</span> <span class="nx">isPlaying</span><span class="p">,</span> <span class="nx">progress</span><span class="p">,</span> <span class="nx">video</span> <span class="p">}:</span> <span class="nx">ViewingAreaModel</span><span class="p">);</span>
+
+    <span class="cm">/**
+     * Convert this ViewingArea instance to a simple ViewingAreaModel suitable for 
+     * transporting over a socket to a client.
+     */</span>
+    <span class="k">public</span> <span class="nx">toModel</span><span class="p">():</span> <span class="nx">ViewingAreaModel</span><span class="p">;</span>
+
+    <span class="cm">/**
+     * Creates a new ViewingArea object that will represent a Viewing Area object in the town map.
+     * @param mapObject An ITiledMapObject that represents a rectangle in which this viewing area exists
+     * @param townEmitter An emitter that can be used by this viewing area to broadcast updates to players in the town
+     * @returns 
+     */</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="nx">fromMapObject</span><span class="p">(</span><span class="nx">mapObject</span><span class="p">:</span> <span class="nx">ITiledMapObject</span><span class="p">,</span> <span class="nx">townEmitter</span><span class="p">:</span> <span class="nx">TownEmitter</span><span class="p">):</span> <span class="nx">ViewingArea</span><span class="p">;</span></code></pre></figure>
+
+</details>
+
+<p>(Added 9/12) <code class="language-plaintext highlighter-rouge">fromMapObject</code> should create the <code class="language-plaintext highlighter-rouge">BoundingBox</code> from the <code class="language-plaintext highlighter-rouge">mapObject</code> using its fields: <code class="language-plaintext highlighter-rouge">x, y, width, height</code>. The <code class="language-plaintext highlighter-rouge">id</code> of the corresponding <code class="language-plaintext highlighter-rouge">InteractableArea</code> should match the <code class="language-plaintext highlighter-rouge">name</code> property of the <code class="language-plaintext highlighter-rouge">mapObject</code>. If it is helpful: <code class="language-plaintext highlighter-rouge">fromMapObject</code> may throw an error if the <code class="language-plaintext highlighter-rouge">mapObject</code> is invalid.</p>
+
+<p>Grading for implementation tasks:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">remove</code>: 3 points</li>
+  <li><code class="language-plaintext highlighter-rouge">updateModel</code>: 3 points</li>
+  <li><code class="language-plaintext highlighter-rouge">toModel</code>: 3 points</li>
+  <li><code class="language-plaintext highlighter-rouge">fromMapObject</code>: 3 points</li>
+</ul>
+
+<p>Grading for testing tasks:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">updateModel</code>: 3 points</li>
+  <li><code class="language-plaintext highlighter-rouge">toModel</code>: 3 points</li>
+  <li><code class="language-plaintext highlighter-rouge">fromMapObject</code>: 3 points</li>
+</ul>
+      <h3 id="task-4-implement-and-test-createinteractablesfrommap-20-points-total">
+        
+        
+          <a href="#task-4-implement-and-test-createinteractablesfrommap-20-points-total" class="anchor-heading" aria-labelledby="task-4-implement-and-test-createinteractablesfrommap-20-points-total"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Task 4: Implement and test createInteractablesFromMap (20 points total)
+        
+        
+      </h3>
+    
+<p>Your last task for this deliverable is to implement a function to validate the <code class="language-plaintext highlighter-rouge">InteractableArea</code>s defined in the town’s map file and populate the <code class="language-plaintext highlighter-rouge">Town</code> with instances of <code class="language-plaintext highlighter-rouge">ViewingArea</code> and <code class="language-plaintext highlighter-rouge">ConversationArea</code> to represent those areas. Implement this function in the method <code class="language-plaintext highlighter-rouge">initializeFromMap</code> in <code class="language-plaintext highlighter-rouge">src/town/Town.ts</code>.</p>
+
+<p>Avery has provided you with a single test case that you can use to check your progress; you will find that it tests some basic functionality of this function, but does not test the full specification. Please add new tests in the same <code class="language-plaintext highlighter-rouge">describe</code> block as the existing one in <code class="language-plaintext highlighter-rouge">src/town/Town.test.ts</code>. You can run these tests by running the command <code class="language-plaintext highlighter-rouge">npx jest --watch Town.test</code>, which will automatically re-run the tests as you update the file.</p>
+
+<p>Hint: The function takes as a parameter an <code class="language-plaintext highlighter-rouge">ITiledMap</code> object; you can learn more about the structure from reviewing the type definition, from the <a href="https://doc.mapeditor.org/en/stable/reference/json-map-format/">Tiled JSON Map Format Specification</a>, and from the example provided in the test case for <code class="language-plaintext highlighter-rouge">initializeFromMap</code> in the handout. The specific <em>layer</em> of the map that you are looking for will be of the type <code class="language-plaintext highlighter-rouge">ITiledMapObjectLayer</code>. The object layer will list all of the objects. The <code class="language-plaintext highlighter-rouge">type</code> property of each object in that layer identifies it as a <code class="language-plaintext highlighter-rouge">ViewingArea</code>, <code class="language-plaintext highlighter-rouge">ConversationArea</code>, or other - you can ignore any others.</p>
+
+<p>Note (9/13/22): The grading script will also run two integration tests as part of grading this task. The integration tests will check for the behavior of every single one of the methods that you were required t complete for this and the other tasks. While we aim to create test suites for each individual implementation task that are <em>perfect</em>, this is at times a difficult task, and these two integration tests check how the different units interact. These two tests are clearly identified as integration tests in the grading output.</p>
+
+<p>Note (9/15/22): Do <em>not</em> try to replicate these integration tests in your tests for <code class="language-plaintext highlighter-rouge">initializeFromMap</code>. We will <em>only</em> grade your tests for <code class="language-plaintext highlighter-rouge">initializeFromMap</code> on their ability to find defects in our implementation of <code class="language-plaintext highlighter-rouge">initializeFromMap</code>, and <em>not</em> in any other functions.</p>
+
+<p>Grading:</p>
+<ul>
+  <li>10 points for a correct implementation</li>
+  <li>10 points for tests:
+    <ul>
+      <li>10 points for detecting all 15 faults, or</li>
+      <li>5 points for detecting at least 6 faults, or</li>
+      <li>3 points for detecting at least 1 fault</li>
+    </ul>
+  </li>
+</ul>
+      <h2 id="submission-instructions">
+        
+        
+          <a href="#submission-instructions" class="anchor-heading" aria-labelledby="submission-instructions"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Submission Instructions
+        
+        
+      </h2>
+    
+<p>Submit your assignment in GradeScope. The easiest way to get into GradeScope the first time is to first
+<a href="https://northeastern.instructure.com/courses/99531">sign into Canvas</a> and then click the link on our course for “GradeScope”. 
+You should then also have the option to create an account on GradeScope (if you don’t already have one) so that you can log in to GradeScope directly.
+Please contact the instructors immediately if you have difficulty accessing the course on GradeScope.</p>
+
+<p>To submit your assignment: upload <em>only</em> the files:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">src/town/InteractableArea.ts</code></li>
+  <li><code class="language-plaintext highlighter-rouge">src/town/InteractableArea.test.ts</code></li>
+  <li><code class="language-plaintext highlighter-rouge">src/town/ConversationArea.ts</code></li>
+  <li><code class="language-plaintext highlighter-rouge">src/town/ConversationArea.test.ts</code></li>
+  <li><code class="language-plaintext highlighter-rouge">src/town/ViewingArea.ts</code></li>
+  <li><code class="language-plaintext highlighter-rouge">src/town/ViewingArea.test.ts</code></li>
+  <li><code class="language-plaintext highlighter-rouge">src/town/Town.test.ts</code></li>
+  <li><code class="language-plaintext highlighter-rouge">src/town/Town.ts</code></li>
+</ul>
+
+<p>The grading script should also accept your submission if you upload only a subset of these files.</p>
+
+<p>GradeScope will provide you with feedback on your submission, but note that it will <em>not</em> include any marks that will be assigned after we manually grade your submission for code style (it will show 0 for this until it is graded). It may take several minutes for the grading script to complete.</p>
+
+<p>GradeScope is configured to only provide feedback on at most 5 submissions per-24-hours per-student (submissions that fail to run or receive a grade of 0 are not counted in that limit). We strongly encourage you to lint and test your submission on your local development machine, and <em>not</em> rely on GradeScope for providing grading feedback - relying on GradeScope is a very slow feedback loop.
+To check for linter errors, run the command <code class="language-plaintext highlighter-rouge">npm run lint</code> from the terminal. The handout contains the same eslint configuration that is used by our grading script.</p>
+
+        
+
+        
+
+        
+        
+          <hr>
+          <footer>
+            
+
+            <p class="text-small text-grey-dk-100 mb-0">&copy; 2022 Jonathan Bell, Adeel Bhutta and Mitch Wand. Released under the <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a> license</p>
+
+            
+          </footer>
+        
+
+      </div>
+    </div>
+
+    
+      
+
+      <div class="search-overlay"></div>
+    
+  </div>
+</body>
+</html>
+

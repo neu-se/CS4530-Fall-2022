@@ -1,0 +1,187 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  
+
+  <link rel="shortcut icon" href="/CS4530-Fall-2022/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="/CS4530-Fall-2022/assets/css/just-the-docs-default.css">
+
+  
+
+  
+    <script type="text/javascript" src="/CS4530-Fall-2022/assets/js/vendor/lunr.min.js"></script>
+  
+  <script type="text/javascript" src="/CS4530-Fall-2022/assets/js/just-the-docs.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Weather Station Observer Pattern Example | CS4530, Fall 2022</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Weather Station Observer Pattern Example" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Northeastern University CS 4530 “Fundamentals of Software Engineering”, Fall 2022. Professors Jonathan Bell, Adeel Bhutta and Mitch Wand." />
+<meta property="og:description" content="Northeastern University CS 4530 “Fundamentals of Software Engineering”, Fall 2022. Professors Jonathan Bell, Adeel Bhutta and Mitch Wand." />
+<link rel="canonical" href="https://neu-se.github.io/CS4530-Fall-2022/Activities/Lesson04%20Activity%20(Weather%20Station)/" />
+<meta property="og:url" content="https://neu-se.github.io/CS4530-Fall-2022/Activities/Lesson04%20Activity%20(Weather%20Station)/" />
+<meta property="og:site_name" content="CS4530, Fall 2022" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Weather Station Observer Pattern Example" />
+<script type="application/ld+json">
+{"headline":"Weather Station Observer Pattern Example","dateModified":"2022-12-08T20:13:58+00:00","description":"Northeastern University CS 4530 “Fundamentals of Software Engineering”, Fall 2022. Professors Jonathan Bell, Adeel Bhutta and Mitch Wand.","url":"https://neu-se.github.io/CS4530-Fall-2022/Activities/Lesson04%20Activity%20(Weather%20Station)/","@type":"WebPage","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+</head>
+
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="svg-link" viewBox="0 0 24 24">
+      <title>Link</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </symbol>
+    <symbol id="svg-search" viewBox="0 0 24 24">
+      <title>Search</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+        <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+    </symbol>
+    <symbol id="svg-menu" viewBox="0 0 24 24">
+      <title>Menu</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+        <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </symbol>
+    <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+      <title>Expand</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </symbol>
+    <symbol id="svg-doc" viewBox="0 0 24 24">
+      <title>Document</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+        <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
+      </svg>
+    </symbol>
+  </svg>
+
+  <div class="side-bar">
+    <div class="site-header">
+      <a href="https://neu-se.github.io/CS4530-Fall-2022/" class="site-title lh-tight">
+  CS4530, Fall 2022
+
+</a>
+      <a href="#" id="menu-button" class="site-button">
+        <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg>
+      </a>
+    </div>
+    <nav role="navigation" aria-label="Main" id="site-nav" class="site-nav">
+      
+        <ul class="nav-list"><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://neu-se.github.io/CS4530-Fall-2022/calendar/" class="nav-list-link">Calendar</a><ul class="nav-list "><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/calendar/s2" class="nav-list-link">Section 2 - Calendar</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/calendar/s3" class="nav-list-link">Section 3 - Calendar</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/calendar/s4" class="nav-list-link">Section 4 - Calendar</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/calendar/s5" class="nav-list-link">Section 5 - Calendar</a></li></ul></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/" class="nav-list-link">Modules</a><ul class="nav-list "><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/1-requirements-testing" class="nav-list-link">1 - Orientation & Requirements</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/2-requirements-to-code" class="nav-list-link">2 - From Requirements to Code</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/3-code-level-design-principles" class="nav-list-link">3 - Code-Level Design Principles</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/4-interaction-level-design-patterns" class="nav-list-link">4 - Interaction-Level Design Patterns</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/5-concurrency-patterns-in-typescript" class="nav-list-link">5 - Concurrency Patterns in Typescript</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/6-software-process" class="nav-list-link">6 - Software Process</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/7-react" class="nav-list-link">7 - React</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/8-patterns-of-react" class="nav-list-link">8 - Patterns of React</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/9-distributed-principles" class="nav-list-link">9 - Distributed Systems Principles and Requirements</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/10-distributed-architectures" class="nav-list-link">10 - Distributed Systems Architectures</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/11-good-tests" class="nav-list-link">11 - Test Adequacy</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/12-larger-tests" class="nav-list-link">12 - Larger Tests</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/13-cloud-infrastructure" class="nav-list-link">13 - Cloud Infrastructure</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/14-continuous-development" class="nav-list-link">14 - Continuous Development</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/15-security" class="nav-list-link">15 - Security</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/16-technical-debt" class="nav-list-link">16 - Technical Debt</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/17-open-source" class="nav-list-link">17 - Open Source</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/modules/18-equitable-software" class="nav-list-link">18 - Ethics</a></li></ul></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://neu-se.github.io/CS4530-Fall-2022/assignments/" class="nav-list-link">Assignments</a><ul class="nav-list "><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/assignments/ip1" class="nav-list-link">Individual Project 1</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/assignments/ip2" class="nav-list-link">Individual Project 2</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/assignments/project-overview" class="nav-list-link">Project Overview</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/assignments/project-plan" class="nav-list-link">Project Plan</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/assignments/revised-project-plan" class="nav-list-link">Revised Project Plan</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/Assignments/project-deliverable" class="nav-list-link">Project Final Deliverable</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/assignments/project-showcase" class="nav-list-link">Project Showcase</a></li></ul></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://neu-se.github.io/CS4530-Fall-2022/tutorials/" class="nav-list-link">Tutorials</a><ul class="nav-list "><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/tutorials/week1-getting-started" class="nav-list-link">Installing a Development Environment</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/tutorials/week4-react-basics" class="nav-list-link">React Tutorial</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/tutorials/week2-typescript-basics" class="nav-list-link">Typescript Basics</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/tutorials/week5-unit-testing" class="nav-list-link">Unit Testing with Jest</a></li><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/tutorials/continuous-development" class="nav-list-link">CI/CD for Covey.Town</a></li></ul></li><li class="nav-list-item"><a href="https://neu-se.github.io/CS4530-Fall-2022/textbooks/" class="nav-list-link">Textbooks</a></li><li class="nav-list-item"><a href="https://neu-se.github.io/CS4530-Fall-2022/staff/" class="nav-list-link">Staff</a></li><li class="nav-list-item"><a href="https://neu-se.github.io/CS4530-Fall-2022/resources/" class="nav-list-link">Other Resources</a></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://neu-se.github.io/CS4530-Fall-2022/policies/" class="nav-list-link">Policies</a><ul class="nav-list "><li class="nav-list-item "><a href="https://neu-se.github.io/CS4530-Fall-2022/policies/style/" class="nav-list-link">Code Style</a></li></ul></li></ul>
+
+      
+    </nav>
+    <footer class="site-footer">
+      This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+    </footer>
+  </div>
+  <div class="main" id="top">
+    <div id="main-header" class="main-header">
+      
+        <div class="search">
+          <div class="search-input-wrap">
+            <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search CS4530, Fall 2022" aria-label="Search CS4530, Fall 2022" autocomplete="off">
+            <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label>
+          </div>
+          <div id="search-results" class="search-results"></div>
+        </div>
+      
+      
+      
+    </div>
+    <div id="main-content-wrap" class="main-content-wrap">
+      
+        
+      
+      <div id="main-content" class="main-content" role="main">
+        
+          <div class="fs-1 text-right fw-300">Last updated: Dec 08, 22 20:13 UTC | <a href="/CS4530-Fall-2022/Activities/Lesson04%20Activity%20(Weather%20Station)/">Permalink</a></div>
+
+<p>This project contains starter code to demonstrate the <em>observer</em> design pattern. The starter code for this activity is located in
+<a href="/CS4530-Fall-2022/Activities/Lesson04 Activity (Weather Station).zip">week2-designpatterns-observer.zip</a></p>
+
+<p>To run it on your computer, run <code class="language-plaintext highlighter-rouge">npm install</code> to fetch the dependencies for the project, and then run 
+<code class="language-plaintext highlighter-rouge">ts-node src/WeatherStation.ts</code> (or <code class="language-plaintext highlighter-rouge">npm run demo</code>, if <code class="language-plaintext highlighter-rouge">ts-node</code> does not work), which should produce the following output:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Current conditions: 80F degrees and 65% humidity
+Avg/max/min temperature = 80/80/0
+Heat Index: 82.95535063710001
+Forecast: Improving weather on the way!
+Current conditions: 82F degrees and 70% humidity
+Avg/max/min temperature = 81/82/0
+Heat Index: 86.90123306385205
+Forecast: Watch out for cooler, rainy weather
+Current conditions: 78F degrees and 90% humidity
+Avg/max/min temperature = 80/82/0
+Heat Index: 83.64967139559604
+Forecast: More of the same
+</code></pre></div></div>
+
+<p>As we discussed in class, there is a lot to be improved from this design. Working in your group,
+modify this code so that it uses the observer pattern, with each of the various display classes as
+the observers, and the <code class="language-plaintext highlighter-rouge">WeatherData</code> as the subject object.</p>
+
+<p>A high-level sketch of this design is:</p>
+<ol>
+  <li>Create a <code class="language-plaintext highlighter-rouge">WeatherDataObserver</code> interface, which defines your <code class="language-plaintext highlighter-rouge">update</code> method</li>
+  <li>Create an <code class="language-plaintext highlighter-rouge">observers</code> array in <code class="language-plaintext highlighter-rouge">WeatherData</code> and helper methods to register and de-register observers. Add code to notify the observers of updates when the weather data updates.</li>
+  <li>Modify each of <code class="language-plaintext highlighter-rouge">CurrentConditionsDisplay</code>, <code class="language-plaintext highlighter-rouge">ForecastDisplay</code>, <code class="language-plaintext highlighter-rouge">HeatIndexDisplay</code> and <code class="language-plaintext highlighter-rouge">StatisticsDisplay</code> to be implementors of the new observer interface. These display classes should display their information whenever the weather data is updated.</li>
+  <li>Modify <code class="language-plaintext highlighter-rouge">WeatherStation</code>, so that it creates the <code class="language-plaintext highlighter-rouge">XXXDisplay</code>s, and subscribes them to the <code class="language-plaintext highlighter-rouge">WeatherData</code></li>
+  <li>Update <code class="language-plaintext highlighter-rouge">WeatherData.measurementsChanged</code> to notify its observers of the update</li>
+  <li>Compare the output of your new program to the output you got by running the original version.  Are the lines printed in the same order?  Why or why not?</li>
+  <li>Can you modify the code so that the various <code class="language-plaintext highlighter-rouge">XXXDisplay</code> classes are all implementations of the same interface?  Why might or might not this be a good idea?</li>
+</ol>
+
+<p>When you are done, run <code class="language-plaintext highlighter-rouge">npm run pack</code>  to create a zip archive with your code. (Do <strong>NOT</strong> say <code class="language-plaintext highlighter-rouge">npm pack</code>, since that creates a .tgz, not a .zip.)</p>
+
+<p>This activity is based on the running example in Chapter 2 of “Head First Design Patterns, 2nd Edition” by Robson and Freeman.</p>
+
+        
+
+        
+
+        
+        
+          <hr>
+          <footer>
+            
+
+            <p class="text-small text-grey-dk-100 mb-0">&copy; 2022 Jonathan Bell, Adeel Bhutta and Mitch Wand. Released under the <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a> license</p>
+
+            
+          </footer>
+        
+
+      </div>
+    </div>
+
+    
+      
+
+      <div class="search-overlay"></div>
+    
+  </div>
+</body>
+</html>
+
